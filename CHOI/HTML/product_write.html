@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">    
+
+    <!-- Product CSS-->
+    <link rel="stylesheet" href="/CHOI/CSS/product.css">
+    
+    <!-- jQuery JS -->  
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>   
+
+    <!-- summernote CSS/JS -->
+    <script src="/CHOI/JS/summernote/summernote-lite.js"></script>
+    <script src="/CHOI/JS/summernote/lang/summernote-ko-KR.js"></script>
+
+    <link rel="stylesheet" href="/CHOI/CSS/summernote/summernote-lite.css">
+
+    <title>Header</title>
+</head>
+<body>
+    <header>
+        <div class="header">Menu</div>
+    </header>
+
+    
+    <div class="contents">
+        <br><br>
+        <div class="row justify-content-center"><h2>상품 등록</h2></div>
+        <br>
+        <div class="">
+            <div class="">
+                <form method="post">
+                    <table>
+                        <tr>
+                            <td><b>상품명</b></td>
+                            <td><input type="text" size="80" placeholder="노출 상품명 입력(브랜드명 + 상품명)"></td>
+                        </tr>
+                        <tr>
+                            <td><b>카테고리</b></td>
+                            <td>
+                                <select required>
+                                    <option>카테고리 선택</option>
+                                    <option value="food">사료/간식</option>
+                                    <option value="cloth">미용/패션</option>
+                                    <option value="furniture">식기/집/이동장</option>
+                                    <option value="toy">장난감/위생/훈련</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>태그</b></td>
+                            <td><input type="text" size="80" placeholder="쉼표(,)로 구분하여 최대 10개까지 입력 가능"></td>
+                        </tr>
+                        <tr>
+                            <td><b>대표 이미지</b></td>
+                            <td><input type="file" name="cit_file_1" id="cit_file_1" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>추가 이미지 1/4</b></td>
+                            <td><input type="file" name="cit_file_1" id="cit_file_1" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>추가 이미지 2/4</b></td>
+                            <td><input type="file" name="cit_file_1" id="cit_file_1" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>추가 이미지 3/4</b></td>
+                            <td><input type="file" name="cit_file_1" id="cit_file_1" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>추가 이미지 4/4</b></td>
+                            <td><input type="file" name="cit_file_1" id="cit_file_1" /></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table>
+                        <tr>
+                            <td><b>상품 수량(개)</b></td>
+                            <td><b>정상가(원)</b></td>
+                            <td><b>판매가(원)</b></td>
+                            <td><b>배송비(원)</b></td>
+                            <td><b>출고 소요 기간(일)</b></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" value="1" min="1" max="999" step="1" required></td>
+                            <td><input type="text" style="padding-left: 1em;"></td>
+                            <td><input type="text" style="padding-left: 1em;"></td>
+                            <td><input type="text" style="padding-left: 1em;"></td>
+                            <td><input type="text" style="padding-left: 1em;"></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <textarea id="summernote" name="editordata"></textarea>
+                    <br>
+                    <div id="align-center">
+                        <button type="reset" class="btn btn-light text-nowrap">입력취소</button>
+                        <button class="btn btn-light text-nowrap">미리보기</button>
+                        <button class="btn btn-light text-nowrap">중간저장</button>
+                        <button class="btn btn-light text-nowrap">저장하기</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">Footer</div>
+    </footer>
+
+    <script>
+    $(document).ready(function() {
+        $('#summernote').summernote({
+            height: 400,                 // 에디터 높이
+            minHeight: null,             // 최소 높이
+            maxHeight: null,             // 최대 높이
+            focus: true,                  // 에디터 로딩후 포커스를 맞출지 여부
+            lang: "ko-KR",					// 한글 설정
+            placeholder: '최대 2,048자까지 내용을 입력할 수 있습니다.'	//placeholder 설정
+        });
+    });    
+    </script>
+</body>
