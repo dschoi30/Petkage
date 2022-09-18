@@ -9,14 +9,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">    
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
     <!-- Product CSS-->
     <link rel="stylesheet" href="/CHOI/CSS/product.css">
-    
-    <!-- jQuery JS -->  
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>    -->
 
     <title>Document</title>
 </head>
@@ -25,7 +21,7 @@
         <div class="row">
             <div class="header" style="width: 100%; height: 100px; background-color: rgba(255,235,201,1);">Header</div>
         </div>
-        <div class="row row-cols-auto">
+        <div class="row">
             <div class="contents">
                 <br><br>
                 <div class="row justify-content-center"><h2>상품 상세</h2></div>
@@ -128,7 +124,7 @@
                         <div>
                         </div>
                         <div class="prod-total-price">
-                            <span class="qty"><input type="number" value="1" min="1" max="999" step="1" required></span>
+                            <span class="col mt-2 p-0"><input type="number" value="1" min="1" max="999" step="1" required></span>
                             <span class="total-price-info">총 상품 금액</span>
                             <span class="total-price">14,490원</span>
                         </div>
@@ -141,26 +137,156 @@
                 </div>
             </div>
         </div>
-        <div class="contents">
-            <div class="col">
-                <ul class="tap-contents-info">
-                    <li>상품상세</li>
-                    <li>상품평</li>
-                    <li>상품문의</li>
-                    <li>배송/반품/교환 안내</li>
-                </ul>
+        <div class="row">
+            <div class="contents">
+                <div class="col">
+                    <ul class="tap-contents-info" id="topFix">
+                        <li>상품상세</li>
+                        <li>상품평</li>
+                        <li>상품문의</li>
+                        <li>배송/반품/교환 안내</li>
+                    </ul>
+                </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="prod-content">
-                    <img src="/CHOI/IMG/dogfood6.jpg" class="d-block" alt="...">
-                    <img src="/CHOI/IMG/dogfood7.jpg" class="d-block" alt="...">
-                    <img src="/CHOI/IMG/dogfood8.jpg" class="d-block" alt="...">
-                </div>
-                <div id="prodReview">
-                    상품 후기
-                </div>
-                <div id="prodQna">
-                    상품 문의
+            <div class="contents">
+                <div id="belowFix">
+                <div class="row justify-content-center">
+                        <div id="prodContent">
+                            <img src="/CHOI/IMG/dogfood6.jpg" class="d-block" alt="...">
+                            <img src="/CHOI/IMG/dogfood7.jpg" class="d-block" alt="...">
+                            <img src="/CHOI/IMG/dogfood8.jpg" class="d-block" alt="...">
+                        </div>
+                        <ul class="prod-review-wrap">
+                            <div id="prodReview">
+                                <br>
+                                <h4><strong>상품평</strong></h3>
+                                <p><small>상품에 대한 문의를 남기는 공간입니다. 해당 게시판의 성격과 다른 글은 사전동의 없이 담당 게시판으로 이동될 수 있습니다.<br>
+                                    배송관련, 주문(취소/교환/환불)관련 문의 및 요청사항은 마이페이지 내 1:1 문의에 남겨주세요.
+                                </small></p>
+                                <hr>
+                                <div class="review">
+                                    <div class="user-img"><img src="/CHOI/IMG/reviewer.jpg" width="50px;"></div>
+                                    <span>김*혜</span>
+                                    <div>★★★★★</div>
+                                    <div>
+                                        탐사 제품이 점점 퀄리티가 좋아지는거 같아서<br>
+                                        우리 강아지 사료도 한번 주문해봤어요!<br>
+                                        5살 말티즈 입맛 까다로운 아이인데 잘 먹네요!!
+                                    </div>
+                                    <div>
+                                        <img src="/CHOI/IMG/review1.jpg" width="80" height="80">
+                                        <img src="/CHOI/IMG/review2.jpg" width="80" height="80">
+                                        <img src="/CHOI/IMG/review3.jpg" width="80" height="80">
+                                    </div>
+                                </div>
+                                <div class="review">
+                                    <div class="user-img"><img src="/CHOI/IMG/reviewer.jpg" width="50px;"></div>
+                                    <span>김*혜</span>
+                                    <div>★★★★★</div>
+                                    <div>
+                                        탐사 제품이 점점 퀄리티가 좋아지는거 같아서<br>
+                                        우리 강아지 사료도 한번 주문해봤어요!<br>
+                                        5살 말티즈 입맛 까다로운 아이인데 잘 먹네요!!
+                                    </div>
+                                    <div>
+                                        <img src="/CHOI/IMG/review1.jpg" width="80" height="80">
+                                        <img src="/CHOI/IMG/review2.jpg" width="80" height="80">
+                                        <img src="/CHOI/IMG/review3.jpg" width="80" height="80">
+                                    </div>
+                                </div>
+                                <div class="review">
+                                    <div class="user-img"><img src="/CHOI/IMG/reviewer.jpg" width="50px;"></div>
+                                    <span>김*혜</span>
+                                    <div>★★★★★</div>
+                                    <div>
+                                        탐사 제품이 점점 퀄리티가 좋아지는거 같아서<br>
+                                        우리 강아지 사료도 한번 주문해봤어요!<br>
+                                        5살 말티즈 입맛 까다로운 아이인데 잘 먹네요!!
+                                    </div>
+                                    <div>
+                                        <img src="/CHOI/IMG/review1.jpg" width="80" height="80">
+                                        <img src="/CHOI/IMG/review2.jpg" width="80" height="80">
+                                        <img src="/CHOI/IMG/review3.jpg" width="80" height="80">
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="col">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item"><a class="page-link" href="#">&lt;&lt;</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">&gt;&gt;</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </ul>
+                        
+                        <ul class="prod-qna-wrap">
+                            <div id="prodQna">
+                                <br>
+                                <h4><strong>상품 문의</strong></h3>
+                                    <div class="mt-5">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="py-0.5" style="width: 10%; text-align: center;">답변상태</th>
+                                                    <th class="py-0.5" style="width: 70%; text-align: center;">제목</th>
+                                                    <th class="py-0.5" style="width: 10%; text-align: center;">작성자</th>
+                                                    <th class="py-0.5" style="width: 10%; text-align: center;">작성일</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: center;">답변완료</td>
+                                                    <td class="review-content">매번구매구매하구있어요~하루에200그램먹이면될까요?웰시코기인데요20키로나가요</td>
+                                                    <td style="text-align: center;">ds06**</td>
+                                                    <td style="text-align: center;">2022-09-18</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: center;">답변완료</td>
+                                                    <td class="review-content">매번구매구매하구있어요~하루에200그램먹이면될까요?웰시코기인데요20키로나가요</td>
+                                                    <td style="text-align: center;">ds06**</td>
+                                                    <td style="text-align: center;">2022-09-18</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: center;">답변완료</td>
+                                                    <td class="review-content">매번구매구매하구있어요~하루에200그램먹이면될까요?웰시코기인데요20키로나가요</td>
+                                                    <td style="text-align: center;">ds06**</td>
+                                                    <td style="text-align: center;">2022-09-18</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: center;">답변완료</td>
+                                                    <td class="review-content">매번구매구매하구있어요~하루에200그램먹이면될까요?웰시코기인데요20키로나가요</td>
+                                                    <td style="text-align: center;">ds06**</td>
+                                                    <td style="text-align: center;">2022-09-18</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: center;">답변완료</td>
+                                                    <td class="review-content">매번구매구매하구있어요~하루에200그램먹이면될까요?웰시코기인데요20키로나가요</td>
+                                                    <td style="text-align: center;">ds06**</td>
+                                                    <td style="text-align: center;">2022-09-18</td>
+                                                </tr>
+                                            </tbody>                        
+                                        </table>
+                                        <br>
+                                        <div class="col">
+                                            <ul class="pagination justify-content-center">
+                                                <li class="page-item"><a class="page-link" href="#">&lt;&lt;</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">&gt;&gt;</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                            </div>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -168,5 +294,23 @@
             <div class="footer" style="width: 100%; height: 200px; background-color: rgba(255,235,201,1);">Footer</div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function(){
+            var topBar = $("#topFix").offset();
+        $(window).scroll(function(){
+            var docScrollY = $(document).scrollTop()
+            var barThis = $("#topFix")
+            var fixNext = $("#belowFix")
+            if( docScrollY > topBar.top ) {
+                barThis.addClass("top_bar_fix");
+                fixNext.addClass("pd_top_80");
+            }else{
+                barThis.removeClass("top_bar_fix");
+                fixNext.removeClass("pd_top_80");
+            }
+            });
+        })
+    </script>
 </body>
 </html>

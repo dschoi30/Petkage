@@ -14,7 +14,7 @@ div {
 
 #container {
     position: relative;
-    min-width: 980px;
+    /* min-width: 980px; */
     overflow: hidden;
 }
 
@@ -29,14 +29,27 @@ div {
 }
 
 .contents {
-    padding-bottom: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
+    position: relative;
+    display: block;
+    margin-bottom: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
     width: 100%;
     height: 100%;
     align-content: center;
+    border: 1px solid black;
 }
 
+/* .tap-contents-info {
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+    margin: 0 auto;
+} */
+
+.tap-contents-info {
+    z-index: 100;
+}
 .tap-contents-info li {
     border: 1px solid rgb(238, 238, 238);
     background-color: rgb(250, 250, 250);
@@ -47,7 +60,6 @@ div {
     width: 24%;
     cursor: pointer;
     padding: 15px 20px 15px;
-    
 }
 
 .footer {
@@ -61,13 +73,13 @@ div {
     background-color: rgba(255,235,201,1);
 }
 
-div#align-center {
+#align-center {
     position: absolute;
     left: 50%;
     margin-left: -185px;
 }
 
-div#prodImageItems {
+#prodImageItems {
     border: 1px solid black;
     float: left;
     width: 500px;
@@ -143,18 +155,16 @@ div#carouselIndicators {
 .qty {
     float: left;
 }
-
+/* 
 .total-price-info {
     float: right;
-    line-height: 28px;
-}
+} */
 
 .total-price {
     float: right;
     margin-left: 10px;
     font-weight: 500;
     font-size: 28px;
-    line-height: 36px;
 }
 
 .prod-summary-footer {
@@ -162,18 +172,71 @@ div#carouselIndicators {
     float: left;
 }
 
-div#prodContent, div#prodReview, div#prodQna {
-    border: 1px solid black;
-    background-color: #e0e0e0;
-    opacity: 0.5;
+#prodContent {
     text-align: center;
-    line-height: 500px;
+}
+
+#prodReview, #prodQna {
     float: left;
     width: 1200px;
-    height: 500px;
+    height: 100%;
+    /* border-top: 1px solid black; */
+    /* text-align: center;
+    line-height: 500px; */
+}
+
+.user-img {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.review {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.review-content {
+    cursor: pointer;
 }
 
 .btn {
     display: inline-block;
     text-align: center;
+}
+
+.table td {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.top_bar_fix{position:fixed; top:0; left:0; width:100%;}
+.pd_top_80{padding-top:80px;}
+
+.pay-prod-info, .pay-delivery-info, .pay-discount-info, .pay-method, .cart-prod-info {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 30px;
+    background-color: #dee2e6;
+    align-content: center;
+    text-align: center;
+    line-height: 300px;
+}
+
+.cart-total-price {
+    width: 100%;
+    height: 100px;
+    align-content: center;
+    text-align: center;
+    line-height: 100px;
+}
+
+.pay-btn {
+    width: 300px;
+    height: 60px;
+    display: block;
+    margin: auto;
 }
