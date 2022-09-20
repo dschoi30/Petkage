@@ -28,7 +28,7 @@ div {
     background-color: rgba(255,235,201,1);
 }
 
-.contents {
+#container .contents {
     position: relative;
     display: block;
     margin-bottom: 5%;
@@ -38,28 +38,6 @@ div {
     height: 100%;
     align-content: center;
     border: 1px solid black;
-}
-
-/* .tap-contents-info {
-    width: 100%;
-    position: fixed;
-    overflow: auto;
-    margin: 0 auto;
-} */
-
-.tap-contents-info {
-    z-index: 100;
-}
-.tap-contents-info li {
-    border: 1px solid rgb(238, 238, 238);
-    background-color: rgb(250, 250, 250);
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    width: 24%;
-    cursor: pointer;
-    padding: 15px 20px 15px;
 }
 
 .footer {
@@ -73,56 +51,56 @@ div {
     background-color: rgba(255,235,201,1);
 }
 
-#align-center {
+#container #align-center {
     position: absolute;
     left: 50%;
     margin-left: -185px;
 }
 
-#prodImageItems {
+#container #prodImageItems {
     border: 1px solid black;
     float: left;
     width: 500px;
     height: 700px;
 }
 
-.carousel-images {
+#container .carousel-images {
     background-size: cover;
 }
 
-div#prodSummary {
+#container div#prodSummary {
     border: 1px solid black;
     float: right;
-    width: 600px;
+    width: 500px;
     height: 700px;
 }
 
-div#carouselIndicators {
+#container div#carouselIndicators {
     width: 500px;
     height: 500px;
 }
 
-/* .prod-images-bar {
+/* #container .prod-images-bar {
     display: inline-block;
     width: 500px;
     height: 150px;
     justify-content : center;
 } */
 
-.prod-images li {
+#container .prod-images li {
     display: inline-block;
     margin-inline: 5px;
 }
 
-.carousel-control-prev-icon {
+#container .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23aaa' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); 
 }
 
-.carousel-control-next-icon{
+#container .carousel-control-next-icon{
     background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23aaa' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e")
 }
 
-.carousel-indicators li {
+#container .carousel-indicators li {
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -135,57 +113,150 @@ div#carouselIndicators {
     box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.2);    
 }
 
-.carousel-indicators .active {
+#container .carousel-indicators .active {
     width: 15px;
     height: 15px;
     margin: 10px;
     background-color: #c0c0c0;
 }
 
-.sale-price {
+#container .sale-price {
     font-weight: 500;
     font-size: 28px;
 }
 
-.prod-total-price {
+#container .prod-total-price {
     display: flex;
     padding-right: 30px;
 }
 
-.qty {
+#container .qty {
     float: left;
 }
 /* 
-.total-price-info {
+#container .total-price-info {
     float: right;
 } */
 
-.total-price {
+#container .total-price {
     float: right;
     margin-left: 10px;
     font-weight: 500;
     font-size: 28px;
 }
 
-.prod-summary-footer {
+#container .prod-summary-footer {
     display: block;
     float: left;
 }
 
-#prodContent {
+/* #container .tap-contents-info {
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+    margin: 0 auto;
+} */
+
+/* #container .tap-contents-info {
+    z-index: 100;
+} */
+
+#container .tap-contents-info {
+    background-color: rgb(250, 250, 250);
+}
+
+#container .tap-contents-info>li {
+    border: 1px solid rgb(238, 238, 238);
+    background-color: rgb(250, 250, 250);
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 24.6%;
+    cursor: pointer;
+    padding: 15px 20px 15px;
+}
+
+#container .tap-contents-info>li>a {
+    display: block;
+    color:rgba(0, 0, 0, 0.8);
+}
+
+#container .top_bar_fix {
+    position:fixed; 
+    top:0; 
+    left:0; 
+    width:1060px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#container .pd_top_80 {
+    padding-top:80px;
+}
+
+#container #prodContent {
     text-align: center;
 }
 
-#prodReview, #prodQna {
+#container img[class^=img] {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#container .modal {
+    display: none; /* 모달창 숨겨 놓기 */
+    position: fixed; 
+    z-index: 1; /* 모달창을 제일 앞에 두기 */
+    padding-top: 100px;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto; /* 스크롤 허용 auto */
+    cursor: pointer; /* 마우스 손가락모양 */
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#container .modal_content {
+    margin: auto;
+    display: block;
+    width: 50%; height: auto;
+    max-width: 1000px;
+    border-radius: 10px;
+    animation-name: zoom;
+    animation-duration: 0.8s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+#container .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#container .close:hover, .close:focus{
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#container #prodReview, #prodQna {
     float: left;
-    width: 1200px;
+    width: 100%;
     height: 100%;
     /* border-top: 1px solid black; */
     /* text-align: center;
     line-height: 500px; */
 }
 
-.user-img {
+#container .user-img {
     float: left;
     width: 40px;
     height: 40px;
@@ -194,29 +265,26 @@ div#carouselIndicators {
     overflow: hidden;
 }
 
-.review {
+#container .review {
     padding-top: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid #c0c0c0;
 }
 
-.review-content {
+#container .review-content {
     cursor: pointer;
 }
 
-.btn {
+#container .btn {
     display: inline-block;
     text-align: center;
 }
 
-.table td {
+#container .table td {
     border-bottom: 1px solid #dee2e6;
 }
 
-.top_bar_fix{position:fixed; top:0; left:0; width:100%;}
-.pd_top_80{padding-top:80px;}
-
-.pay-prod-info, .pay-delivery-info, .pay-discount-info, .pay-method, .cart-prod-info {
+#container .pay-prod-info, .pay-delivery-info, .pay-discount-info, .pay-method, .cart-prod-info {
     width: 100%;
     height: 300px;
     margin-bottom: 30px;
@@ -226,7 +294,7 @@ div#carouselIndicators {
     line-height: 300px;
 }
 
-.cart-total-price {
+#container .cart-total-price {
     width: 100%;
     height: 100px;
     align-content: center;
@@ -234,7 +302,7 @@ div#carouselIndicators {
     line-height: 100px;
 }
 
-.pay-btn {
+#container .pay-btn {
     width: 300px;
     height: 60px;
     display: block;
