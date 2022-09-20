@@ -1,0 +1,51 @@
+.hd .header_container {
+    background-color: #FFEBC9;
+    height: 80px;
+}
+
+.hd .d-flex {
+    justify-content: space-between;
+}
+
+.hd .headerLogo {
+    width: 170px;
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+.hd .header_item {
+    padding-top: 20px;
+}
+
+.hd .header_link {
+    color: #803D3D !important;
+    font-weight: bold;
+    width: 100px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.hd .headercart {
+    padding: 0px 20px 0px 20px;
+}
+.hd .cart {
+    width: 30px;
+    margin-top: 5px;
+}
+
+.hd .headerBtn {
+    background-color: #803D3D;
+    color: white !important;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border-style: none;
+}
+
+.hd #loginBtn {
+    background-color: #D79771 !important;
+}
