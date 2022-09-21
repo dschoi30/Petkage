@@ -22,28 +22,46 @@
             <div class="header" style="width: 100%; height: 100px; background-color: rgba(255,235,201,1);">Header</div>
         </div>
         <div class="row">
-            <div class="contents">
+            <div class="contents" style="margin-bottom: 50px;">
                 <br><br>
                 <div class="row justify-content-center"><h2>장바구니</h2></div>
-                <br>
-                <div class="col">
-
-                </div>
             </div>
         </div>
         <div class="row">
             <div class="contents">
-                <div class="cart-prod-info">
-                    상품 정보
-                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th colspan="4">상품정보</th>
+                            <th>상품금액</th>
+                            <th>배송비</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2" style="width: 3%"><input type="checkbox"></td>
+                            <td rowspan="2" style="width: 10%"><img class="img" src="/CHOI/IMG/dogfood.jpg" width="80" height="80"></td>
+                            <td colspan="3" style="width: 60%">[탐사] 탐사 6free 강아지 사료 연어 레시피, 3kg</td>
+                            <td rowspan="2" style="width: 14%; text-align: center;"><br><strong>14,490원</strong><br><s>18,000원</s></td>
+                            <td rowspan="2" style="width: 13%; text-align: center;"><br>3,000원</td>
+                        </tr>
+                        <tr>
+                            <td>내일 9/24 배송 출발 예정</td>
+                            <td>14,490원</td>
+                            <td>1개</td>
+                        </tr>
+                    </tbody>
+                </table>
+                &nbsp;&nbsp;<input type="checkbox">&nbsp;&nbsp;전체선택 ( 1 / 1 )&nbsp;&nbsp;<button>전체삭제</button>
             </div>
             <div class="contents">
                 <div class="cart-total-price">
-                    총 선택상품금액 14,490원 + 총 배송비 3,000원 - 할인금액 3,000원 = 총 주문금액 14,490원
+                    총 선택상품금액 <span class="cart-price">14,490</span>원 + 총 배송비 <span class="cart-price">3,000</span>원 = 총 주문금액 <span class="cart-price" style="color: red;">17,490</span>원
                 </div>
             </div>
             <div class="contents">
-                <button class="pay-btn">주문하기</button>
+                <button class="pay-btn">총 1건 주문하기</button>
             </div>
         </div>
         <div class="row justify-content-center">

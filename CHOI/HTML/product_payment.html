@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <!-- Product CSS-->
+    <link rel="stylesheet" href="/CHOI/CSS/product.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div class="row">
+            <div class="header" style="width: 100%; height: 100px; background-color: rgba(255,235,201,1);">Header</div>
+        </div>
+        <div class="row">
+            <div class="contents" style="margin-bottom: 0;">
+                <br><br>
+                <div class="row justify-content-center"><h2>주문/결제</h2></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="contents">
+                <div class="pay-delivery-info">
+                    <h4>배송지 정보</h4><br>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td style="width: 12%">이름</td>
+                                <td>최동식</td>
+                            </tr>
+                            <tr>
+                                <td>배송 주소</td>
+                                <td>
+                                    <input type="text" id="sample6_postcode" placeholder="우편번호">
+                                    <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
+                                    &nbsp; <input type="checkbox" checked> 기본배송지 설정 &nbsp;<br>
+                                    <input type="text" id="sample6_address" placeholder="주소" size="50" value="서울 강남구 테헤란로14길 6"><br>
+                                    <input type="text" id="sample6_detailAddress" placeholder="상세주소" size="50" value="KH정보교육원 2층">
+                                </td>
+                            <tr>
+                                <td>연락처</td>
+                                <td>010-1234-5678</td>
+                            </tr>
+                            <tr>
+                                <td>배송 요청사항</td>
+                                <td>직접 받고 부재 시 문 앞</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pay-prod-info">
+                    <br><h4>주문 정보</h4><br>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th colspan="4">상품정보</th>
+                                <th>상품금액</th>
+                                <th>배송비</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2" style="width: 10%"><img class="img" src="/CHOI/IMG/dogfood.jpg" width="80" height="80"></td>
+                                <td colspan="3" style="width: 60%">[탐사] 탐사 6free 강아지 사료 연어 레시피, 3kg</td>
+                                <td rowspan="2" style="width: 14%; text-align: center;"><br><strong>14,490원</strong><br><s>18,000원</s></td>
+                                <td rowspan="2" style="width: 13%; text-align: center;"><br>3,000원</td>
+                            </tr>
+                            <tr>
+                                <td>내일 9/24 배송 출발 예정</td>
+                                <td>14,490원</td>
+                                <td>1개</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pay-method-info">
+                    <br><h4>결제 정보</h4><br>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td style="width: 12%">총 상품금액</td>
+                                <td>14,490원</td>
+                            </tr>
+                            <tr>
+                                <td>포인트 사용</td>
+                                <td><span class="discount-point"><input type="text" placeholder="0" size="10" dir="rtl">&nbsp; 원</span> &nbsp; <input type="checkbox"> 전액 사용 ( 보유 포인트 : 1,000원 )&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>배송비</td>
+                                <td>3,000원</td>
+                            </tr>
+                            <tr>
+                                <td>총 결제금액</td>
+                                <td>17,490원</td>
+                            </tr>
+                            <tr>
+                                <td>결제 방법</td>
+                                <td>
+                                    <label><input type="radio" name="kakaopay">카카오페이</label>&nbsp;
+                                    <label><input type="radio" name="account">계좌이체</label>&nbsp;
+                                    <label><input type="radio" name="card">신용/체크카드</label>&nbsp;
+                                    <label><input type="radio" name="corp-card">법인카드</label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="contents">
+                <button class="pay-btn">결제하기</button>
+            </div>
+        </div>
+    </div>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+        function sample6_execDaumPostcode() {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+    
+                    // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                    // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                    var addr = ''; // 주소 변수
+                    var extraAddr = ''; // 참고항목 변수
+    
+                    //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                    if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                        addr = data.roadAddress;
+                    } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                        addr = data.jibunAddress;
+                    }
+    
+                    // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+                    if(data.userSelectedType === 'R'){
+                        // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                        // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                        if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                            extraAddr += data.bname;
+                        }
+                        // 건물명이 있고, 공동주택일 경우 추가한다.
+                        if(data.buildingName !== '' && data.apartment === 'Y'){
+                            extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                        }
+                    } else {
+                        document.getElementById("sample6_extraAddress").value = '';
+                    }
+    
+                    // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                    document.getElementById('sample6_postcode').value = data.zonecode;
+                    document.getElementById("sample6_address").value = addr;
+                    // 커서를 상세주소 필드로 이동한다.
+                    document.getElementById("sample6_detailAddress").focus();
+                }
+            }).open();
+        }
+    </script>
+</body>
+</html>
