@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>age_calculator</title>
+
+    <link rel="stylesheet" href="../../CSS/common/header.css"></link>
+    <link rel="stylesheet" href="../../CSS/others/age_calculator.css"></link>
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+<body>
+	<section class="ot">
+		<div id="others-container">
+			<div class="others_A_container">
+
+				<!-- 계산기 전체 상단 -->
+				<div class="cal_top pr">
+					<div class="cal_top_box pr area">
+						<div class="cal_Tbg">
+							<h3 class="">MY<span> PET</span></h3>
+							<p class="cal_top_h3_line_c"></p>
+							<!-- <p class="h21_h3_text_c">나이, 칼로리, 비만도 소중한 우리 아이를 위한 필수 계산기!</p> -->
+						</div>
+					</div>
+				</div>
+
+				<!-- 계산기 메뉴 버튼 -->
+				<div class="cal_menu pr">
+					<div class="cal_menu_btn">
+						<ul>
+							<li class='active'>
+								<a href="?m1Code=tip&m2Code=dogcal&tab_id=1">
+									<span class="cal_icon"><img src="http://appdata.hungryapp.co.kr/images/hatdog/img/pc_img/calculator/btnicon_cal01_on.png" alt="나이계산기" /></span>
+									<span class="cal_txt">나이계산기</span>
+								</a>
+							</li>
+							<li class=''>
+								<a href="?m1Code=tip&m2Code=dogcal&tab_id=2">
+									<span class="cal_icon"><img src="http://appdata.hungryapp.co.kr/images/hatdog/img/pc_img/calculator/btnicon_cal02_on.png" alt="권장칼로리" /></span>
+									<span class="cal_txt">권장칼로리</span>
+								</a>
+							</li>
+							<li class=''>
+								<a href="?m1Code=tip&m2Code=dogcal&tab_id=3">
+									<span class="cal_icon"><img src="http://appdata.hungryapp.co.kr/images/hatdog/img/pc_img/calculator/btnicon_cal03_on.png" alt="비만도계산기" /></span>
+									<span class="cal_txt">비만도계산기</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 계산시 메뉴 컨텐츠 -->
+				<div class="cal_menu2 pr">
+					<div class="cal_content Cc_form" id="contents_tab_1">
+						<div class="cal_write">
+							<div class="content_write">
+								<span class="content_write_input write_divline">
+									<h5>반려동물 선택</h5>
+									<fieldset>
+										<label for="dog_check"><input type="radio" class="animal_choice" id="dog_check" name="animal_check" value="dog_check" checked><span>강아지</span></label>
+										<label for="cat_check"><input type="radio" class="animal_choice" id="cat_check" name="animal_check" value="cat_check"><span>고양이</span></label>
+									</fieldset>
+								</span>
+								<span class="content_write_input write_divline">
+									<h5>생년월일 입력</h5>
+									<input type="text" name="dog_date" id="dog_date"  inputmode="numeric" pattern="[0-9]*" maxlength="10"  xonkeyup="myFunction()" placeholder="반려동물의 생년월일을 입력해주세요. ex) 20221031" title="">
+								</span>
+								<span class="content_write_input write_divline">
+									<h5>몸무게 선택</h5>
+									<div class="cal_choice">
+										<input type="hidden" id="dog_type" name="dog_type">
+										<input type="button" class="dog_type0 cal_type_checked" value="소(~9kg)" onclick="weigh_choice(0)">
+										<input type="button" class="dog_type1 " value="중(9~23kg)" onclick="weigh_choice(1)">
+										<input type="button" class="dog_type2 " value="대(23kg이상)" onclick="weigh_choice(2)">
+										<!-- <a class="dog_type0 h21_cal_checked" onclick="weigh_choice(0)">소(~9kg)</a>
+										<a class="dog_type1" onclick="weigh_choice(1)">중(9~23kg)</a>
+										<a class="dog_type2" onclick="weigh_choice(2)">대(23kg이상)</a> -->
+									</div>
+								</span>
+							</div>
+						</div>
+
+						<!-- 계산기 결과버튼 -->
+						<div class="cal_btn">
+							<div class="cal_result" onclick="result_view(1)"><a>결과보기</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    
+</body>
+</html>
