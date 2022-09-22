@@ -1,0 +1,30 @@
+.mp-info .info {
+    position: absolute;
+    background: #FFEBC9;
+border-radius: 20px;
+padding-left: 100px;
+margin-left: 100px;
+left: 200px;
+}
+
+.mp-info .info1 {
+    position: absolute;
+    background: #FFEBC9;
+border-radius: 20px;
+padding-left: 400px;
+margin-left: 100px;
+left: 200px;
+}
+
+.mp-info .infofont {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #803D3D;
+}

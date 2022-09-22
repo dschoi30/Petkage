@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/mypage.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/pur-list.css" type="text/css">
+    <title>mypage</title>
+    <style>
+        
+        </style>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+  <section class="hdmp">
+    <div class="container">
+    <div class="header_container">
+      <header class="d-flex flex-wrap mb-4">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+              <img src="../../resources/images/Petkage_Logo2.png" alt="" class="headerLogo">
+          </a>
+      
+          <ul class="nav nav-pills">
+              <li class="nav-item header_item"><a href="#" class="nav-link header_link">어디가지</a></li>
+              <li class="nav-item header_item"><a href="#" class="nav-link header_link">커뮤니티</a></li>
+              <li class="nav-item header_item"><a href="#" class="nav-link header_link">마켓</a></li>
+              <li class="nav-item header_item"><a href="#" class="nav-link header_link">OTHERS</a></li>
+              <input type="button" class="headerBtn" value="마이페이지" >
+              <input type="button" class="headerBtn" id="loginBtn" value="로그아웃">
+  
+              <a href="/" class="d-flex align-items-center headercart">
+                  <img src="../../resources/images/Cart.png" alt="" class="cart">
+              </a>
+          </ul>
+          
+      </header>
+  </div>
+  </section>
+
+  <section class="mp-1">
+    <div class="container">
+    <p style="width: 1110px; height: 109px; font-size: 32px; font-weight: 700; line-height: 100%; padding-top: 30px; text-align: center; color: rgba(227, 183, 160, 1);">My PetKage</p>
+    
+
+      <nav id="topMenu">
+        <ul class="main-nav">
+            <li class="mypage"><a href="#">구매내역</a>
+              <ul class="submenu">
+                <li><a href="" class="submenuList">주문내역조회</a></li>
+                <li><a href="" class="submenuList">취소/반품/교환</a></li>
+              </ul>
+            </li>
+            
+            <li class="mypage"><a href="#">캘린더</a></li>
+            <li class="mypage"><a href="#">찜 목록</a></li>
+            <li class="mypage"><a href="#">MY작성글</a></li>
+            <li class="mypage"><a href="#">회원정보</a></li>
+          </ul>
+        </nav>
+      </section>
+
+    <br><br><br><br><br>
+    <section class="mp-pur">
+      <div class="container">
+      <p class="mypagept" style="width: 1110px; height: 50px; font-size: 32px; font-weight: 700; line-height: 100%; text-align: center; color: #803D3D;">주문내역조회</p>
+      
+      <p class="v91_238">기본적으로 최근 3개월간의 자료가 조회되며, 기간 검색 시 지난 주문내역을 조회하실 수 있습니다. </p>
+      
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">주문번호</th>
+            <th scope="col">주문일자</th>
+            <th scope="col">상품정보</th>
+            <th scope="col">수량</th>
+            <th scope="col">상품구매금액</th>
+            <th scope="col">주문처리상태</th>
+            <th scope="col">취소/교환/반품</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>2000-01-01</td>
+            <td>탈취제</td>
+            <td>3</td>
+            <td>32000</td>
+            <td>배송중</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-secondary">취소</button>
+                <button type="button" class="btn btn-outline-secondary">교환</button>
+                <button type="button" class="btn btn-outline-secondary">반품</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>2000-01-01</td>
+            <td>방석</td>
+            <td>1</td>
+            <td>35000</td>
+            <td>배송왼료</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-secondary">취소</button>
+                <button type="button" class="btn btn-outline-secondary">교환</button>
+                <button type="button" class="btn btn-outline-secondary">반품</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>2000-01-01</td>
+            <td>귀세정제</td>
+            <td>2</td>
+            <td>20000</td>
+            <td>배송중</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-secondary">취소</button>
+                <button type="button" class="btn btn-outline-secondary">교환</button>
+                <button type="button" class="btn btn-outline-secondary">반품</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br><br>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+      
+    <section class="ftmp">
+      <div class="container">
+      <div id='wrapper'>
+          <div>
+              
+          </div>
+      </div>
+
+      <div class="footer_container">
+          <footer class="footer_section1">
+              <div class="footer">
+                  <p class="footerName">Petkage</p>
+
+                  <ul class="nav footer_nav">
+                      <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">이용약관</a></li>
+                      <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">개인정보 취급방침</a></li>
+                      <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">공지사항</a></li>
+                      <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">FAQ</a></li>
+                  </ul>
+
+                  <div class="footer_contents">
+                      <p class="footer_content">회사명 : (주)펫키지 대표 : 문인수 / 전화 : 070-1234-5678 / 주소 : 서울특별시 강남구 테헤란로 14길 6 남도빌딩</p>
+                      <p class="footer_content">사업자 등록번호 안내 : 123-45-6789 / 통신판매업 신고 2022-서울강남-03472 <a href="">[사업자정보 확인]</a>  </p>
+                      <p class="footer_content">&copy;펫키지. All Rights Reserved</p>
+                  </div>
+
+                  <div class="footer_icons">
+                      <a href="/" class="">
+                          <img src="../../resources/images/Instagram.png" alt="" class="footericon">
+                      </a>
+                      <a href="/" class="">
+                          <img src="../../resources/images/Facebook.png" alt="" class="footericon">
+                      </a>
+                      <a href="/" class="">
+                          <img src="../../resources/images/youtube.png" alt="" class="footericon">
+                      </a>
+                      <a href="/" class="">
+                          <img src="../../resources/images/kakaotalk.png" alt="" class="footericon">
+                      </a>
+                  </div>
+
+                      
+                  <img src="../../resources/images/Pet2.png" alt="" class="footerLogo">
+              </div>
+          </footer>
+      </div>
+  </section>
+      
+      
+      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+    </body>
+    </html>
