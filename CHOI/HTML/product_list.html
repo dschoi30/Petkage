@@ -12,17 +12,38 @@
 
     <!-- Product CSS-->
     <link rel="stylesheet" href="/CHOI/CSS/product.css">
-    
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="/EUM/CSS/common/header.css"></link>
+    <link rel="stylesheet" href="/EUM/CSS/common/footer.css"></link>
+
     <!-- jQuery js -->  
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>   
 
     <title>Header</title>
 </head>
 <body>
-    <div id="container">
-        <div class="row">
-            <div class="header" style="width: 100%; height: 100px; background-color: rgba(255,235,201,1);">Header</div>
+    <section class="hd">
+        <div class="header_container">
+            <header class="d-flex flex-wrap mb-4">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+                    <img src="/EUM/resources/images/Petkage_Logo2.png" alt="" class="headerLogo">
+                </a>
+
+                <ul class="nav nav-pills">
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">어디가지</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">커뮤니티</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">마켓</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">OTHERS</a></li>
+                    <input type="button" class="headerBtn" id="loginBtn" value="로그인">
+                    <a href="/" class="d-flex align-items-center headercart">
+                        <img src="/EUM/resources/images/Cart.png" alt="" class="cart">
+                    </a>
+                </ul>
+            </header>
         </div>
+    </section>
+    <div id="container">
         <div class="row">
             <div class="contents">
                 <br><br>
@@ -170,8 +191,52 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="footer" style="width: 100%; height: 200px; background-color: rgba(255,235,201,1);">Footer</div>
-        </div>
     </div>
+    <section class="ft">
+        <!-- <div id='wrapper'>
+            <div>
+                CONTENT 
+            </div>
+        </div> -->
+
+        <div class="footer_container">
+            <footer class="footer_section1">
+                <!-- <div class="footer"> -->
+                    <p class="footerName">Petkage</p>
+
+                    <ul class="nav footer_nav">
+                        <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">이용약관</a></li>
+                        <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">개인정보 취급방침</a></li>
+                        <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">공지사항</a></li>
+                        <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">FAQ</a></li>
+                    </ul>
+
+                    <div class="footer_contents">
+                        <p class="footer_content">회사명 : (주)펫키지 대표 : 문인수 / 전화 : 070-1234-5678 / 주소 : 서울특별시 강남구 테헤란로 14길 6 남도빌딩</p>
+                        <p class="footer_content">사업자 등록번호 안내 : 123-45-6789 / 통신판매업 신고 2022-서울강남-03472 <a href="">[사업자정보 확인]</a>  </p>
+                        <p class="footer_content">&copy;펫키지. All Rights Reserved</p>
+                    </div>
+
+                    <div class="footer_icons">
+                        <a href="/" class="">
+                            <img src="/EUM/resources/images/Instagram.png" alt="" class="footericon">
+                        </a>
+                        <a href="/" class="">
+                            <img src="/EUM/resources/images/Facebook.png" alt="" class="footericon">
+                        </a>
+                        <a href="/" class="">
+                            <img src="/EUM/resources/images/youtube.png" alt="" class="footericon">
+                        </a>
+                        <a href="/" class="">
+                            <img src="/EUM/resources/images/kakaotalk.png" alt="" class="footericon">
+                        </a>
+                    </div>
+
+                    <img src="/EUM/resources/images/Pet2.png" alt="" class="footerLogo">
+                <!-- </div> -->
+            </footer>
+        </div>
+    </section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
+</html>

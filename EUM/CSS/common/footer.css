@@ -10,7 +10,7 @@
     color: #803D3D;
     padding-top: 5px;
     position : relative;
-    transform : translateY(100%);
+    /* transform : translateY(100%); */
 }
 
 .ft .footer_section1 {
