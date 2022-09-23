@@ -5,606 +5,358 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bmi_calculator</title>
+
+	<!-- Font -->
+	<style>
+
+		/* 폰트 자체 아래에 여백이 있음 */
+		@font-face {
+			font-family: "GmarketSansMedium";
+			src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+				format("woff");
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		* {
+			font-family: "GmarketSansMedium";
+		}
+
+	</style>
+
+	<!-- Header css -->
+	<link rel="stylesheet" href="../../CSS/common/header.css"></link>
+	
+	<!-- Footer css -->
+	<link rel="stylesheet" href="../../CSS/common/footer.css"></link>
+    
+	<!-- Age_calculator css -->
+	<link rel="stylesheet" href="../../CSS/others/age_calculator.css"></link>
+    <link rel="stylesheet" href="../../CSS/others/age_calculator_result.css"></link>
+
+	<!-- Bootstrap css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> -->
+
+	
 </head>
 <body>
-    
+	<!-- Header 시작 -->
+	<section class="hd">
+        <div class="header_container">
+            <header class="d-flex flex-wrap mb-4">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+                    <img src="../../resources/images/Petkage_Logo3.png" alt="" class="headerLogo">
+                </a>
+            
+                <ul class="nav nav-pills">
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">어디가지</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">커뮤니티</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">마켓</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">OTHERS</a></li>
+                    <input type="button" class="headerBtn" value="마이페이지" >
+                    <input type="button" class="headerBtn" id="loginBtn" value="로그아웃">
+        
+                    <a href="/" class="d-flex align-items-center headercart">
+                        <img src="../../resources/images/Cart.png" alt="" class="cart">
+                    </a>
+                </ul>
+            </header>
+        </div>
+    </section>
+	<!-- Header 끝 -->
+
+	<!-- Age_calculator 시작 -->
+	<section class="ot">
+		<div class="others-container">
+			<div class="others_A_container">
+
+				<!-- 계산기 전체 상단 -->
+				<div class="cal_top pr">
+					<div class="cal_top_box pr area">
+						<div class="cal_Tbg">
+							<h3 class="">MY<span> PET</span></h3>
+							<p class="cal_top_h3_line_c"></p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 계산기 메뉴 버튼 -->
+				<div class="cal_menu pr">
+					<div class="cal_menu_btn">
+						<ul>
+							<li class=''>
+								<a href="?m1Code=tip&m2Code=dogcal&tab_id=1">
+									<span class="cal_icon"><img src="http://appdata.hungryapp.co.kr/images/hatdog/img/pc_img/calculator/btnicon_cal01_on.png" alt="나이계산기" /></span>
+									<span class="cal_txt">나이계산기</span>
+								</a>
+							</li>
+							<li class=''>
+								<a href="?m1Code=tip&m2Code=dogcal&tab_id=2">
+									<span class="cal_icon"><img src="http://appdata.hungryapp.co.kr/images/hatdog/img/pc_img/calculator/btnicon_cal02_on.png" alt="권장칼로리" /></span>
+									<span class="cal_txt">권장칼로리</span>
+								</a>
+							</li>
+							<li class='active'>
+								<a href="?m1Code=tip&m2Code=dogcal&tab_id=3">
+									<span class="cal_icon"><img src="http://appdata.hungryapp.co.kr/images/hatdog/img/pc_img/calculator/btnicon_cal03_on.png" alt="비만도계산기" /></span>
+									<span class="cal_txt">비만도계산기</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 계산기 컨텐츠 -->
+				<div class="cal_content pr">
+
+					<!-- 계산기 정보 박스 -->
+					<!-- style="display:none" -->
+					<div class="cal_info_box" id="contents_tab_1">
+
+						<!-- 계산기 정보 작성-->
+						<div class="cal_write">
+							<div class="content_write">
+								<span class="content_write_input write_divline" >
+									<h5>반려동물 선택</h5>
+									<fieldset>
+										<label for="dog_check"><input type="radio" class="animal_choice" id="dog_check" name="animal_check" value="dog_check" checked><span>강아지</span></label>
+										<label for="cat_check"><input type="radio" class="animal_choice" id="cat_check" name="animal_check" value="cat_check"><span>고양이</span></label>
+									</fieldset>
+								</span>
+								<span class="content_write_input write_divline">
+									<h5>생년월일 입력</h5>
+									<input type="text" name="dog_date" id="dog_date"  inputmode="numeric" pattern="[0-9]*" maxlength="10"  xonkeyup="myFunction()" placeholder="반려동물의 생년월일을 입력해주세요. ex) 20221031" title="">
+								</span>
+								<span class="content_write_input write_divline" id="cat_hide">
+									<h5>몸무게 선택</h5>
+									<div class="cal_choice">
+										<input type="hidden" id="dog_type" name="dog_type">
+										<input type="button" class="dog_type_btn dog_type0 cal_type_checked" value="소(~9kg)" onclick="weigh_choice(0)">
+										<input type="button" class="dog_type_btn dog_type1" value="중(9~23kg)" onclick="weigh_choice(1)">
+										<input type="button" class="dog_type_btn dog_type2" value="대(23kg이상)" onclick="weigh_choice(2)">
+										<!-- <a class="dog_type0 h21_cal_checked" onclick="weigh_choice(0)">소(~9kg)</a>
+										<a class="dog_type1" onclick="weigh_choice(1)">중(9~23kg)</a>
+										<a class="dog_type2" onclick="weigh_choice(2)">대(23kg이상)</a> -->
+									</div>
+								</span>
+							</div>
+						</div>
+
+						<!-- 계산기 결과보기 버튼 -->
+						<div class="cal_btn">
+							<div class="cal_result" id="result_btn" onclick="result_view(1)"><a>결과보기</a></div>
+							<!-- <div class="cal_result" onclick="result_view(1)"><button class="btn-hover color-4">결과보기</button></div> -->
+						</div>
+					</div>	
+
+					<!-- 계산기 결과 박스 -->
+					<div class="cal_result_box" style="display:none">
+			
+						<!-- 나이 계산기 결과 -->
+						<div class="cal_result_age">
+							<div class="age_circle">
+								<span class="age_img"><img src="../../resources/images/Laughing_Dog.png" alt="강아지" /></span>
+								<span class="age_number" id="dog_age">1살</span>
+							</div>
+							
+							<div class="age_same"><img src="http://appdata.hungryapp.co.kr/images/hatdog/img/calculator/result_img03.png" alt="같다" /></div>
+			
+							<div class="age_circle">
+								<!-- ! 이미지 수정하기 -->
+								<span class="age_img"><img src="../../resources/images/Agegroup_W1.png" alt="사람" /></span>
+								<span class="age_number" id="dog_age_cal">15살</span>
+							</div>
+			
+							<div class="age_lifecycle"  id="dog_life">아동청소년기</div>
+						</div>
+			
+						<!-- 계산기 다시하기 버튼-->
+						<div class="cal_btn">
+							<div class="cal_again" onclick="location.reload()"><a>다시하기</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Age_calculator 끝 -->
+	
+	<!-- Footer 시작 -->
+	<section class="ft">
+        <div class="footer_container">
+            <footer class="footer_part">
+				<p class="footerName">Petkage</p>
+
+				<ul class="nav footer_nav">
+					<li class="nav-item footer_item"><a href="#" class="nav-link footer_link">이용약관</a></li>
+					<li class="nav-item footer_item"><a href="#" class="nav-link footer_link">개인정보 취급방침</a></li>
+					<li class="nav-item footer_item"><a href="#" class="nav-link footer_link">공지사항</a></li>
+					<li class="nav-item footer_item"><a href="#" class="nav-link footer_link">FAQ</a></li>
+				</ul>
+
+				<div class="footer_contents">
+					<p class="footer_content">회사명 : (주)펫키지 대표 : 문인수 / 전화 : 070-1234-5678 / 주소 : 서울특별시 강남구 테헤란로 14길 6 남도빌딩</p>
+					<p class="footer_content">사업자 등록번호 안내 : 123-45-6789 / 통신판매업 신고 2022-서울강남-03472 <a href="">[사업자정보 확인]</a>  </p>
+					<p class="footer_content">&copy;펫키지. All Rights Reserved</p>
+				</div>
+
+				<div class="footer_icons">
+					<a href="/" class="">
+						<img src="../../resources/images/Instagram.png" alt="" class="footericon">
+					</a>
+					<a href="/" class="">
+						<img src="../../resources/images/Facebook.png" alt="" class="footericon">
+					</a>
+					<a href="/" class="">
+						<img src="../../resources/images/youtube.png" alt="" class="footericon">
+					</a>
+					<a href="/" class="">
+						<img src="../../resources/images/kakaotalk.png" alt="" class="footericon">
+					</a>
+				</div>
+
+				<img src="../../resources/images/Pet.png" alt="" class="footerLogo">
+            </footer>
+        </div>
+    </section>
+	<!-- Footer 끝-->
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>  
+	
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+	<script>
+
+
+		function dogcal_tab(tab){
+			$("div[id^='contents']").hide();
+			$("#contents_tab_"+tab).show();
+
+		}
+
+		$(document).ready(function() {
+			dogcal_tab(1);
+			weigh_choice(0);
+		});
+
+		var cellBirth = document.getElementById('dog_date');
+			cellBirth.onkeyup = function(event){
+			event = event || window.event;
+			var _val = this.value.trim();
+			this.value = autoBirth(_val) ;
+		}
+
+		$("#dog_check").on("click", function() {
+			$("#cat_hide").show();
+		})
+
+		$("#cat_check").on("click", function() {
+			$("#cat_hide").hide();
+		})
+
+		init();
+
+		function result_view(tab_id){
+			var dog_date = $('input[name="dog_date"]').val().replace(/\./g,'-');
+			var dog_type= $('input[name="dog_type"]').val();
+
+			var dog_weight = $('input[name="dog_weight"]').val();
+			var dog_jisu= $('select[name="dog_jisu"]').val();
+
+			var bcs_type= $('#bcs_type').val();
+
+			if(tab_id==1){
+				if(!dog_date){
+					alert("생년월일을 입력해주세요.");
+					$('input[name="dog_date"]').focus()
+					return;
+				} else if(!dog_type){
+					alert("몸무게를 선택해주세요.");
+					return;
+				}
+
+				if(!isBirthday(dog_date)){ //생년월일 유효성 검사
+					return;
+				} else {
+					$(".cal_info_box").hide();
+					$(".cal_result_box").show();
+				}
+
+				data="m2Code=dogcal&mode=age_cal&dog_date="+dog_date+"&dog_type="+dog_type;
+			} else if(tab_id==2){
+				if(!dog_weight){
+					alert("몸무게를 입력해주세요.");
+					$('input[name="dog_weight"]').focus()
+					return;
+				}else if(!dog_jisu){
+					alert("반려견 상태를 선택해주세요.");
+					return;
+				}
+
+				data="m2Code=dogcal&mode=calorie_cal&dog_weight="+dog_weight+"&dog_jisu="+dog_jisu;
+			} else if(tab_id==3){
+				if(!bcs_type){
+					alert("BCS를 선택해주세요");
+					return;
+				}
+				data="m2Code=dogcal&mode=bimando_cal&bcs_type="+bcs_type;
+			}
+			
+
+			$.ajax({
+				type: "post",
+				dataType: "json",
+				data:data,
+				url: "../ajaxData_cal.php",
+				success: function(r){
+					$(".Cc_result").show();
+					$(".h21_calculator_sns").show();
+					$(".Cc_form").hide();
+
+					if(tab_id==1){ // 나이 계산
+						$(".Cc_result_age").css("display","block");
+						$("#dog_age").html(r.msg[0]);
+						$("#dog_age_cal").html(r.msg[1]+"살");
+						$("#dog_life").html(r.msg[2]);
+					}else if(tab_id==2){ //칼로리 계산
+						$(".Cc_result_calorie").css("display","block");
+						$("#basic_meta").html(r.msg[0]+"kcal");
+						$("#basic_kal").html(r.msg[1]+"kcal");
+						
+					}else if(tab_id==3){ // 비만도 계산
+						$(".Cc_result_obesity").css("display","block");
+						$("#bsc_type_str1").html(r.msg_pc[0]);
+						$("#bsc_type_str2").html(r.msg_pc[1]);
+						$("#bsc_type_str3").html(r.msg_pc[2]);
+					}
+
+				}
+			})
+		}
+
+		function bcs_sel(no){//비만도선택
+			$("#bcs_type").val(no);
+			$(this).addClass("Cc_BCS_on");
+			$("li[class^='bcs_type_']").removeClass("Cc_BCS_on");
+			$(".bcs_type_"+no).addClass("Cc_BCS_on");
+		}
+
+		function weigh_choice(no){//소중대 선택
+			$("a[class^='bcs_type_']").removeClass("Cc_BCS_on");
+
+			$("a[class^='dog_type']").removeClass("h21_cal_checked");
+			$(".dog_type"+no).addClass("h21_cal_checked");
+
+			$("#dog_type").val(no);
+			$("#bcs_type").val("");
+			$("ul[id^='bcs_sel_']").hide();
+			$("#bcs_sel_"+no+"_img").show();
+		}
+	</script>
+
 </body>
 </html>
-
-/* others_나이 계산기 */
-
-box-sizing: border-box;
-
-position: relative;
-width: 1920px;
-height: 2149px;
-
-background: #FFFFFF;
-border: 1px solid #000000;
-
-
-/* Group 12 */
-
-position: absolute;
-width: 1920px;
-height: 122px;
-left: 0px;
-top: 0px;
-
-
-
-/* Rectangle 1 */
-
-position: absolute;
-width: 1920px;
-height: 120px;
-left: 0px;
-top: 1px;
-
-background: #FFEBC9;
-
-
-/* 댕댕 1 */
-
-position: absolute;
-width: 188.72px;
-height: 120px;
-left: 0px;
-top: 2px;
-
-background: url(댕댕.png);
-
-
-/* Petkage 펫키지 */
-
-position: absolute;
-width: 200px;
-height: 120px;
-left: 189px;
-top: 0px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 32px;
-line-height: 39px;
-display: flex;
-align-items: center;
-
-color: #753422;
-
-
-
-/* My Pet */
-
-position: absolute;
-width: 592px;
-height: 109px;
-left: calc(50% - 592px/2);
-top: 217px;
-
-font-family: 'Lexend Exa';
-font-style: normal;
-font-weight: 700;
-font-size: 64px;
-line-height: 80px;
-text-align: center;
-
-color: #E3B7A0;
-
-
-
-/* Rectangle 34 */
-
-position: absolute;
-width: 400px;
-height: 251px;
-left: 366px;
-top: 458px;
-
-/* #E3B7A0 */
-background: #E3B7A0;
-border-radius: 50px 0px 0px 50px;
-
-
-/* Rectangle 35 */
-
-position: absolute;
-width: 400px;
-height: 251px;
-left: 766px;
-top: 458px;
-
-/* Style */
-background: #FFEBC9;
-
-
-/* Rectangle 36 */
-
-position: absolute;
-width: 400px;
-height: 251px;
-left: 1166px;
-top: 458px;
-
-/* Style */
-background: #FFEBC9;
-border-radius: 0px 50px 50px 0px;
-
-
-/* Group 95 */
-
-position: absolute;
-width: 107px;
-height: 107px;
-left: 513px;
-top: 503px;
-
-
-
-/* image 21 */
-
-position: absolute;
-width: 107px;
-height: 107px;
-left: 513px;
-top: 503px;
-
-background: url(image.png);
-
-
-/* Group 96 */
-
-position: absolute;
-width: 107px;
-height: 107px;
-left: 912px;
-top: 503px;
-
-
-
-/* image 21 */
-
-position: absolute;
-width: 107px;
-height: 107px;
-left: 912px;
-top: 503px;
-
-background: url(image.png);
-
-
-/* Group 97 */
-
-position: absolute;
-width: 107px;
-height: 107px;
-left: 1297px;
-top: 503px;
-
-
-
-/* image 21 */
-
-position: absolute;
-width: 107px;
-height: 107px;
-left: 1297px;
-top: 503px;
-
-background: url(image.png);
-
-
-/* 나이 계산기 */
-
-position: absolute;
-width: 321px;
-height: 57px;
-left: 406px;
-top: 632px;
-
-font-family: 'Lexend Exa';
-font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 50px;
-text-align: center;
-
-color: #FFFFFF;
-
-
-
-/* 권장 칼로리 */
-
-position: absolute;
-width: 321px;
-height: 57px;
-left: 805px;
-top: 632px;
-
-font-family: 'Lexend Exa';
-font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 50px;
-text-align: center;
-
-color: #050505;
-
-
-
-/* 비만도 계산기 */
-
-position: absolute;
-width: 321px;
-height: 57px;
-left: 1190px;
-top: 632px;
-
-font-family: 'Lexend Exa';
-font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 50px;
-text-align: center;
-
-color: #050505;
-
-
-
-/* Rectangle 37 */
-
-position: absolute;
-width: 1200px;
-height: 568px;
-left: 366px;
-top: 822px;
-
-background: #F8F8F8;
-border-radius: 50px;
-
-
-/* Group 93 */
-
-position: absolute;
-width: 584px;
-height: 74px;
-left: 667px;
-top: 1235px;
-
-
-
-/* Rectangle 14 */
-
-position: absolute;
-width: 584px;
-height: 74px;
-left: 667px;
-top: 1235px;
-
-/* #E3B7A0 */
-background: #E3B7A0;
-border-radius: 20px;
-
-
-/* 결과 보기 */
-
-position: absolute;
-width: 507.02px;
-height: 37.97px;
-left: 704.16px;
-top: 1253.5px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 800;
-font-size: 40px;
-line-height: 48px;
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #FFFFFF;
-
-
-
-/* Group 98 */
-
-position: absolute;
-width: 1018px;
-height: 223px;
-left: 450px;
-top: 928px;
-
-
-
-/* Group 40 */
-
-position: absolute;
-width: 182.29px;
-height: 79px;
-left: 680px;
-top: 1060px;
-
-
-
-/* Rectangle 14 */
-
-position: absolute;
-width: 182.29px;
-height: 79px;
-left: 680px;
-top: 1060px;
-
-/* #E3B7A0 */
-background: #E3B7A0;
-border-radius: 20px;
-
-
-/* 소 (~9kg) */
-
-position: absolute;
-width: 158.26px;
-height: 40.54px;
-left: 691.6px;
-top: 1079.75px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 800;
-font-size: 24px;
-line-height: 29px;
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #FFFFFF;
-
-
-
-/* Group 42 */
-
-position: absolute;
-width: 182.29px;
-height: 79px;
-left: 1082.71px;
-top: 1060px;
-
-
-
-/* Rectangle 14 */
-
-position: absolute;
-width: 182.29px;
-height: 79px;
-left: 1082.71px;
-top: 1060px;
-
-/* #E3B7A0 */
-background: #E3B7A0;
-border-radius: 20px;
-
-
-/* 대 (23kg이상) */
-
-position: absolute;
-width: 158.26px;
-height: 40.54px;
-left: 1094.31px;
-top: 1079.75px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 800;
-font-size: 24px;
-line-height: 29px;
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #FFFFFF;
-
-
-
-/* Group 41 */
-
-position: absolute;
-width: 203px;
-height: 174px;
-left: 864px;
-top: 965px;
-
-
-
-/* Rectangle 14 */
-
-position: absolute;
-width: 182.29px;
-height: 79px;
-left: 881.35px;
-top: 1060px;
-
-/* 803D3D */
-background: #803D3D;
-border-radius: 20px;
-
-
-/* 중 (9~23kg) */
-
-position: absolute;
-width: 158.26px;
-height: 40.54px;
-left: 893.78px;
-top: 1079.75px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 800;
-font-size: 24px;
-line-height: 29px;
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #FFFFFF;
-
-
-
-/* ex) 19940305 */
-
-position: absolute;
-width: 203px;
-height: 41px;
-left: 864px;
-top: 965px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 800;
-font-size: 24px;
-line-height: 29px;
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #000000;
-
-
-
-/* Group 43 */
-
-position: absolute;
-width: 182.29px;
-height: 79px;
-left: 683px;
-top: 936px;
-
-
-
-/* Rectangle 14 */
-
-position: absolute;
-width: 182.29px;
-height: 79px;
-left: 683px;
-top: 936px;
-
-/* 803D3D */
-background: #803D3D;
-border-radius: 20px;
-
-
-/* 생년월일입력 */
-
-position: absolute;
-width: 273px;
-height: 102px;
-left: 450px;
-top: 928px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 800;
-font-size: 40px;
-line-height: 48px;
-display: flex;
-align-items: center;
-
-color: #000000;
-
-
-
-/* 몸무게 선택 */
-
-position: absolute;
-width: 273px;
-height: 102px;
-left: 450px;
-top: 1049px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 800;
-font-size: 40px;
-line-height: 48px;
-display: flex;
-align-items: center;
-
-color: #000000;
-
-
-
-/* Line 15 */
-
-position: absolute;
-width: 1018px;
-height: 0px;
-left: 450px;
-top: 1032px;
-
-border: 1px solid #000000;
-
-
-/* Line 14 */
-
-position: absolute;
-width: 1565px;
-height: 0px;
-left: 177px;
-top: 373px;
-
-/* #D6D6D6 */
-border: 4px solid #D6D6D6;
-
-
-/* Group 13 */
-
-position: absolute;
-width: 1920px;
-height: 608px;
-left: 0px;
-top: 1541px;
-
-
-
-/* Rectangle 11 */
-
-position: absolute;
-width: 1920px;
-height: 608px;
-left: 0px;
-bottom: 0px;
-
-background: #FFEBC9;
-
-
-/* Petkage */
-
-position: absolute;
-width: 435px;
-height: 84px;
-left: 162px;
-bottom: 479px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 800;
-font-size: 64px;
-line-height: 77px;
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #753422;
-
-
-
-/* 댕댕 2 */
-
-position: absolute;
-width: 929px;
-height: 607px;
-left: 977px;
-bottom: 0px;
-
-background: url(댕댕.png);
