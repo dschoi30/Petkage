@@ -31,15 +31,16 @@
 	<link rel="stylesheet" href="../../CSS/common/footer.css"></link>
     
 	<!-- Age_calculator css -->
-	<link rel="stylesheet" href="../../CSS/others/age_calculator.css"></link>
-    <link rel="stylesheet" href="../../CSS/others/age_calculator_result.css"></link>
+	<link rel="stylesheet" href="../../CSS/tools/age_calculator.css"></link>
+    <link rel="stylesheet" href="../../CSS/tools/age_calculator_result.css"></link>
+	
+	<!-- Calorie_calculator css -->
+	<link rel="stylesheet" href="../../CSS/tools/calorie_calculator.css"></link>
 
 	<!-- Bootstrap css-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
 	<!-- <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> -->
-
-	
 </head>
 <body>
 	<!-- Header 시작 -->
@@ -67,16 +68,16 @@
     </section>
 	<!-- Header 끝 -->
 
-	<!-- Age_calculator 시작 -->
-	<section class="ot">
-		<div class="others-container">
-			<div class="others_A_container">
+	<!-- calorie_calculator 시작 -->
+	<section class="ta">
+		<div class="tools-container">
+			<div class="tools_A_container">
 
 				<!-- 계산기 전체 상단 -->
 				<div class="cal_top pr">
 					<div class="cal_top_box pr area">
 						<div class="cal_Tbg">
-							<h3 class="">FOR MY<span> PET</span> TOOLS</h3>
+							<h3 class="">Tools For MY<span> PET</span></h3>
 							<p class="cal_top_h3_line_c"></p>
 						</div>
 					</div>
@@ -120,16 +121,27 @@
 							<div class="content_write">
 								<span class="content_write_input write_divline" >
 									<h5>반려동물 선택</h5>
-									<fieldset>
+									<div class="pet_choice">
+										<!-- 선택 시 pet_on-->
+										<div class="pet_off" id="dog_on">
+											<img src="../../resources/images/Laughing_Dog.png" alt="Option Image" id="pet_choice_dog">
+											<p>강아지</p>
+										</div>
+										<div class="pet_off" id="cat_on">
+											<img src="../../resources/images/Laughing_Cat.png" alt="Option Image" id="pet_choice_cat">
+											<p>고양이</p>
+										</div>
+									</div>
+									<!-- <fieldset>
 										<label for="dog_check"><input type="radio" class="animal_choice" id="dog_check" name="animal_check" value="dog_check" checked><span>강아지</span></label>
 										<label for="cat_check"><input type="radio" class="animal_choice" id="cat_check" name="animal_check" value="cat_check"><span>고양이</span></label>
-									</fieldset>
+									</fieldset> -->
 								</span>
 								<span class="content_write_input write_divline">
 									<h5>몸무게 입력</h5>
 									<input type="text" name="dog_weight" id="dog_weight"  inputmode="numeric" pattern="[0-9]*" placeholder="kg단위로 입력해주세요" title="">
 								</span>
-								<span class="content_write_input write_divline" id="cat_hide">
+								<span class="content_write_input write_divline">
 									<h5>몸무게 선택</h5>
                                     <label>
                                         <select id="dog_jisu" name="dog_jisu">
@@ -191,7 +203,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- Age_calculator 끝 -->
+	<!-- calorie_calculator 끝 -->
 	
 	<!-- Footer 시작 -->
 	<section class="ft">
@@ -243,7 +255,6 @@
 		function dogcal_tab(tab){
 			$("div[id^='contents']").hide();
 			$("#contents_tab_"+tab).show();
-
 		}
 
 		$(document).ready(function() {
@@ -258,12 +269,16 @@
 			this.value = autoBirth(_val) ;
 		}
 
-		$("#dog_check").on("click", function() {
+		$("#pet_choice_dog").on("click", function() {
 			$("#cat_hide").show();
+			$("#dog_on").addClass("pet_on");
+			$("#_on").removeClass("pet_off");
 		})
 
-		$("#cat_check").on("click", function() {
+		$("#pet_choice_cat").on("click", function() {
 			$("#cat_hide").hide();
+			$("#cat_on").addClass("pet_on");
+			$("#cat_on").removeClass("pet_off");
 		})
 
 		init();

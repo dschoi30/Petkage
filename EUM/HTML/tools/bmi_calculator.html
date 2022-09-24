@@ -4,45 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>age_calculator</title>
+    <title>bmi_calculator</title>
 
 	<!-- Font -->
 	<style>
-		@font-face {
-			font-family: '양진체';
-			src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
-			font-weight: normal;
-			font-style: normal;
-		}
-	
-		@font-face {
-			font-family: 'HS-Regular';
-			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff') format('woff');
-			font-weight: normal;
-			font-style: normal;
-		}
-
-		/* 20px 이상 안 깨짐 */
-		@font-face { 
-			font-family: 'ImcreSoojin';
-			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
-			font-weight: normal;
-			font-style: normal;
-		}
-
-		@font-face {
-			font-family: 'Jal_Onuel';
-			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Jal_Onuel.woff') format('woff');
-			font-weight: normal;
-			font-style: normal;
-		}
-
-		@font-face {
-			font-family: "twayair";
-			src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff") format("woff");
-			font-weight: normal;
-			font-style: normal;
-		}
 
 		/* 폰트 자체 아래에 여백이 있음 */
 		@font-face {
@@ -89,7 +54,7 @@
                     <li class="nav-item header_item"><a href="#" class="nav-link header_link">어디가지</a></li>
                     <li class="nav-item header_item"><a href="#" class="nav-link header_link">커뮤니티</a></li>
                     <li class="nav-item header_item"><a href="#" class="nav-link header_link">마켓</a></li>
-                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">OTHERS</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">펫키지 툴</a></li>
                     <input type="button" class="headerBtn" value="마이페이지" >
                     <input type="button" class="headerBtn" id="loginBtn" value="로그아웃">
         
@@ -105,7 +70,7 @@
 	<!-- Age_calculator 시작 -->
 	<section class="ot">
 		<div class="others-container">
-			<div class="others_A_container">
+			<div class="others_B_container">
 
 				<!-- 계산기 전체 상단 -->
 				<div class="cal_top pr">
@@ -121,7 +86,7 @@
 				<div class="cal_menu pr">
 					<div class="cal_menu_btn">
 						<ul>
-							<li class='active'>
+							<li class=''>
 								<a href="?m1Code=tip&m2Code=dogcal&tab_id=1">
 									<span class="cal_icon"><img src="http://appdata.hungryapp.co.kr/images/hatdog/img/pc_img/calculator/btnicon_cal01_on.png" alt="나이계산기" /></span>
 									<span class="cal_txt">나이계산기</span>
@@ -133,7 +98,7 @@
 									<span class="cal_txt">권장칼로리</span>
 								</a>
 							</li>
-							<li class=''>
+							<li class='active'>
 								<a href="?m1Code=tip&m2Code=dogcal&tab_id=3">
 									<span class="cal_icon"><img src="http://appdata.hungryapp.co.kr/images/hatdog/img/pc_img/calculator/btnicon_cal03_on.png" alt="비만도계산기" /></span>
 									<span class="cal_txt">비만도계산기</span>
@@ -293,30 +258,6 @@
 			$("#cat_hide").hide();
 		})
 
-		var dog_type_btn = document.getElementsByClassName("dog_type_btn");
-
-		function handleClick(event) {
-			console.log(event.target);
-
-			console.log(event.target.classList);
-
-			if (event.target.classList[1] === "cal_type_checked") {
-				event.target.classList.remove("cal_type_checked");
-			} else {
-				for (var i = 0; i < dog_type_btn.length; i++) {
-					dog_type_btn[i].classList.remove("cal_type_checked");
-				}
-
-				event.target.classList.add("cal_type_checked");
-			}
-		}
-
-		function init() {
-			for (var i = 0; i < dog_type_btn.length; i++) {
-				dog_type_btn[i].addEventListener("click", handleClick);
-			}
-		}
-
 		init();
 
 		function result_view(tab_id){
@@ -376,18 +317,17 @@
 					$(".h21_calculator_sns").show();
 					$(".Cc_form").hide();
 
-					//나이계산기
-					if(tab_id==1){
+					if(tab_id==1){ // 나이 계산
 						$(".Cc_result_age").css("display","block");
 						$("#dog_age").html(r.msg[0]);
 						$("#dog_age_cal").html(r.msg[1]+"살");
 						$("#dog_life").html(r.msg[2]);
-					}else if(tab_id==2){//칼로리계산
+					}else if(tab_id==2){ //칼로리 계산
 						$(".Cc_result_calorie").css("display","block");
 						$("#basic_meta").html(r.msg[0]+"kcal");
 						$("#basic_kal").html(r.msg[1]+"kcal");
 						
-					}else if(tab_id==3){//칼로리계산
+					}else if(tab_id==3){ // 비만도 계산
 						$(".Cc_result_obesity").css("display","block");
 						$("#bsc_type_str1").html(r.msg_pc[0]);
 						$("#bsc_type_str2").html(r.msg_pc[1]);
@@ -396,53 +336,6 @@
 
 				}
 			})
-		}
-
-		function isBirthday(dateStr) { 
-			$("#birth_chk_str").hide();
-			dateStr = dateStr.replace(/[^0-9]/g, '');
-			var year = Number(dateStr.substr(0,4)); // 입력한 값의 0~4자리까지 (연) 
-			var month = Number(dateStr.substr(4,2)); // 입력한 값의 4번째 자리부터 2자리 숫자 (월) 
-			var day = Number(dateStr.substr(6,2)); // 입력한 값 6번째 자리부터 2자리 숫자 (일) 
-			var today = new Date(); // 날짜 변수 선언 
-			var yearNow = today.getFullYear(); // 올해 연도 가져옴 
-
-
-			if (dateStr.length <=10) { // 연도의 경우 1900 보다 작거나 yearNow 보다 크다면 false를 반환합니다. 
-				if (1900 > year || year > yearNow){ 
-					alert("날짜형식이 다릅니다.");
-					$('input[name="dog_date"]').focus()
-					return false;
-				} else if (month < 1 || month > 12) { 
-					alert("날짜형식이 다릅니다.");
-					$('input[name="dog_date"]').focus()
-					return false;
-				} else if (day < 1 || day > 31) {
-					alert("날짜형식이 다릅니다.");
-					$('input[name="dog_date"]').focus()
-					return false;
-				} else if ((month==4 || month==6 || month==9 || month==11) && day==31) { 
-					alert("날짜형식이 다릅니다.");
-					$('input[name="dog_date"]').focus()
-					return false;
-				} else if (month == 2) {
-					var isleap = (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)); 
-					if (day>29 || (day==29 && !isleap)) { 
-						alert("날짜형식이 다릅니다.");
-						$('input[name="dog_date"]').focus()
-						return false;
-					} else { 
-						return true;
-					}
-				} else { 
-					return true;
-				}//end of if
-			} else { //1.입력된 생년월일이 8자 초과할때 : auth:false 
-				alert("날짜형식이 다릅니다.");
-				$('input[name="dog_date"]').focus()
-				return false;
-			} 
-
 		}
 
 		function bcs_sel(no){//비만도선택
