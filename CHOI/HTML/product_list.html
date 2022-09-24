@@ -47,18 +47,8 @@
         <div class="row">
             <div class="contents">
                 <br><br>
-                <div class="row justify-content-center"><h2>상품</h2></div>
-                <div class="col-md-4">
-                    <div class="row mb-3 mt-3">
-                        <div>
-                            <a href="javascript:recentlist();">최신순</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
-                            <a href="javascript:pricelist();">낮은가격</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
-                            <a href="javascript:pricelistdesc();">높은가격</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-xs-2 col-sm-2">
+                <div class="row justify-content-center">
+                    <!-- <div class="col-xs-1">
                         <select id="searchType" name="searchType" class="form-control">
                             <option value="all" selected>전체</option>
                             <option value="food">사료/간식</option>
@@ -66,111 +56,222 @@
                             <option value="furniture">식기/집/이동장</option>
                             <option value="toy">장난감/위생/훈련</option>
                         </select>
-                    </div>
-                    <div class="col-xs-5 col-sm-5">
-                        <div class="input-group">
-                            <input type="text" name="searchVal" id="searchInput" class="form-control">
+                    </div> -->
+                    <div class="wrap-category">
+                        <div class="category-info-top"><h3>마켓</h3></div>
+                        <div class="wrap-search-bar">
+                            <input type="text" name="searchVal" id="searchInput" class="form-control" size="60">
                             <span class="input-group-btn">
-                                <button id="searchBtn" class="btn btn-light text-nowrap">검색</button>
+                                <button id="searchBtn">
+                                    <img src="/CHOI/IMG/category/best-icon.png" width="23" height="23" alt="search">
+                                </button>
                             </span>
                         </div>
                     </div>
                 </div>
+                <div class="row justify-content-center">
+                    <input type="button" class="category-btn-on" value="강아지">
+                    <input type="button" class="category-btn-off" value="고양이">
+                </div>
                 <div class="row">
-                    <div class="row row-cols-1 row-cols-md-4">
+                    <div class="col-xs-4 col-sm-12">
+                        <ul class="wrap-subcategory">
+                            <li class="subcategory">
+                                <button class="btn-subcategory">
+                                    <span class="span-subcategory-img">
+                                        <img src="../IMG/category/best-icon.png" width="60" height="60" alt="">
+                                    </span>
+                                    <span class="span-subcategory">
+                                        <div class="">베스트</div>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="subcategory">
+                                <button class="btn-subcategory">
+                                    <span class="span-subcategory-img">
+                                        <img src="../IMG/category/dog-icon1.png" width="60" height="60" alt="">
+                                    </span>
+                                    <span class="span-subcategory">
+                                        <div class="">사료/간식</div>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="subcategory">
+                                <button class="btn-subcategory">
+                                    <span class="span-subcategory-img">
+                                        <img src="../IMG/category/dog-icon3.png" width="60" height="60" alt="">
+                                    </span>
+                                    <span class="span-subcategory">
+                                        <div class="">건강관리</div>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="subcategory">
+                                <button class="btn-subcategory">
+                                    <span class="span-subcategory-img">
+                                        <img src="../IMG/category/dog-icon4.png" width="60" height="60" alt="">
+                                    </span>
+                                    <span class="span-subcategory">
+                                        <div class="">배변용품</div>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="subcategory">
+                                <button class="btn-subcategory">
+                                    <span class="span-subcategory-img">
+                                        <img src="../IMG/category/dog-icon5.png" width="60" height="60" alt="">
+                                    </span>
+                                    <span class="span-subcategory">
+                                        <div class="">리빙용품</div>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="subcategory">
+                                <button class="btn-subcategory">
+                                    <span class="span-subcategory-img">
+                                        <img src="../IMG/category/dog-icon6.png" width="60" height="60" alt="">
+                                    </span>
+                                    <span class="span-subcategory">
+                                        <div class="">식기/급수기</div>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="subcategory">
+                                <button class="btn-subcategory">
+                                    <span class="span-subcategory-img">
+                                        <img src="../IMG/category/dog-icon7.png" width="60" height="60" alt="">
+                                    </span>
+                                    <span class="span-subcategory">
+                                        <div class="">미용/목욕</div>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="subcategory">
+                                <button class="btn-subcategory">
+                                    <span class="span-subcategory-img">
+                                        <img src="../IMG/category/dog-icon8.png" width="60" height="60" alt="">
+                                    </span>
+                                    <span class="span-subcategory">
+                                        <div class="">야외용품</div>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="subcategory">
+                                <button class="btn-subcategory">
+                                    <span class="span-subcategory-img">
+                                        <img src="../IMG/category/dog-icon9.png" width="60" height="60" alt="">
+                                    </span>
+                                    <span class="span-subcategory">
+                                        <div class="">장난감</div>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="subcategory">
+                                <button class="btn-subcategory">
+                                    <span class="span-subcategory-img">
+                                        <img src="../IMG/category/dog-icon10.png" width="60" height="60" alt="">
+                                    </span>
+                                    <span class="span-subcategory">
+                                        <div class="">패션용품</div>
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="row filter-list">
+                    <a href="javascript:recentlist();">최신순</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+                    <a href="javascript:pricelist();">낮은가격</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+                    <a href="javascript:pricelistdesc();">높은가격</a>
+                </div>
+                <div class="row">
+                    <div class="row row-cols-2 row-cols-md-4">
                         <div class="col mb-4">
-                            <a class="page-link" href="#">
-                            <div class="card h-100">
+                            <a class="page-link" href="/CHOI/HTML/product_view.html" style="border: 0;">
+                            <div class="card h-100" style="border: 0;">
                                     <img src="/CHOI/IMG/dogfood.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <p class="card-text">탐사 6free 강아지 사료 연어 레시피, 3kg</p>
                                         <p class="rating">★★★★★ (후기 : 99건)</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <div class="col mb-4">
-                            <a class="page-link" href="#">
-                            <div class="card h-100">
+                            <a class="page-link" href="/CHOI/HTML/product_view.html" style="border: 0;">
+                            <div class="card h-100" style="border: 0;">
                                     <img src="/CHOI/IMG/dogfood.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <p class="card-text">탐사 6free 강아지 사료 연어 레시피, 3kg</p>
                                         <p class="rating">★★★★★ (후기 : 99건)</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <div class="col mb-4">
-                            <a class="page-link" href="#">
-                            <div class="card h-100">
+                            <a class="page-link" href="/CHOI/HTML/product_view.html" style="border: 0;">
+                            <div class="card h-100" style="border: 0;">
                                     <img src="/CHOI/IMG/dogfood.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <p class="card-text">탐사 6free 강아지 사료 연어 레시피, 3kg</p>
                                         <p class="rating">★★★★★ (후기 : 99건)</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <div class="col mb-4">
-                            <a class="page-link" href="#">
-                            <div class="card h-100">
+                            <a class="page-link" href="/CHOI/HTML/product_view.html" style="border: 0;">
+                            <div class="card h-100" style="border: 0;">
                                     <img src="/CHOI/IMG/dogfood.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <p class="card-text">탐사 6free 강아지 사료 연어 레시피, 3kg</p>
                                         <p class="rating">★★★★★ (후기 : 99건)</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div class="row row-cols-1 row-cols-md-4">
+                    <div class="row row-cols-2 row-cols-md-4">
                         <div class="col mb-4">
-                            <a class="page-link" href="#">
-                            <div class="card h-100">
+                            <a class="page-link" href="#" style="border: 0;">
+                            <div class="card h-100" style="border: 0;">
                                     <img src="/CHOI/IMG/dogfood.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <p class="card-text">탐사 6free 강아지 사료 연어 레시피, 3kg</p>
                                         <p class="rating">★★★★★ (후기 : 99건)</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <div class="col mb-4">
-                            <a class="page-link" href="#">
-                            <div class="card h-100">
+                            <a class="page-link" href="#" style="border: 0;">
+                            <div class="card h-100" style="border: 0;">
                                     <img src="/CHOI/IMG/dogfood.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <p class="card-text">탐사 6free 강아지 사료 연어 레시피, 3kg</p>
                                         <p class="rating">★★★★★ (후기 : 99건)</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <div class="col mb-4">
-                            <a class="page-link" href="#">
-                            <div class="card h-100">
+                            <a class="page-link" href="#" style="border: 0;">
+                            <div class="card h-100" style="border: 0;">
                                     <img src="/CHOI/IMG/dogfood.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <p class="card-text">탐사 6free 강아지 사료 연어 레시피, 3kg</p>
                                         <p class="rating">★★★★★ (후기 : 99건)</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <div class="col mb-4">
-                            <a class="page-link" href="#">
-                            <div class="card h-100">
+                            <a class="page-link" href="#" style="border: 0;">
+                            <div class="card h-100" style="border: 0;">
                                     <img src="/CHOI/IMG/dogfood.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <p class="card-text">탐사 6free 강아지 사료 연어 레시피, 3kg</p>
                                         <p class="rating">★★★★★ (후기 : 99건)</p>
                                     </div>
                                 </div>
@@ -180,13 +281,13 @@
                 </div>
                 <div>
                     <ul class="pagination justify-content-center">
-                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">&lt;</a></li>
                         <li class="page-item"><a class="page-link" href="#">1</a></li>
                         <li class="page-item"><a class="page-link" href="#">2</a></li>
                         <li class="page-item"><a class="page-link" href="#">3</a></li>
                         <li class="page-item"><a class="page-link" href="#">4</a></li>
                         <li class="page-item"><a class="page-link" href="#">5</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        <li class="page-item"><a class="page-link" href="#">&gt;</a></li>
                     </ul>
                 </div>
             </div>

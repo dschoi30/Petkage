@@ -15,6 +15,10 @@
 
     <!-- Product CSS-->
     <link rel="stylesheet" href="/CHOI/CSS/product.css">
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="/EUM/CSS/common/header.css"></link>
+    <link rel="stylesheet" href="/EUM/CSS/common/footer.css"></link>
     
     <!-- jQuery js -->  
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>   
@@ -26,130 +30,155 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="container">
-        <div class="row">
-            <div class="header" style="width: 100%; height: 100px; background-color: rgba(255,235,201,1);">Header</div>
+    <section class="hd">
+        <div class="header_container">
+            <header class="d-flex flex-wrap mb-4">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+                    <img src="/EUM/resources/images/Petkage_Logo2.png" alt="" class="headerLogo">
+                </a>
+
+                <ul class="nav nav-pills">
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">어디가지</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">커뮤니티</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">마켓</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">OTHERS</a></li>
+                    <input type="button" class="headerBtn" id="loginBtn" value="로그인">
+                    <a href="/" class="d-flex align-items-center headercart">
+                        <img src="/EUM/resources/images/Cart.png" alt="" class="cart">
+                    </a>
+                </ul>
+            </header>
         </div>
+    </section>
+    <div id="container">
         <div class="row">
             <div class="contents" style="margin-bottom: 50px;">
                 <br><br>
                 <div class="row justify-content-center"><h2>상품 상세</h2></div>
                 <br>
-                <div class="col">
-                    <div>
-                        <div id="prodImageItems">
-                            <div id="carouselIndicators" class="carousel slide" data-touch="false" data-interval="false">
-                                <ol class="carousel-indicators">
-                                    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carouselIndicators" data-slide-to="1"></li>
-                                    <li data-target="#carouselIndicators" data-slide-to="2"></li>
-                                    <li data-target="#carouselIndicators" data-slide-to="3"></li>
-                                    <li data-target="#carouselIndicators" data-slide-to="4"></li>
-                                </ol>
-                                <div class="carousel-inner">
-                                    <div class="carousel-images">
-                                        <div class="carousel-item active">
-                                        <img src="/CHOI/IMG/dogfood.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                        <img src="/CHOI/IMG/dogfood2.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                        <img src="/CHOI/IMG/dogfood3.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                        <img src="/CHOI/IMG/dogfood4.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                        <img src="/CHOI/IMG/dogfood5.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                    </div>
+                <div id="prodImageItems">
+                    <div id="carouselIndicators" class="carousel slide" data-touch="false" data-interval="false">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="3"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="4"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-images">
+                                <div class="carousel-item active">
+                                <img src="/CHOI/IMG/dogfood.jpg" class="d-block w-100" alt="...">
                                 </div>
-                                <button class="carousel-control-prev" type="button" data-target="#carouselIndicators" data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-target="#carouselIndicators" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                                </button>
-                            </div>
-                            <div class="prod-images-bar">
-                                <ul class="prod-images">
-                                    <li>
-                                        <a href="#" class="_1F-riHNwNb" role="button" aria-selected="false">
-                                            <img src="/CHOI/IMG/dogfood.jpg" width="80" height="80" alt="대표이미지">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="_1F-riHNwNb" role="button" aria-selected="false">
-                                            <img src="/CHOI/IMG/dogfood2.jpg" width="80" height="80" alt="추가이미지0">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="_1F-riHNwNb" role="button" aria-selected="false">
-                                            <img src="/CHOI/IMG/dogfood3.jpg" width="80" height="80" alt="추가이미지1">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="_1F-riHNwNb" role="button" aria-selected="false">
-                                            <img src="/CHOI/IMG/dogfood4.jpg" width="80" height="80" alt="추가이미지2">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="_1F-riHNwNb" role="button" aria-selected="false">
-                                            <img src="/CHOI/IMG/dogfood5.jpg" width="80" height="80" alt="추가이미지3">
-                                        </a>
-                                    </li>
-                                </ul>
+                                <div class="carousel-item">
+                                <img src="/CHOI/IMG/dogfood2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                <img src="/CHOI/IMG/dogfood3.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                <img src="/CHOI/IMG/dogfood4.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                <img src="/CHOI/IMG/dogfood5.jpg" class="d-block w-100" alt="...">
+                                </div>
                             </div>
                         </div>
+                        <button class="carousel-control-prev" type="button" data-target="#carouselIndicators" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-target="#carouselIndicators" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                        </button>
+                    </div>
+                    <div class="prod-images-bar">
+                        <ul class="prod-images">
+                            <li>
+                                <a href="#" class="_1F-riHNwNb" role="button" aria-selected="false">
+                                    <img src="/CHOI/IMG/dogfood.jpg" width="80" height="80" alt="대표이미지">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="_1F-riHNwNb" role="button" aria-selected="false">
+                                    <img src="/CHOI/IMG/dogfood2.jpg" width="80" height="80" alt="추가이미지0">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="_1F-riHNwNb" role="button" aria-selected="false">
+                                    <img src="/CHOI/IMG/dogfood3.jpg" width="80" height="80" alt="추가이미지1">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="_1F-riHNwNb" role="button" aria-selected="false">
+                                    <img src="/CHOI/IMG/dogfood4.jpg" width="80" height="80" alt="추가이미지2">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="_1F-riHNwNb" role="button" aria-selected="false">
+                                    <img src="/CHOI/IMG/dogfood5.jpg" width="80" height="80" alt="추가이미지3">
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col">
-                    <div id="prodSummary">
-                        <div class="prod-brand">탐사
-                        </div>
-                        <div class="prod-title">
-                            <h3>탐사 6free 강아지 사료 연어 레시피</h2>
-                        </div>
-                        <span class="rating">★★★★★</span>
+                <div id="prodSummary">
+                    <div class="prod-brand">탐사
+                    </div>
+                    <div class="prod-title">
+                        <h3>탐사 6free 강아지 사료 연어 레시피</h2>
+                    </div>
+                    <div class="wrap-rating">
+                        <span class="rating">
+                            <img src="/CHOI/IMG/star_filled.png" width="20" height="20" alt="star">
+                            <img src="/CHOI/IMG/star_filled.png" width="20" height="20" alt="star">
+                            <img src="/CHOI/IMG/star_filled.png" width="20" height="20" alt="star">
+                            <img src="/CHOI/IMG/star_filled.png" width="20" height="20" alt="star">
+                            <img src="/CHOI/IMG/star_filled.png" width="20" height="20" alt="star">
+                        </span>
                         <span class="review-count">12개 상품평</span>
-                        <span class="badge badge-secondary">New</span>
-                        <div class="prod-original-price">
-                            18,000원 (정상가)
-                        </div>
-                        <div class="prod-sale-price">
-                            <span class="sale-price">14,490원</span>
-                            <span clas="sale-price-info">(할인가)</span>
-                        </div>
-                        <div class="reward-point">
-                            700원 적립
-                        </div>
-                        <div class="delivery-etd">
-                            지금 주문 시 9/19(월)에 발송됩니다.
-                        </div>
-                        <br>
-                        <div>
-                        </div>
-                        <div class="prod-total-price">
-                            <span class="col mt-2 p-0"><input type="number" value="1" min="1" max="999" step="1" required></span>
-                            <span class="total-price-info">총 상품 금액</span>
-                            <span class="total-price">14,490원</span>
-                        </div>
-                        <br>
-                        <div class="prod-summary-footer">
+                        <span class="badge badge-secondary badge-new">New</span>
+                    </div>
+                    <div class="prod-original-price">
+                        19% <s>18,000원</s> (정상가)
+                    </div>
+                    <div class="prod-sale-price">
+                        <span class="sale-price">14,490원</span>
+                        <span clas="sale-price-info">(할인가)</span>
+                    </div>
+                    <div class="reward-point">
+                        700원 적립
+                    </div>
+                    <div class="delivery-etd">
+                        지금 주문 시 9/19(월)에 발송됩니다.
+                    </div>
+                    <br>
+                    <div>
+                    </div>
+                    <div class="prod-total-price">
+                        <span class="col mt-2 p-0"><label>수량 : <input type="number" value="1" min="1" max="999" step="1" dir="rtl" required></label></span>
+                        <span class="total-price-info">총 상품 금액</span>
+                        <span class="total-price">14,490원</span>
+                    </div>
+                    <br>
+                    <div class="prod-summary-footer">
+                        <a href="/CHOI/HTML/product_cart.html">
                             <button class="btn btn-light">장바구니</button>
+                            <!-- <input type="button" class="prod-summary-pay-btn" value="장바구니"> -->
+                        </a>
+                        <a href="/CHOI/HTML/product_payment.html">
                             <button class="btn btn-dark">바로구매</button>
-                        </div>
+                            <!-- <input type="button" class="prod-summary-pay-btn" value="바로구매"> -->
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="contents">
-                <div class="col" id="tap-contents-wrap">
-                    <ul class="tap-contents" id="topFix">
+                <div id="topFix">
+                    <ul class="tap-contents" >
                         <li><a href="#prodContent">상품상세</a></li>
                         <li><a href="#prodReview">상품평</a></li>
                         <li><a href="#prodQna">상품문의</a></li>
@@ -179,7 +208,37 @@
                             <div class="review">
                                 <div class="user-img"><img src="/CHOI/IMG/reviewer.jpg" width="50px;"></div>
                                 <span>김*혜</span>
-                                <div>★★★★★</div>
+                                <div>
+                                    <span>★★★★★</span>
+                                    <span>2022.09.24</span>
+                                </div>                                <div>
+                                    탐사 제품이 점점 퀄리티가 좋아지는거 같아서<br>
+                                    우리 강아지 사료도 한번 주문해봤어요!<br>
+                                    5살 말티즈 입맛 까다로운 아이인데 잘 먹네요!!
+                                </div>
+                                <img class="img" src="/CHOI/IMG/review1.jpg" width="80" height="80">
+                                <img class="img" src="/CHOI/IMG/review2.jpg" width="80" height="80">
+                                <img class="img" src="/CHOI/IMG/review3.jpg" width="80" height="80">
+                                <div class="modal">
+                                    <span class="close">&times;</span>
+                                    <img class="modal_content" src="/CHOI/IMG/review1.jpg">
+                                </div>
+                                <div class="modal">
+                                    <span class="close">&times;</span>
+                                    <img class="modal_content" src="/CHOI/IMG/review2.jpg">
+                                </div>
+                                <div class="modal">
+                                    <span class="close">&times;</span>
+                                    <img class="modal_content" src="/CHOI/IMG/review3.jpg">
+                                </div>
+                            </div>
+                            <div class="review">
+                                <div class="user-img"><img src="/CHOI/IMG/reviewer.jpg" width="50px;"></div>
+                                <span>김*혜</span>
+                                <div>
+                                    <span>★★★★★</span>
+                                    <span>2022.09.24</span>
+                                </div>
                                 <div>
                                     탐사 제품이 점점 퀄리티가 좋아지는거 같아서<br>
                                     우리 강아지 사료도 한번 주문해봤어요!<br>
@@ -204,32 +263,10 @@
                             <div class="review">
                                 <div class="user-img"><img src="/CHOI/IMG/reviewer.jpg" width="50px;"></div>
                                 <span>김*혜</span>
-                                <div>★★★★★</div>
                                 <div>
-                                    탐사 제품이 점점 퀄리티가 좋아지는거 같아서<br>
-                                    우리 강아지 사료도 한번 주문해봤어요!<br>
-                                    5살 말티즈 입맛 까다로운 아이인데 잘 먹네요!!
+                                    <span>★★★★★</span>
+                                    <span>2022.09.24</span>
                                 </div>
-                                <img class="img" src="/CHOI/IMG/review1.jpg" width="80" height="80">
-                                <img class="img" src="/CHOI/IMG/review2.jpg" width="80" height="80">
-                                <img class="img" src="/CHOI/IMG/review3.jpg" width="80" height="80">
-                                <div class="modal">
-                                    <span class="close">&times;</span>
-                                    <img class="modal_content" src="/CHOI/IMG/review1.jpg">
-                                </div>
-                                <div class="modal">
-                                    <span class="close">&times;</span>
-                                    <img class="modal_content" src="/CHOI/IMG/review2.jpg">
-                                </div>
-                                <div class="modal">
-                                    <span class="close">&times;</span>
-                                    <img class="modal_content" src="/CHOI/IMG/review3.jpg">
-                                </div>
-                            </div>
-                            <div class="review">
-                                <div class="user-img"><img src="/CHOI/IMG/reviewer.jpg" width="50px;"></div>
-                                <span>김*혜</span>
-                                <div>★★★★★</div>
                                 <div>
                                     탐사 제품이 점점 퀄리티가 좋아지는거 같아서<br>
                                     우리 강아지 사료도 한번 주문해봤어요!<br>
@@ -272,9 +309,9 @@
                                     <thead>
                                         <tr>
                                             <th class="py-0.5" style="width: 10%; text-align: center;">답변상태</th>
-                                            <th class="py-0.5" style="width: 70%; text-align: center;">제목</th>
-                                            <th class="py-0.5" style="width: 10%; text-align: center;">작성자</th>
-                                            <th class="py-0.5" style="width: 10%; text-align: center;">작성일</th>
+                                            <th class="py-0.5" style="width: 60%; text-align: center;">제목</th>
+                                            <th class="py-0.5" style="width: 15%; text-align: center;">작성자</th>
+                                            <th class="py-0.5" style="width: 15%; text-align: center;">작성일</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -358,10 +395,40 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="footer" style="width: 100%; height: 200px; background-color: rgba(255,235,201,1);">Footer</div>
-        </div>
     </div>
+    <section class="ft">
+        <div class="footer_container">
+            <footer class="footer_section1">
+                    <p class="footerName">Petkage</p>
+                    <ul class="nav footer_nav">
+                        <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">이용약관</a></li>
+                        <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">개인정보 취급방침</a></li>
+                        <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">공지사항</a></li>
+                        <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">FAQ</a></li>
+                    </ul>
+                    <div class="footer_contents">
+                        <p class="footer_content">회사명 : (주)펫키지 대표 : 문인수 / 전화 : 070-1234-5678 / 주소 : 서울특별시 강남구 테헤란로 14길 6 남도빌딩</p>
+                        <p class="footer_content">사업자 등록번호 안내 : 123-45-6789 / 통신판매업 신고 2022-서울강남-03472 <a href="">[사업자정보 확인]</a>  </p>
+                        <p class="footer_content">&copy;펫키지. All Rights Reserved</p>
+                    </div>
+                    <div class="footer_icons">
+                        <a href="/" class="">
+                            <img src="/EUM/resources/images/Instagram.png" alt="" class="footericon">
+                        </a>
+                        <a href="/" class="">
+                            <img src="/EUM/resources/images/Facebook.png" alt="" class="footericon">
+                        </a>
+                        <a href="/" class="">
+                            <img src="/EUM/resources/images/youtube.png" alt="" class="footericon">
+                        </a>
+                        <a href="/" class="">
+                            <img src="/EUM/resources/images/kakaotalk.png" alt="" class="footericon">
+                        </a>
+                    </div>
+                    <img src="/EUM/resources/images/Pet2.png" alt="" class="footerLogo">
+            </footer>
+        </div>
+    </section>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
