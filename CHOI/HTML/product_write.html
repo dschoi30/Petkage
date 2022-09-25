@@ -12,6 +12,10 @@
 
     <!-- Product CSS-->
     <link rel="stylesheet" href="/CHOI/CSS/product.css">
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="/EUM/CSS/common/header.css"></link>
+    <link rel="stylesheet" href="/EUM/CSS/common/footer.css"></link>
     
     <!-- jQuery JS -->  
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>   
@@ -25,98 +29,151 @@
     <title>Header</title>
 </head>
 <body>
-    <div id="container">
-        <div class="row">
-            <div class="header" style="width: 100%; height: 100px; background-color: rgba(255,235,201,1);">Header</div>
+    <section class="hd">
+        <div class="header_container">
+            <header class="d-flex flex-wrap mb-4">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+                    <img src="/EUM/resources/images/Petkage_Logo2.png" alt="" class="headerLogo">
+                </a>
+
+                <ul class="nav nav-pills">
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">어디가지</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">커뮤니티</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">마켓</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">OTHERS</a></li>
+                    <input type="button" class="headerBtn" id="loginBtn" value="로그인">
+                    <a href="/" class="d-flex align-items-center headercart">
+                        <img src="/EUM/resources/images/Cart.png" alt="" class="cart">
+                    </a>
+                </ul>
+            </header>
         </div>
+    </section>
+    <div id="wrap-all-prod">
         <div class="row">
             <div class="contents">
                 <br><br>
                 <div class="row justify-content-center"><h2>상품 등록</h2></div>
                 <br><br>
-                <div class="">
-                    <div class="">
-                        <form method="post">
-                            <table class="table">
-                                <tr>
-                                    <td><b>상품명</b></td>
-                                    <td><input type="text" size="80" placeholder="노출 상품명 입력(브랜드명 + 상품명)"></td>
-                                </tr>
-                                <tr>
-                                    <td><b>카테고리</b></td>
-                                    <td>
-                                        <select required>
-                                            <option>카테고리 선택</option>
-                                            <option value="food">사료/간식</option>
-                                            <option value="cloth">미용/패션</option>
-                                            <option value="furniture">식기/집/이동장</option>
-                                            <option value="toy">장난감/위생/훈련</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><b>태그</b></td>
-                                    <td><input type="text" size="80" placeholder="쉼표(,)로 구분하여 최대 10개까지 입력 가능"></td>
-                                </tr>
-                                <tr>
-                                    <td><b>대표 이미지</b></td>
-                                    <td><input type="file" name="cit_file_1" id="cit_file_1" /></td>
-                                </tr>
-                                <tr>
-                                    <td><b>추가 이미지 1/5</b></td>
-                                    <td><input type="file" name="cit_file_1" id="cit_file_1" /></td>
-                                </tr>
-                                <tr>
-                                    <td><b>추가 이미지 2/5</b></td>
-                                    <td><input type="file" name="cit_file_1" id="cit_file_1" /></td>
-                                </tr>
-                                <tr>
-                                    <td><b>추가 이미지 3/5</b></td>
-                                    <td><input type="file" name="cit_file_1" id="cit_file_1" /></td>
-                                </tr>
-                                <tr>
-                                    <td><b>추가 이미지 4/5</b></td>
-                                    <td><input type="file" name="cit_file_1" id="cit_file_1" /></td>
-                                </tr>
-                                <tr>
-                                    <td><b>추가 이미지 5/5</b></td>
-                                    <td><input type="file" name="cit_file_1" id="cit_file_1" /></td>
-                                </tr>
-                            </table>
-                            <br>
-                            <table class="table">
-                                <tr>
-                                    <td><b>상품 수량(개)</b></td>
-                                    <td><b>정상가(원)</b></td>
-                                    <td><b>판매가(원)</b></td>
-                                    <td><b>배송비(원)</b></td>
-                                    <td><b>출고 소요 기간(일)</b></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="number" value="1" min="1" max="999" step="1" required></td>
-                                    <td><input type="text" dir="rtl"></td>
-                                    <td><input type="text" dir="rtl"></td>
-                                    <td><input type="text" dir="rtl"></td>
-                                    <td><input type="text" dir="rtl"></td>
-                                </tr>
-                            </table>
-                            <br>
-                            <textarea id="summernote" name="editordata"></textarea>
-                            <br>
-                            <div id="align-center">
-                                <button type="reset" class="btn btn-light text-nowrap">입력취소</button>
-                                <button class="btn btn-light text-nowrap">미리보기</button>
-                                <button class="btn btn-light text-nowrap">중간저장</button>
-                                <button class="btn btn-light text-nowrap">저장하기</button>
-                            </div>
-                        </form>
+                <form method="post">
+                    <table class="table">
+                        <tr>
+                            <td><b>상품명</b></td>
+                            <td><input type="text" size="80" placeholder="노출 상품명 입력(브랜드명 + 상품명)"></td>
+                        </tr>
+                        <tr>
+                            <td><b>카테고리</b></td>
+                            <td>
+                                <select required>
+                                    <option>카테고리 선택 1</option>
+                                    <option value="dog">강아지</option>
+                                    <option value="cat">고양이</option>
+                                </select>
+                                <select required>
+                                    <option>카테고리 선택 2</option>
+                                    <option value="food">사료/간식</option>
+                                    <option value="health">건강/관리</option>
+                                    <option value="poo">배변용품</option>
+                                    <option value="living">리빙용품</option>
+                                    <option value="beauty">미용/목욕</option>
+                                    <option value="outdoor">야외용품</option>
+                                    <option value="toy">장난감</option>
+                                    <option value="fashion">패션용품</option>
+                                    <option value="etc">기타</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>태그</b></td>
+                            <td><input type="text" size="80" placeholder="쉼표(,)로 구분하여 최대 10개까지 입력 가능"></td>
+                        </tr>
+                        <tr>
+                            <td><b>대표 이미지</b></td>
+                            <td><input type="file" name="cit_file_1" id="cit_file_1" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>추가 이미지 1/5</b></td>
+                            <td><input type="file" name="cit_file_1" id="cit_file_1" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>추가 이미지 2/5</b></td>
+                            <td><input type="file" name="cit_file_1" id="cit_file_1" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>추가 이미지 3/5</b></td>
+                            <td><input type="file" name="cit_file_1" id="cit_file_1" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>추가 이미지 4/5</b></td>
+                            <td><input type="file" name="cit_file_1" id="cit_file_1" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>추가 이미지 5/5</b></td>
+                            <td><input type="file" name="cit_file_1" id="cit_file_1" /></td>
+                        </tr>
+                    </table>
+                    <table class="prod-input-detail">
+                        <tr>
+                            <td><b>상품 수량(개)</b></td>
+                            <td><b>정상가(원)</b></td>
+                            <td><b>판매가(원)</b></td>
+                            <td><b>배송비(원)</b></td>
+                            <td><b>출고 소요 기간(일)</b></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" size="18" dir="rtl"></td>
+                            <td><input type="text" size="18" dir="rtl"></td>
+                            <td><input type="text" size="18" dir="rtl"></td>
+                            <td><input type="text" size="18" dir="rtl"></td>
+                            <td><input type="text" size="18" dir="rtl"></td>
+                        </tr>
+                    </table>
+                    <br><br>
+                    <b>상품 상세 설명</b>
+                    <textarea id="summernote" name="editordata"></textarea>
+                    <br>
+                    <div id="align-center">
+                        <button type="reset" class="btn btn-light text-nowrap">입력취소</button>
+                        <button class="btn btn-light text-nowrap">미리보기</button>
+                        <button class="btn btn-light text-nowrap">중간저장</button>
+                        <button class="btn btn-light text-nowrap">저장하기</button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
-        <footer>
-            <div class="footer">Footer</div>
-        </footer>
+        <section class="ft">
+            <div class="footer_container">
+                <footer class="footer_section1">
+                        <p class="footerName">Petkage</p>
+                        <ul class="nav footer_nav">
+                            <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">이용약관</a></li>
+                            <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">개인정보 취급방침</a></li>
+                            <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">공지사항</a></li>
+                            <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">FAQ</a></li>
+                        </ul>
+                        <div class="footer_contents">
+                            <p class="footer_content">회사명 : (주)펫키지 대표 : 문인수 / 전화 : 070-1234-5678 / 주소 : 서울특별시 강남구 테헤란로 14길 6 남도빌딩</p>
+                            <p class="footer_content">사업자 등록번호 안내 : 123-45-6789 / 통신판매업 신고 2022-서울강남-03472 <a href="">[사업자정보 확인]</a>  </p>
+                            <p class="footer_content">&copy;펫키지. All Rights Reserved</p>
+                        </div>
+                        <div class="footer_icons">
+                            <a href="/" class="">
+                                <img src="/EUM/resources/images/Instagram.png" alt="" class="footericon">
+                            </a>
+                            <a href="/" class="">
+                                <img src="/EUM/resources/images/Facebook.png" alt="" class="footericon">
+                            </a>
+                            <a href="/" class="">
+                                <img src="/EUM/resources/images/youtube.png" alt="" class="footericon">
+                            </a>
+                            <a href="/" class="">
+                                <img src="/EUM/resources/images/kakaotalk.png" alt="" class="footericon">
+                            </a>
+                        </div>
+                        <img src="/EUM/resources/images/Pet2.png" alt="" class="footerLogo">
+                </footer>
+            </div>
+        </section>
     </div>
 
     <script>
