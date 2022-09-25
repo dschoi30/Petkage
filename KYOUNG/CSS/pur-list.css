@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.mp-pur .v91_238 {
+    color: #959595;
+    font-family: Inter;
+    font-weight: Extra Bold;
+    font-size: 20px;
+    opacity: 1;
+}
+.mp-pur .page-link {
+    color: #000; 
+    background-color: #fff;
+    border: 1px solid #ccc; 
+  }
+  
+.mp-pur .page-ite.mp-purm.active.mp-pur .page-link {
+  z-index: 1;
+  color: #555;
+  font-weight:bold;
+  background-color: #f1f1f1;
+  border-color: #ccc;
+  
+  }
+  
+.mp-pur .page-link:focus,.mp-pur .page-link:hover {
+    color: #000;
+    background-color: #fafafa; 
+    border-color: #ccc;
+  }
