@@ -1,0 +1,394 @@
+html {
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family: "GmarketSansMedium";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  * {
+    font-family: "GmarketSansMedium";
+  }
+
+  /* 반응형 */
+
+@media all and (max-width: 1023px) {
+    html {
+    font-size: 50%;
+    }
+
+    /* 검색 바*/
+    .wg_3 .wg_top {
+    width: 60%;
+    }
+
+    .wg_3 .ht_search2 {
+    width: 65%;
+    }
+
+}
+
+
+.wg_3 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wg_3 .wg_top {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.wg_3 .wg_top .wg_title {
+    display: flex;
+    width: 231px;
+    height: 100px;
+    align-items: center;
+    text-align: center;
+}
+
+.wg_3 .wg_top .wg_title p {
+    width: 100%;
+    font-weight: 800;
+    font-size: 3rem;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+.wg_3 .ht_search2 .ht_22 {
+    display: flex;
+}
+
+.wg_3 .ht_search2 input {
+    width: 829px;
+    height: 50px;
+    border: 3px solid #753422;
+    border-radius: 30px;
+}
+
+.wg_3 .ht_search2 button {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #753422;
+    border-left: none;
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    transform: translateX(-23px);
+}
+
+.wg_3 .ht_search2 button img{
+    width: 23px;
+    height: 23px;
+    transform: translatey(-4px);
+}
+
+/* 리뷰 게시판 상단 */
+
+.wg_3 .wgc_7 {
+    margin: 0 auto;
+    width: 1110px;
+    margin-top: 50px;
+}
+
+@media (max-width:1023px) {
+    .wg_3 .wgc_7 {
+    width: 90%;
+    }
+}
+
+/* 1) 리뷰 게시판 바*/
+
+.wg_3 .wgc_7 .wgc7_rbar {
+    width: 1110px;
+    height: 80px;
+    background-color: #FEDDB2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+@media (max-width:1023px) {
+    .wg_3 .wgc_7 .wgc7_rbar {
+    width: 100%;
+    height: 60px;
+    }
+}
+
+.wg_3 .wgc_7 .wgc7_rbar .wgc7r_img img {
+    width: 60px;
+    height: 60px;
+}
+
+.wg_3 .wgc_7 .wgc7_rbar .wgc7r_img {
+    width: 15%;
+    text-align: center;
+}
+
+.wg_3 .wgc_7 .wgc7_rbar .wgc7r_text {
+    width: 80%;
+}
+
+@media (max-width:1023px) {
+    .wg_3 .wgc_7 .wgc7_rbar .wgc7r_img img {
+    width: 40px;
+    height: 40px;
+    }
+}
+
+.wg_3 .wgc_7 .wgc7_rbar .wgc7r_text p {
+    margin: 0;
+}
+
+.wg_3 .wgc_7 .wgc7_rbar .wgc7r_text .wgc7rt_1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+}
+
+/* 옵션 */
+
+.wg_3 .wgc_7 .wgc7_option {
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 2px solid #b1b1b1;
+}
+
+.wg_3 .wgc_7 .wgc7_option .wgc7_select {
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+}
+
+.wg_3 .wgc_7 .wgc7_option .wgc7_select .wgc7_cate {
+    display: flex;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:1023px) {
+    .wg_3 .wgc_7 .wgc7_option .wgc7_select .wgc7_cate {
+    width: 30%;
+    }
+}
+
+.wg_3 .wgc_7 .wgc7_option .wgc7_select .wgc7_cate label,
+.wg_3 .wgc_7 .wgc7_option .wgc7_select .wgc7_location label {
+    margin-left: 5px;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.wg_3 .wgc_7 .wgc7_option .wgc7_select .wgc7_cate label {
+    width: 100px;
+}
+
+.wg_3 .wgc_7 .wgc7_option .wgc7_select .wgc7_cate .form-control {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #753422;
+    border-radius: 30px;
+    font-size: 1.4rem;
+}
+
+.wg_3 .wgc_7 .wgc7_option .wgc7_select .wgc7_cate .form-control:focus,
+.wg_3 .wgc_7 .wgc7_option .wgc7_select .wgc7_location .form-control:focus {
+    box-shadow: 0rem 0rem 1.2rem 0 #fab357;
+}
+
+.wg_3 .wgc_7 .wgc7_option .wgc7_select .wgc7_location {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:1023px) {
+    .wg_3 .wgc_7 .wgc7_option .wgc7_select .wgc7_location {
+    width: 45%;
+    }
+}
+
+.wg_3 .wgc_7 .wgc7_option .wgc7_select .wgc7_location label {
+    width: 100px;
+}
+
+.wg_3 .wgc_7 .wgc7_option .wgc7_select .wgc7_location .form-control {
+    width: 270px;
+    height: 30px;
+    border: 1px solid #753422;
+    border-radius: 30px;
+    font-size: 1.4rem;
+}
+
+/* 별점 */
+
+
+.wg_3 .wgc_7 .wgc7_option .wgc7_score {
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.wg_3 .wgc_7 .wgc7_option .wgc7_score .wgc7_sl {
+    display: flex;
+    width: 10%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1px;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-right: 35px;
+}
+
+@media (max-width:1023px) {
+    .wg_3 .wgc_7 .wgc7_option .wgc7_score .wgc7_sl {
+    margin-right: 50px;
+    }
+}
+
+.wg_3 .wgc_7 .wgc7_option .wgc7_score .wgc7_star fieldset{
+    display: flex;
+    direction: rtl;
+    border:0;
+    align-items: center;
+    justify-content: center;
+}
+
+.wg_3 .wgc_7 .wgc7_option .wgc7_score .wgc7_star fieldset legend{
+    text-align: right;
+}
+.wg_3 .wgc_7 .wgc7_option .wgc7_score .wgc7_star input[type=radio]{
+    display: none;
+}
+.wg_3 .wgc_7 .wgc7_option .wgc7_score .wgc7_star label{
+    font-size: 4rem;
+    color: transparent;
+    text-shadow: 0 0 0 #e2e1e1;
+    padding-right: 10px;
+    padding-bottom: 3px;
+}
+
+.wg_3 .wgc_7 .wgc7_option .wgc7_score .wgc7_star label:hover{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+.wg_3 .wgc_7 .wgc7_option .wgc7_score .wgc7_star label:hover ~ label{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+.wg_3 .wgc_7 .wgc7_option .wgc7_score .wgc7_star input[type=radio]:checked ~ label{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+
+/* 업로드 및 텍스트 */
+
+.wg_3 .wgc_7 .wgc7_write {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+}
+
+.wg_3 .wgc_7 .wgc7_write .wgc7w_upload, 
+.wg_3 .wgc_7 .wgc7_write .wgc7w_text {
+    width: 50%;
+    text-align: center;
+}
+
+
+/* 업로드 */
+.wg_3 .wgc_7 .wgc7_write .wgc7w_upload {
+    list-style: none;
+}
+
+.wg_3 .wgc_7 .wgc7_write .wgc7w_upload .btn-upload {
+    width: 150px;
+    height: 50px;
+    background: #fff;
+    border: 2px solid #753422;
+    border-radius: 30px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #753422;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wg_3 .wgc_7 .wgc7_write .wgc7w_upload .btn-upload:hover {
+    background: #753422;
+    color: #fff;
+}
+
+.wg_3 .wgc_7 .wgc7_write .wgc7w_upload #image {
+    display: none;
+}
+
+
+/* textarea */
+.wg_3 .wgc_7 .wgc7_write .wgc7w_text .form-group .form-control {
+    height: 280px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 1.8rem;
+}
+
+.wg_3 .wgc_7 .wgc7_write .wgc7w_text .form-group .form-control::placeholder {
+    color: #753422;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    padding-top: 120px;
+}
+
+/* 버튼 */
+.wg_3 .wgc_7 .wgc7_button {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-top: 2px solid #b1b1b1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 150px;
+}
+
+.wg_3 .wgc_7 .wgc7_button button {
+    width: 150px;
+    height: 50px;
+    background: #753422;
+    border: 2px solid #753422;
+    border-radius: 30px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wg_3 .wgc_7 .wgc7_button button:hover {
+    background: #fff;
+    color: #753422;
+}

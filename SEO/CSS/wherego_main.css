@@ -1,3 +1,38 @@
+html {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "GmarketSansMedium";
+}
+
+/* 반응형 */
+
+@media all and (max-width: 1023px) {
+  html {
+    font-size: 50%;
+  }
+
+  /* 검색 바*/
+  .wg_1 .wg_top {
+    width: 60%;
+  }
+
+  .wg_1 .ht_search2 {
+    width: 65%;
+  }
+
+}
+
+
 .wg_1 {
   margin: 0;
   padding: 0;
@@ -23,7 +58,7 @@
 .wg_1 .wg_top .wg_title p {
   width: 100%;
   font-weight: 800;
-  font-size: 2.5em;
+  font-size: 3rem;
   align-items: center;
   text-align: center;
   margin: 0;
@@ -71,6 +106,15 @@
   overflow: hidden;           
   border-radius: 20px;
 }      
+
+@media (max-width:1023px) {
+  .wg_1 #visual {
+    width: 85%;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+}
+
 .wg_1 #visual>div {
   position: absolute;
   left: 0;
@@ -89,6 +133,7 @@
   bottom: 30px;
   text-align: center;      
 }
+
 .wg_1 #control a {
   display: inline-block;
   width: 10px;
@@ -98,6 +143,12 @@
   font-size: 0.8em;
   border-radius: 14px;
   margin: 0 2px;
+}
+
+@media (max-width:1023px) {
+  .wg_1 #control a {
+    display: none;
+  }
 }
 
 .wg_1 #control a.on {
@@ -152,6 +203,7 @@
   transition: .4s ease;
 }
 
+
 .wg_1 div#right>span:first-child{
   position: absolute;
   display: inline-block;
@@ -183,10 +235,25 @@
   width: 1110px;
 }
 
+@media (max-width:1023px) {
+  .wg_1 .wg_cate {
+    margin-top: -30px;
+    width: 90%;
+  }
+}
+
 .wg_1 .wg_cate img {
   width: 40px;
   height: 40px;
   cursor: pointer;
+}
+
+@media (max-width:1023px) {
+  .wg_1 .wg_cate img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
 }
 
 
@@ -200,6 +267,13 @@
   justify-content: center;
 }
 
+@media (max-width:1023px) {
+  .wg_1 .wg_cate .wgc_1, .wgc_2 {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
 .wg_1 .wg_cate .wgc_box {
   width: 277px;
   text-align: center;
@@ -208,7 +282,7 @@
 
 .wg_1 .wg_cate .wgc_box p {
   margin: 0;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 800;
   cursor: pointer;
 }
@@ -248,9 +322,24 @@
   cursor: pointer;
 }
 
+@media (max-width:1023px) {
+  .wg_1 .wg_cate .wgc_3 {
+    width: 90%;
+    margin: 0 auto;
+    height: 70px;
+  }
+}
+
 .wg_1 .wg_cate .wgc_3 .wgc3_img img {
   width: 80px;
   height: 80px;
+}
+
+@media (max-width:1023px) {
+  .wg_1 .wg_cate .wgc_3 .wgc3_img img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .wg_1 .wg_cate .wgc_3 .wgc3_text p {
@@ -262,12 +351,12 @@
 }
 
 .wg_1 .wg_cate .wgc_3 .wgc3_text .wgct_1 {
-  font-size: 25px;
+  font-size: 2rem;
   font-weight: 800;
 }
 
 .wg_1 .wg_cate .wgc_3 .wgc3_text .wgct_2 {
-  font-size: 20px;
+  font-size: 1.6rem;
   font-weight: 800;
 }
 
@@ -281,6 +370,14 @@
   color: white;
 }
 
+@media (max-width:1023px) {
+  .wg_1 .wg_cate .wgc_3 .wgc3_btn button {
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+  }
+}
+
 .wg_1 .wg_cate .wgc_3 .wgc3_btn button:hover {
   background-color: #ffffff;
   border: 1px solid #D79771;
@@ -288,7 +385,7 @@
 }
 
 .wg_1 .wg_cate .wgc_3 .wgc3_btn button p {
-  font-size: 20px;
+  font-size: 1.6rem;
   font-weight: 700;
   margin: 0 auto;
 }
@@ -299,7 +396,8 @@
   margin-top: 60px;
 }
 
-.cardsb {
+
+.wgc_4 .cardsb {
   position: relative;
   width: 1500px;
   height: 400px;
@@ -309,7 +407,6 @@
   padding: 0;
 }
 
-
 .swiper {
   width: 100%;
   height: 100%;
@@ -317,7 +414,7 @@
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.8rem;
   background: #fff;
 
   /* Center slide text vertically */
@@ -344,11 +441,18 @@
 }
 
 .wg_1 .wg_cate .wgc_4 .wgc4_text p {
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 800;
   margin: 0;
   margin-bottom: 30px;
 }
+
+@media (max-width:1023px) {
+  .wg_1 .wg_cate .wgc_4 .wgc4_text p {
+    margin: 0 auto;
+  }
+}
+
 
 .wg_1 .wg_cate .wgc_4 .cardsb .wgc4_card {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -380,12 +484,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 800;
 }
 
 .wg_1 .wg_cate .wgc_4 .cardsb .card_text .ct_2 {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 800;
 }
 
@@ -397,8 +501,14 @@
   width: 1110px;
 }
 
+@media (max-width:1023px) {
+  .wg_1 .wgc_5 {
+    width: 90%;
+  }
+}
+
 .wg_1 .wgc_5 .wgc5_text {
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 800;
   margin: 0;
   margin-bottom: 30px;
@@ -412,22 +522,37 @@
   cursor: pointer;
 }
 
+@media (max-width:1023px) {
+  .wg_1 .wgc_5 .card{
+    width: 100%;
+    height: 200px;
+  }
+}
+
 .wg_1 .wgc_5 .card img {
   width: 100%;
   height: 250px;
   border-radius: 50px;
 }
 
+@media (max-width:1023px) {
+  .wg_1 .wgc_5 .card img {
+    height: 200px;
+  }
+}
+
+
 .wg_1 .wgc_5 .card .card-img-overlay {
   display: flex;
   flex-direction: column;
   justify-content: end;
   font-weight: 800;
+  margin-left: 20px;
 }
 
 .wg_1 .wgc_5 .card .card-img-overlay p {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1.8rem;
 }
 
 /* 2 */
@@ -436,10 +561,18 @@
 
 }
 
+@media (max-width:1023px) {
+  .wg_1 .wgc_5 .wgc5_rm {
+    margin-top: 50px;
+  }
+}
+
+
 .wg_1 .wgc_5 .wgc5_rm img {
   width: 300px;
   height: 180px;
 }
+
 
 .wg_1 .wgc_5 .wgc5_rm .wgcm_1, .wgcm_3 {
   display: flex;
@@ -470,12 +603,12 @@
 
 
 .wg_1 .wgc_5 .wgc5_rm .wgcm_text .wgcmt_1 {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 800;
 }
 
 .wg_1 .wgc_5 .wgc5_rm .wgcm_text .wgcmt_2 {
-  font-size: 20px;
+  font-size: 2.0rem;
   font-weight: 800;
 }
 
@@ -497,8 +630,15 @@
   margin-top: 100px;
 }
 
+@media (max-width:1023px) {
+  .wg_1 .wgc_6 {
+    width: 90%;
+  }
+}
+
+
 .wg_1 .wgc_6 .wgc6_text {
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 800;
   margin: 0;
   margin-bottom: 30px;
@@ -522,6 +662,13 @@
   border-radius: 30px;
 }
 
+@media (max-width:1023px) {
+  .wg_1 .wgc_6 .wgc6_cate section .btnBox {
+    width: 120px;
+    height: 50px;
+  }
+}
+
 .wg_1 .wgc_6 .wgc6_cate section .btnBox:hover {
   box-shadow: 0.4rem 0.4rem 1.2rem 0 rgba(151, 70, 4, 0.12);
 }
@@ -538,7 +685,7 @@
 }
 
 .wg_1 .wgc_6 .wgc6_cate section .btnBox .textItem p {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 800;
   line-height: 1.4;
   color: #1f1f1f;
@@ -548,6 +695,29 @@
 
 .wg_1 .wgc_6 .wgc6_cate section .btnBox.active .textItem p  {
   color: #ffffff;
+}
+
+/* 구조 */
+.plogCourseTab_row_02 {
+  position: relative;
+  /* 24px */
+  /* top: -1.600rem; */
+}
+.plogCourseTab_row_02 .content_container {
+  display: none;
+  margin: 0 !important;
+}
+.plogCourseTab_row_02 .content_container.active {
+  display: block;
+}
+
+/* 내용 */
+.plogCourseTab_row_02 .content_container section {
+  position: relative;
+  max-width: 80%;
+  margin: 30px auto 0 auto;
+  transform: translateX(0.8%);
+  padding: 0;
 }
 
 /* 2) 리스트 */
@@ -566,10 +736,23 @@
   align-items: center;
 }
 
+@media (max-width:1023px) {
+  .wg_1 .wgc_6 .wgc6_list .wgc6l_1, .wgc6l_2, .wgc6l_3 {
+    height: 100px;
+  }
+}
+
 .wg_1 .wgc_6 .wgc6_list .wgc6l_icon img {
   width: 80px;
   height: 80px;
   margin-left: 35px;
+}
+
+@media (max-width:1023px) {
+  .wg_1 .wgc_6 .wgc6_list .wgc6l_icon img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .wg_1 .wgc_6 .wgc6_list .wgc6l_img {
@@ -579,9 +762,23 @@
   margin-left: 75px;
 }
 
+@media (max-width:1023px) {
+  .wg_1 .wgc_6 .wgc6_list .wgc6l_img {
+    width: 100px;
+    height: 60px;
+  }
+}
+
 .wg_1 .wgc_6 .wgc6_list .wgc6l_img img {
   width: 150px;
   height: 80px;
+}
+
+@media (max-width:1023px) {
+  .wg_1 .wgc_6 .wgc6_list .wgc6l_img img {
+    width: 100px;
+    height: 60px;
+  }
 }
 
 .wg_1 .wgc_6 .wgc6_list .wgc6l_text {
@@ -591,17 +788,23 @@
   margin-left: 150px;
 }
 
+@media (max-width:1023px) {
+  .wg_1 .wgc_6 .wgc6_list .wgc6l_text {
+    margin-left: 80px;
+  }
+}
+
 .wg_1 .wgc_6 .wgc6_list .wgc6l_text p {
   margin: 0;
   font-weight: 800;
 }
 
 .wg_1 .wgc_6 .wgc6_list .wgc6l_text .wgc6lt_1 {
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 
 .wg_1 .wgc_6 .wgc6_list .wgc6l_text .wgc6lt_2 {
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 .wg_1 .wgc_6 .wgc6_list .wgc6l_score {
@@ -610,10 +813,17 @@
   margin-left: 200px;
 }
 
+@media (max-width:1023px) {
+  .wg_1 .wgc_6 .wgc6_list .wgc6l_score {
+    margin-left: 180px;
+  }
+}
+
 .wg_1 .wgc_6 .wgc6_list .wgc6l_score .wgc6ls_icon {
   width: 40px;
   height: 40px;
 }
+
 
 .wg_1 .wgc_6 .wgc6_list .wgc6l_score .wgc6ls_score {
   margin-left: 20px;
@@ -625,11 +835,11 @@
 }
 
 .wg_1 .wgc_6 .wgc6_list .wgc6l_score .wgc6ls_score p {
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 .wg_1 .wgc_6 .wgc6_list .wgc6l_score .wgc6ls_coment p {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #6B6B6B
 }
 
@@ -641,8 +851,14 @@
   margin-top: 100px;
 }
 
+@media (max-width:1023px) {
+  .wg_1 .wgc_7 {
+    width: 90%;
+  }
+}
+
 .wg_1 .wgc_7 .wgc7_text {
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 800;
   margin: 0;
   margin-bottom: 30px;
@@ -660,18 +876,30 @@
   cursor: pointer;
 }
 
+@media (max-width:1023px) {
+  .wg_1 .wgc_7 .wgc7_rbar {
+    width: 100%;
+  }
+}
+
 .wg_1 .wgc_7 .wgc7_rbar .wgc7r_img img {
   width: 60px;
   height: 60px;
 }
 
+@media (max-width:1023px) {
+  .wg_1 .wgc_7 .wgc7_rbar .wgc7r_img img {
+    width: 40px;
+    height: 40px;
+  }
+}
 
 .wg_1 .wgc_7 .wgc7_rbar .wgc7r_text p {
   margin: 0;
 }
 
 .wg_1 .wgc_7 .wgc7_rbar .wgc7r_text .wgc7rt_1 {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 800;
 }
 
@@ -685,6 +913,13 @@
   transition-duration: 0.4s;
 }
 
+@media (max-width:1023px) {
+  .wg_1 .wgc_7 .wgc7_rbar .wgc7r_btn button {
+    width: 90px;
+    height: 40px;
+  }
+}
+
 .wg_1 .wgc_7 .wgc7_rbar .wgc7r_btn button:hover {
   background-color: #ffffff;
   border: 1px solid #D79771;
@@ -692,7 +927,7 @@
 }
 
 .wg_1 .wgc_7 .wgc7_rbar .wgc7r_btn button p {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 700;
   margin: 0 auto;
 }
@@ -727,7 +962,7 @@
 
 .wg_1 .wgc_7 .wgc7_list .wgc7l_1 .wgc7l_1_1 .wgc7l_name p {
   margin: 0;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 800;
 }
 
@@ -746,6 +981,6 @@
 }
 
 .wg_1 .wgc_7 .wgc7_list .wgc7l_1 .wgc7l_1_2 .wgc7l_review {
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 
