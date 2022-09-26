@@ -15,7 +15,7 @@
 	float: left; 
 	text-align: center; 
   line-height: 100px;
-	font-family: "휴먼모음T", sans-serif; 
+	font-family: 'GmarketSansMedium'; 
 	border-left: 1px #00bcd4 solid;
 	background-color: #E3B7A0;;
   border-radius: 50%; 
@@ -271,7 +271,7 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  font-family: Lexend Exa;
+  font-family: 'GmarketSansMedium';
   font-weight: Bold;
   font-size: 20px;
   opacity: 1;
@@ -283,7 +283,7 @@
   position: absolute;
   top: 60px;
   left: 34px;
-  font-family: Lexend Exa;
+  font-family: 'GmarketSansMedium';
   font-weight: Bold;
   font-size: 24px;
   opacity: 1;
@@ -308,7 +308,7 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  font-family: Lexend Exa;
+  font-family: 'GmarketSansMedium';
   font-weight: Bold;
   font-size: 20px;
   opacity: 1;
@@ -320,7 +320,7 @@
   position: absolute;
   top: 60px;
   left: 88px;
-  font-family: Lexend Exa;
+  font-family: 'GmarketSansMedium';
   font-weight: Bold;
   font-size: 24px;
   opacity: 1;
@@ -345,7 +345,7 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  font-family: Lexend Exa;
+  font-family: 'GmarketSansMedium';
   font-weight: Bold;
   font-size: 20px;
   opacity: 1;
@@ -357,7 +357,7 @@
   position: absolute;
   top: 60px;
   left: 33px;
-  font-family: Lexend Exa;
+  font-family: 'GmarketSansMedium';
   font-weight: Bold;
   font-size: 24px;
   opacity: 1;
@@ -382,7 +382,7 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  font-family: Lexend Exa;
+  font-family: 'GmarketSansMedium';
   font-weight: Bold;
   font-size: 20px;
   opacity: 1;
@@ -394,7 +394,7 @@
   position: absolute;
   top: 60px;
   left: 79px;
-  font-family: Lexend Exa;
+  font-family: 'GmarketSansMedium';
   font-weight: Bold;
   font-size: 24px;
   opacity: 1;
@@ -419,7 +419,7 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  font-family: Lexend Exa;
+  font-family: 'GmarketSansMedium';
   font-weight: Bold;
   font-size: 20px;
   opacity: 1;
@@ -431,7 +431,7 @@
   position: absolute;
   top: 60px;
   left: 33px;
-  font-family: Lexend Exa;
+  font-family: 'GmarketSansMedium';
   font-weight: Bold;
   font-size: 24px;
   opacity: 1;
@@ -456,7 +456,7 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  font-family: Lexend Exa;
+  font-family: 'GmarketSansMedium';
   font-weight: Bold;
   font-size: 20px;
   opacity: 1;
@@ -468,7 +468,7 @@
   position: absolute;
   top: 60px;
   left: 33px;
-  font-family: Lexend Exa;
+  font-family: 'GmarketSansMedium';
   font-weight: Bold;
   font-size: 24px;
   opacity: 1;
@@ -493,7 +493,7 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  font-family: Lexend Exa;
+  font-family: 'GmarketSansMedium';
   font-weight: Bold;
   font-size: 20px;
   opacity: 1;
@@ -505,7 +505,7 @@
   position: absolute;
   top: 60px;
   left: 33px;
-  font-family: Lexend Exa;
+  font-family: 'GmarketSansMedium';
   font-weight: Bold;
   font-size: 24px;
   opacity: 1;

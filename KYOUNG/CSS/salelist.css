@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+.sp-1 ul.main-nav {
+	/* width:80%; */
+	display:table;
+	padding:0px;
+	margin:auto;
+    padding-right: 60px;
+}
+
+.sp-1 ul.main-nav .spage { 
+	list-style-type: none; 
+	width: 6em; 
+	height: 6em;
+	float: left; 
+	text-align: center; 
+    line-height: 100px;
+	font-family: 'GmarketSansMedium'; 
+	border-left: 1px #00bcd4 solid;
+	background-color: #E3B7A0;;
+    border-radius: 50%; 
+    position: relative;
+}
+
+/* ul.main-nav li:last-of-type {
+	border-right:1px #00bcd4 solid;
+} */
+
+.sp-1 ul.main-nav li a {
+	display: block;
+	padding:.1em;
+	text-decoration: none;
+	color: #803D3D;
+    font-size: 15px;
+}
+
+.sp-1 .spage {
+    margin-left: 50px;
+}
+
+
+/* ul.main-nav .mypage:hover > .submenu {
+    display: block;
+    
+} */
+
+/* hover시 배경색 변경 */
+
+.sp-1 ul.main-nav li:hover{
+	background-color: #803D3D;;
+    transition-duration: 0.5s;
+}
+
+.sp-1 ul.main-nav li:hover > a{
+	color:#FFF; /* 글자색*/
+}
+
+.sp-sl .container {
+    font-family: 'GmarketSansMedium';
+}
+
+.sp-sl .page-link {
+    color: #000; 
+    background-color: #fff;
+    border: 1px solid #ccc; 
+}

@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+.sp-1 ul.main-nav {
+	/* width:80%; */
+	display:table;
+	padding:0px;
+	margin:auto;
+    padding-right: 60px;
+}
+
+.sp-1 ul.main-nav .spage { 
+	list-style-type: none; 
+	width: 6em; 
+	height: 6em;
+	float: left; 
+	text-align: center; 
+    line-height: 100px;
+	font-family: 'GmarketSansMedium'; 
+	border-left: 1px #00bcd4 solid;
+	background-color: #E3B7A0;;
+    border-radius: 50%; 
+    position: relative;
+}
+
+/* ul.main-nav li:last-of-type {
+	border-right:1px #00bcd4 solid;
+} */
+
+.sp-1 ul.main-nav li a {
+	display: block;
+	padding:.1em;
+	text-decoration: none;
+	color: #803D3D;
+    font-size: 15px;
+}
+
+.sp-1 .spage {
+    margin-left: 50px;
+}
+
+
+/* ul.main-nav .mypage:hover > .submenu {
+    display: block;
+    
+} */
+
+/* hover시 배경색 변경 */
+
+.sp-1 ul.main-nav li:hover{
+	background-color: #803D3D;;
+    transition-duration: 0.5s;
+}
+
+.sp-1 ul.main-nav li:hover > a{
+	color:#FFF; /* 글자색*/
+}
+
+.sp-info .info {
+    position: absolute;
+    background: #FFEBC9;
+border-radius: 20px;
+padding-left: 100px;
+margin-left: 100px;
+left: 200px;
+}
+
+.sp-info .info1 {
+    position: absolute;
+    background: #FFEBC9;
+border-radius: 20px;
+padding-left: 400px;
+margin-left: 100px;
+left: 200px;
+}
+
+.sp-info .infofont {
+    font-family: 'GmarketSansMedium';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #803D3D;
+}
+
+.sp-info2 .container {
+    font-family: 'GmarketSansMedium';
+    border: 3px solid #D6D6D6;
+    border-radius: 20px;
+    padding: 20px;
+}
