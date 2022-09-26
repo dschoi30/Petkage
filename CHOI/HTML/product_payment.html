@@ -11,16 +11,38 @@
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">    
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
     <!-- Product CSS-->
     <link rel="stylesheet" href="/CHOI/CSS/product.css">
 
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="/EUM/CSS/common/header.css"></link>
+    <link rel="stylesheet" href="/EUM/CSS/common/footer.css"></link>
+    
     <title>Document</title>
 </head>
 <body>
-    <div id="container">
-        <div class="row">
-            <div class="header" style="width: 100%; height: 100px; background-color: rgba(255,235,201,1);">Header</div>
+    <section class="hd">
+        <div class="header_container">
+            <header class="d-flex flex-wrap mb-4">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+                    <img src="/EUM/resources/images/Petkage_Logo2.png" alt="" class="headerLogo">
+                </a>
+
+                <ul class="nav nav-pills">
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">어디가지</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">커뮤니티</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">마켓</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">OTHERS</a></li>
+                    <input type="button" class="headerBtn" id="loginBtn" value="로그인">
+                    <a href="/" class="d-flex align-items-center headercart">
+                        <img src="/EUM/resources/images/Cart.png" alt="" class="cart">
+                    </a>
+                </ul>
+            </header>
         </div>
+    </section>
+    <div id="wrap-all-prod">
         <div class="row">
             <div class="contents" style="margin-bottom: 0;">
                 <br><br>
@@ -116,10 +138,45 @@
                 </div>
             </div>
             <div class="contents">
-                <button class="pay-btn">결제하기</button>
+                <a href="/CHOI/HTML/product_payment_fin.html">
+                    <button class="cart-pay-btn">결제하기</button>
+                </a>
             </div>
         </div>
     </div>
+    <section class="ft">
+        <div class="footer_container">
+            <footer class="footer_section1">
+                    <p class="footerName">Petkage</p>
+                    <ul class="nav footer_nav">
+                        <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">이용약관</a></li>
+                        <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">개인정보 취급방침</a></li>
+                        <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">공지사항</a></li>
+                        <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">FAQ</a></li>
+                    </ul>
+                    <div class="footer_contents">
+                        <p class="footer_content">회사명 : (주)펫키지 대표 : 문인수 / 전화 : 070-1234-5678 / 주소 : 서울특별시 강남구 테헤란로 14길 6 남도빌딩</p>
+                        <p class="footer_content">사업자 등록번호 안내 : 123-45-6789 / 통신판매업 신고 2022-서울강남-03472 <a href="">[사업자정보 확인]</a>  </p>
+                        <p class="footer_content">&copy;펫키지. All Rights Reserved</p>
+                    </div>
+                    <div class="footer_icons">
+                        <a href="/" class="">
+                            <img src="/EUM/resources/images/Instagram.png" alt="" class="footericon">
+                        </a>
+                        <a href="/" class="">
+                            <img src="/EUM/resources/images/Facebook.png" alt="" class="footericon">
+                        </a>
+                        <a href="/" class="">
+                            <img src="/EUM/resources/images/youtube.png" alt="" class="footericon">
+                        </a>
+                        <a href="/" class="">
+                            <img src="/EUM/resources/images/kakaotalk.png" alt="" class="footericon">
+                        </a>
+                    </div>
+                    <img src="/EUM/resources/images/Pet2.png" alt="" class="footerLogo">
+            </footer>
+        </div>
+    </section>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script>
         function sample6_execDaumPostcode() {
