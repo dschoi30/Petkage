@@ -1,0 +1,450 @@
+html {
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family: "GmarketSansMedium";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+  * {
+    font-family: "GmarketSansMedium";
+}
+
+  /* 반응형 */
+
+@media all and (max-width: 1023px) {
+    html {
+    font-size: 50%;
+    }
+
+}
+
+
+.wg_4 {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    width: 1110px;
+}
+
+.wg_4 .wg_top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1023px) {
+    .wg_4 .wg_top {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+.wg_4 .wg_top .wg_title {
+    display: flex;
+    width: 250px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1023px) {
+    .wg_4 .wg_top .wg_title {
+        width: 200px;
+        margin: 0 auto;
+    }
+}
+
+.wg_4 .wg_top .wg_title img {
+    width: 50px;
+    height: 50px;
+}
+
+.wg_4 .wg_top .wg_title p {
+    width: 100%;
+    font-weight: 800;
+    font-size: 3rem;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+.wg_4 .ht_search2 {
+    width: 80%;
+}
+
+.wg_4 .ht_search2 .ht_12 {
+    display: flex;
+    align-items: center;
+}
+
+.wg_4 .ht_search2 select {
+    width: 650px;
+    height: 50px;
+    border: 3px solid #753422;
+    border-radius: 30px;
+    appearance: none;
+    cursor: pointer;
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #6B6B6B;
+}
+
+@media (max-width: 1023px) {
+    .wg_4 .ht_search2 select {
+        width: 500px;
+    }
+}
+
+.wg_4 .ht_search2 select option {
+    background-color: #d7967141;
+    text-align: center;
+    color: black;
+    font-size: 1.8rem;
+}
+
+.wg_4 .ht_search2 select option:first-child {
+    color: #6B6B6B;
+}
+
+.wg_4 .ht_search2 button {
+    width: 150px;
+    height: 50px;
+    background: #D79771;
+    border: 2px solid #D79771;
+    border-radius: 30px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 70px;
+}
+
+@media (max-width: 1023px) {
+    .wg_4 .ht_search2 button {
+        width: 100px;
+        margin-left: 50px;
+    }
+}
+
+.wg_4 .ht_search2 button:hover {
+    background: #fff;
+    color: #753422;
+}
+
+
+/* 필터 버튼 */
+.wg_4 .wg_filter {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+@media (max-width: 1023px) {
+    .wg_4 .wg_filter {
+        width: 90%;
+
+    }
+}
+
+
+.wg_4 .wg_filter button {
+    background: #ffffff;
+    cursor: pointer;
+    width: 190px;
+    height: 50px;
+    border: 1px solid #D79771;
+    border-radius: 30px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+@media (max-width: 1023px) {
+    .wg_4 .wg_filter button {
+        width: 150px;
+        margin: 0 auto;
+        margin-left: 50px;
+    }
+}
+
+.wg_4 .wg_filter #wgf_btn1,
+.wg_4 .wg_filter #wgf_btn2,
+.wg_4 .wg_filter #wgf_btn3 {
+    margin-right: 37px;
+}
+
+.wg_4 .wg_filter .wgfbtn:hover {
+    box-shadow: 0.4rem 0.4rem 1.2rem 0 rgba(151, 70, 4, 0.12);
+}
+
+.wg_4 .wg_filter .wgfbtn.active {
+    background-color: #D79771;
+    color: white;
+}
+
+.wg_4 .wg_content {
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.wg_4 .wg_content .wg_content_card {
+    width: 870px;
+}
+
+@media (max-width: 1023px) {
+    .wg_4 .wg_content .wg_content_card {
+        width: 58%;
+    }
+}
+
+
+.wg_4 .wg_content .wg_content_card .wgc4_card {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+
+.wg_4 .wg_content .wg_content_card .card_img img{
+    width: 870px;
+    height: 250px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+@media (max-width: 1023px) {
+    .wg_4 .wg_content .wg_content_card .card_img img {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+.wg_4 .wg_content .wg_content_card .card_text {
+    box-sizing: border-box;
+    width: 870px;
+    height: 120px;
+}
+
+@media (max-width: 1023px) {
+    .wg_4 .wg_content .wg_content_card .card_text {
+        width: 100%;
+        height: 80px;
+    }
+}
+
+
+
+.wg_4 .wg_content .wg_content_card .card_text .ct_1,
+.wg_4 .wg_content .wg_content_card .card_text .ct_2,
+.wg_4 .wg_content .wg_content_card .card_text .ct_3 {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 800;
+    padding-left: 20px;
+}
+
+.wg_4 .wg_content .wg_content_card .card_text .ct_3 {
+    font-size: 1.4rem;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.wg_4 .wg_content .wg_content_card .card_text .ct_2 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #FF7D04;
+}
+
+.wg_4 .wg_content .wg_sidebar {
+    width: 20%;
+    height: 900px;
+    border: 1px solid #bbbbbb;
+    border-radius: 10px;
+    margin-right: 20px;
+    position: sticky;
+    top: 15px;
+}
+
+@media (max-width: 1023px) {
+    .wg_4 .wg_content .wg_sidebar {
+        margin-left: 20px;
+        height: 800px;
+    }
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_date {
+    border-bottom: 2px solid #dddddd;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_date .datext {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_date label {
+    width: 50px;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_date input {
+    width: 120px;
+    border-radius: 20px;
+    border: 1px solid #D79771;
+    text-align: center;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_date .date-search-wrap {
+    margin-bottom: 20px;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_date #datepicker2 {
+    margin-top: 10px;
+}
+
+@media (max-width: 1023px) {
+    .wg_4 .wg_content .wg_sidebar .wgs_main .wgs_date #datepicker2 {
+        margin: 0;
+    }
+}
+
+@media (max-width: 1023px) {
+    .wg_4 .wg_content .wg_sidebar .wgs_main .wgs_date #datepicker1 {
+        margin-bottom: 10px;
+    }
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_option .optext {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-top: 20px;;
+    margin-bottom: 10px;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_option .opt_btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_option .opt_btn button {
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_option .opt_btn button[type=reset] {
+    border: 1px solid #D79771;
+    background-color: white;
+    color: #D79771;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_option .opt_btn button[type=submit] {
+    border: 1px solid #D79771;
+    background-color: #D79771;
+    color: white;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_opt_1 {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_opt_1 .wgs_ptext {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_opt_1 .wgs_pnumber {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_opt_1 .wgs_pnumber #result,
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_opt_1 .wgs_pnumber #result2 {
+    width: 35px;
+    color: #753422;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_opt_1 .wgs_pnumber input {
+    background-color: #fff;
+    border: none;
+    color: #6B6B6B;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_opt_1 .wgs_pnumber input:hover {
+    color: #753422;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_opt_1 .wgs_popt select {
+    width: 76px;
+    height: 20px;
+    font-size: 1.4rem;
+    border: 1px solid #D79771;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_opt_2 {
+    margin-top: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_opt_2 .wgs_ptext2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_opt_2 .wgs_popt2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_opt_2 .wgs_popt2 div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_opt_2 .wgs_popt2 input {
+    margin-right: 5px;
+}
+
+
+.wg_4 .wg_content .wg_sidebar .wgs_main .wgs_opt_2 .wgs_popt2 label {
+    width: 65px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 0;
+    margin-right: 8px;
+}
+
