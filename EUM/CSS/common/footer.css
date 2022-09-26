@@ -1,77 +1,80 @@
-.ft #wrapper{
-    height: auto;
-    min-height: 100%;
-    padding-bottom: 300px;
+.ft #wrapper {
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 300px;
 }
-
+.ft {
+  width: 100%;
+  overflow: hidden;
+}
 .ft .footer_container {
-    background-color: #FFEBC9;
-    height: 270px;
-    color: #803D3D;
-    padding-top: 5px;
-    position : relative;
-    /* transform : translateY(100%); */
+  background-color: #ffebc9;
+  height: 270px;
+  color: #803d3d;
+  padding-top: 5px;
+  position: relative;
+  /* transform : translateY(100%); */
 }
 
 .ft .footer_section1 {
-    padding-left: 100px;
-    position: relative;
+  padding-left: 100px;
+  position: relative;
 }
 
 .ft .footerName {
-    font-size: 50px;
-    font-weight: bold;
-    margin-left: 50px;
-    margin-bottom: 0px;
+  font-size: 50px;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-bottom: 0px;
 }
 
 .ft .footerLogo {
-    width: 300px;
-    /* margin-left: 20px; */
-    margin-top: 8px;
-    position: absolute;
-    left: 1000px;
-    bottom: 15px;
+  width: 300px;
+  /* margin-left: 20px; */
+  margin-top: 8px;
+  position: absolute;
+  left: 1000px;
+  bottom: 15px;
 }
 
 .ft .footer_nav {
-    margin-left: 21px;
-    margin-bottom: 5px;
+  margin-left: 21px;
+  margin-bottom: 5px;
 }
 
 .ft .footer_link {
-    color: #803D3D !important;
-    font-weight: bold;
-    font-size: 17px;
-    text-align: center;
-    margin-left: 10px;
+  color: #803d3d !important;
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+  margin-left: 10px;
 }
 
 .ft .footer_content {
-    font-weight: bold;
-    font-size: 10px;
-    margin: 0px;
-    margin-left: 50px;
+  font-weight: bold;
+  font-size: 10px;
+  margin: 0px;
+  margin-left: 50px;
 }
 
 .ft .footer {
-    margin-right:0px;
+  margin-right: 0px;
 }
 
 .ft .footer_contents {
-    left: 600px;
-    bottom: 10px;
+  left: 600px;
+  bottom: 10px;
 }
 .ft .footer_contents a {
-    color: #803D3D;
-    text-decoration: none;
+  color: #803d3d;
+  text-decoration: none;
 }
 
 .ft .footer_icons {
-    margin-left: 50px;
-    margin-top: 20px;
+  margin-left: 50px;
+  margin-top: 20px;
 }
 
 .ft .footer_icons img {
-    margin-right: 50px;
+  margin-right: 50px;
 }

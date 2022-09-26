@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="fonts/icomoon/style.css"> -->
+
+    <!-- <link rel="stylesheet" href="../CSS/owl.carousel.min.css"> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../CSS/login.css"> 
+
+    <!-- 헤더 스타일 -->
+    <link rel="stylesheet" href="../../EUM/CSS/common/header.css"></link>
+    <!-- 푸터 스타일 -->
+    <link rel="stylesheet" href="../../EUM/CSS/common/footer.css"></link>
+
+  </head>
+  <body>
+    <!-- 헤더 시작 -->
+    <section class="hd">
+      <div class="header_container">
+          <header class="d-flex flex-wrap mb-4">
+              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+                  <img src="../../EUM/resources/images/Petkage_Logo2.png" alt="" class="headerLogo">
+              </a>
+
+              <ul class="nav nav-pills">
+                  <li class="nav-item header_item"><a href="#" class="nav-link header_link">어디가지</a></li>
+                  <li class="nav-item header_item"><a href="#" class="nav-link header_link">커뮤니티</a></li>
+                  <li class="nav-item header_item"><a href="#" class="nav-link header_link">마켓</a></li>
+                  <li class="nav-item header_item"><a href="#" class="nav-link header_link">OTHERS</a></li>
+                  <input type="button" class="headerBtn" id="loginBtn" value="로그인">
+                  <a href="/" class="d-flex align-items-center headercart">
+                      <img src="../../EUM/resources/images/Cart.png" alt="" class="cart">
+                  </a>
+              </ul>
+          </header>
+      </div>
+
+    </section>
+    <!-- 헤더 끝 -->
+
+    <section class="login">
+      <div class="d-lg-flex half">
+        <div class="bg order-1 order-md-2" style="background-image: url('../images/login_main.png'); overflow: hidden;"></div>
+        <div class="contents order-2 order-md-1">
+          <div class="container">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-7">
+                <h3>Login to <strong><span style="color: #753422;">Pet</span>kage</strong></h3>
+                <p class="mb-4">당신의 Petkage를 입력해주세요.</p>
+                <form action="#" method="post">
+                  <div class="form-group first">
+                    <label for="userId">아이디</label>
+                    <input type="text" class="form-control" placeholder="아이디를 입력해 주세요" id="userId" name="userId" value="${ empty cookie.saveId ? '' : cookie.saveId.value }">
+                  </div>
+                  <div class="form-group last mb-3">
+                    <label for="userPwd">비밀번호</label>
+                    <input type="password" class="form-control" placeholder="비밀번호를 입력해 주세요" id="userPwd" name="userPwd">
+                  </div>
+                  
+                  <div class="d-flex mb-5 align-items-center">
+                    <!-- 아이디 저장 -->
+                    <label class="control control--checkbox mb-0"><span class="caption">Remember ID</span>
+                      <input type="checkbox" id="checkId" name="checkId" checked="checkeId"/>
+                      <div class="control__indicator"></div>
+                    </label>
+
+                    <span class="ml-auto">
+                      <a href="./findMyId.html" class="forgot-pass" id="btnFindId">Forgot ID</a>
+                      <span class="forgot-pass"> / </span>
+                      <a href="./findMyPwd.html" class="forgot-pass" id="btnFindPwd">Forgot Password</a>
+                    </span> 
+                  </div>
+    
+                  <div id="btnLoginBox">
+                    <input type="submit" value="로그인" class="btn btn-block" id="btnLoin" style="color: white; background-color: #E3B7A0; border-style: none;font-weight: 700;">
+
+                    <button type="submit" class="btn btn-block" style="color: white; background-color: #F4DF23; font-weight: 700;">
+                      카카오톡으로 로그인
+                    </button>
+
+                    <button type="submit" class="btn btn-block" style="color: white; background-color: #92DE63; font-weight: 700;">
+                      네이버로 로그인
+                    </button>
+
+                    <span class="JoinMsg">
+                      아직 <strong><span style="color: #753422;">Pet</span>kage</strong>의 회원이 아니신가요?<br>
+                      회원가입을 하시면 다양한 혜택이 준비되어 있습니다.
+                    </span>
+                    <button type="submit" class="btn btn-block" id="btnJoinMember" style="color: white; background-color: #803D3D; font-weight: 700;">
+                      회원가입
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 푸터 시작 -->
+    <section class="ft">
+      <div class="footer_container">
+          <footer class="footer_section1">
+              <div class="footer">
+                  <p class="footerName">Petkage</p>
+
+                  <ul class="nav footer_nav">
+                      <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">이용약관</a></li>
+                      <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">개인정보 취급방침</a></li>
+                      <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">공지사항</a></li>
+                      <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">FAQ</a></li>
+                  </ul>
+
+                  <div class="footer_contents">
+                      <p class="footer_content">회사명 : (주)펫키지 대표 : 문인수 / 전화 : 070-1234-5678 / 주소 : 서울특별시 강남구 테헤란로 14길 6 남도빌딩</p>
+                      <p class="footer_content">사업자 등록번호 안내 : 123-45-6789 / 통신판매업 신고 2022-서울강남-03472 <a href="">[사업자정보 확인]</a>  </p>
+                      <p class="footer_content">&copy;펫키지. All Rights Reserved</p>
+                  </div>
+
+                  <div class="footer_icons">
+                      <a href="/" class="">
+                          <img src="../../EUM/resources/images/Instagram.png" alt="" class="footericon">
+                      </a>
+                      <a href="/" class="">
+                          <img src="../../EUM/resources/images/Facebook.png" alt="" class="footericon">
+                      </a>
+                      <a href="/" class="">
+                          <img src="../../EUM/resources/images/youtube.png" alt="" class="footericon">
+                      </a>
+                      <a href="/" class="">
+                          <img src="../../EUM/resources/images/kakaotalk.png" alt="" class="footericon">
+                      </a>
+                  </div>
+
+                      
+                  <img src="../../EUM/resources/images/Pet2.png" alt="" class="footerLogo">
+              </div>
+          </footer>
+      </div>
+    </section>
+    <!-- 푸터 끝 -->
+
+    <script src="../JS/jquery-3.6.0.js"></script>
+    <script src="../JS/popper.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/main.js"></script>
+    <script src="../JS/login.js"></script>
+  </body>
+  </html>
+</html>

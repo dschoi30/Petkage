@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+
+      <!-- Bootstrap core CSS
+      <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+      
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- css 스타일 -->
+    <link rel="stylesheet" href="../CSS/Join.css">
+    <!-- 헤더 스타일 -->
+    <link rel="stylesheet" href="../../EUM/CSS/common/header.css"></link>
+    <!-- 푸터 스타일 -->
+    <link rel="stylesheet" href="../../EUM/CSS/common/footer.css"></link>
+
+    <!-- jQuery -->
+    <script src="../JS/jquery-3.6.0.js"></script>
+    <script src="../JS/join.js"></script>
+  </head>
+  <body>
+    <!-- 헤더 시작 -->
+    <section class="hd">
+      <div class="header_container">
+          <header class="d-flex flex-wrap mb-4">
+              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+                  <img src="../../EUM/resources/images/Petkage_Logo2.png" alt="" class="headerLogo">
+              </a>
+
+              <ul class="nav nav-pills">
+                  <li class="nav-item header_item"><a href="#" class="nav-link header_link">어디가지</a></li>
+                  <li class="nav-item header_item"><a href="#" class="nav-link header_link">커뮤니티</a></li>
+                  <li class="nav-item header_item"><a href="#" class="nav-link header_link">마켓</a></li>
+                  <li class="nav-item header_item"><a href="#" class="nav-link header_link">OTHERS</a></li>
+                  <input type="button" class="headerBtn" id="loginBtn" value="로그인">
+                  <a href="/" class="d-flex align-items-center headercart">
+                      <img src="../../EUM/resources/images/Cart.png" alt="" class="cart">
+                  </a>
+              </ul>
+          </header>
+      </div>
+
+    </section>
+    <!-- 헤더 끝 -->
+
+    <section class="join">
+      <div class="container">
+        <div class="py-5 text-center"  style="padding-bottom: 15px !important;">
+          <h1>Join to <strong><span style="color: #753422;">Pet</span>kage</strong></h1>
+        </div>
+
+        <!-- 회원가입 정보 입력 form -->
+        <form>
+          <!-- 일반회원 / 판매자 회원 -->
+          <div class="memberType text-center">
+            <label class="joinMemberRadioType">
+              <input type="radio" name="memberType" id="memberDefault" value="MEMBER_ROLE_USER" checked onchange="memberTypeDisplay()">
+              <span>일반 회원</span>
+            </label>
+            <label class="joinMemberRadioType">
+              <input type="radio" name="memberType" id="memberSeller" value="MEMBER_ROLE_SELLER" onchange="memberTypeDisplay()">
+              <span>판매자 회원</span>
+            </label>
+          </div>
+          
+          <!-- 약관 동의 -->
+          <div class="termsBox">
+            <div style="font-size: 17px; font-weight: bold;">
+              약관을 읽고 동의해주세요. 
+              <button type="button" class="btn btn-Link" id="btnAgree" data-toggle="modal" data-target="#agreemodal">
+                <img src="../images/약관버튼.png" style="height: 20px; width: 20px; padding: 0;">
+              </button>
+            </div>
+          </div>
+          
+          <!-- 약관 동의 Modal -->
+          <div class="modal fade" id="agreemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <img class="logo" src="${ path }/resources/images/Hi_Logo.png" alt="" width="120" height="60"> -->
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                </div>
+                <div class="modal-body">
+                <form name="agreeForm" action="${ path }/member/agree" method="POST" >
+                  <div class="form-check checkbox_group" > 
+                      <input class="form-check-input checkAll" id="checkAll" type="checkbox" value="" style="width: 20px; height:20px; margin-left: -1.5em;" >
+                      <label class="form-check-label agreeAllTitle" for="checkAll" >
+                        <strong><span style="color: #753422">Pet</span>kage</strong>의 이용약관 및 개인정보 수집 및 이용에 모두 동의합니다.
+                      </label> <br>
+                      
+                      <input class="form-check-input checkSep" id="check1" type="checkbox" value="">
+                      <label class="form-check-label agreeTitle" for="check1">
+                        <strong><span style="color: #753422">Pet</span>kage</strong>의 이용약관에 동의합니다.
+                      </label> <br>
+                      <textarea class="terms" cols="80" rows="10" readonly>제 1 장 총칙
+                      </textarea>
+                  
+                    <input class="form-check-input checkSep" id="check2" type="checkbox" value="">
+                    <label class="form-check-label agreeTitle" for="check2">
+                      <strong><span style="color: #753422">Pet</span>kage</strong>의 개인정보 수집 및 이용에 동의합니다.
+                    </label> <br>
+                    <textarea class="terms" cols="80" rows="10" readonly>1. 개인정보의 수집항목 및 수집방법 
+                        
+                    </textarea>
+                  </div>
+                  </form>
+                </div>
+                <div class="submitForm-no" id="please_allCheck"> 
+                    <span></span> 
+                  </div>
+                <div class="modal-footer" style="justify-content: center;">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" style="font-weight: 700;">닫기</button>
+                  <button type="button" class="btn btn-primary" id="btnAgreeFinish" >동의 완료</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 가입 기본 정보-->
+          <div class="joinInfoBox">
+            <table>
+              <tbody>
+                <tr>
+                  <th>아이디</th>
+                    <td>
+                      <input type="text" class="joinInfoInput" name="userId" id="userId" required>
+                    </td>
+                    <td>
+                      <input type="button" class="btnInfo" id="userIdDuplicate" value="중복확인"></input>
+                    </td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <td>
+                    <span class="checkAlert" id="id_termsCheck"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>비밀번호</th>
+                    <td>
+                      <input type="password" class="joinInfoInput" name="userPwd" id="userPwd" required>
+                    </td>
+                  <th>비밀번호 확인</th>
+                    <td>
+                      <input type="password" class="joinInfoInput" name="userPwdCheck" id="userPwdCheck" required>
+                    </td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <td>
+                    <span class="checkAlert" id="pwd_termsCheck"></span>
+                  </td>
+                  <th></th>
+                  <td><span class="checkAlert" id="pwd_doubleCheck"></span></td>
+                </tr>
+                <tr>
+                  <th>이름</th>
+                    <td>
+                      <input type="text" class="joinInfoInput" name="userName" id="userName" required >
+                    </td>
+                    <th>전화번호</th>
+                    <td>
+                      <input type="text" class="joinInfoInput" name="userPhone" id="userPhone" >
+                    </td>
+                    
+                </tr>
+                <tr>
+                  <th></th>
+                  <td></td>
+                  <th></th>
+                  <td><span class="checkAlert" id="phone_termsCheck"></span></td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <td><span class="checkAlert" id="name_termsCheck"></span></td>
+                </tr>
+                <tr>
+                  <th>주소</th>
+                    <td>
+                      <div style="display: flex; justify-content: left; text-align:center;">
+                        <input type="text" class="joinInfoInput" name="zonecode" style="width: 100px;" id="zonecode" readonly="readonly" placeholder="우편번호" required>
+                      </div>
+                    </td>
+                    <td>
+                      <input type="button" class="btnInfo" id="btnPostcode"  onclick="postCode()" value="주소검색"></input>
+                    </td>
+                </tr>
+                <tr>
+                  <th></th>
+                    <td>
+                      <input type="text" class="joinInfoInput" name="userAddress" id="userAddress" >
+                    </td>
+                    <th>나머지 주소</th>
+                    <td>
+                      <input type="text" class="joinInfoInput" name="addressSub" id="addressSub" >
+                    </td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <td><span class="checkAlert" id="address_termsCheck"></span></td>
+                </tr>
+                <tr>
+                  <th>이메일</th>
+                    <td>
+                      <input type="text" class="joinInfoInput" name="userEmail" id="userEmail" required>
+                      <span class="userInfoAlert" id="error_newEmail"></span>
+                    </td>
+                    <td>
+                      <input type="button" class="btnInfo" id="newEmailDuplicate" value="인증"></input>
+                    </td>
+                    <td>
+                      <input type="text" class="joinInfoInput" name="userEmail" id="userEmail" >
+                      <span class="userInfoAlert" id="error_newEmail"></span>
+                    </td>
+                </tr>
+                <tr>
+                  <th></th>
+                    <td>
+                      
+                      <span class="userInfoAlert" id="error_newEmail"></span>
+                    </td>
+                    <th></th>
+                  <td><span class="checkAlert">이메일 인증이 완료되었습니다.  </span></td>
+                </tr>
+                <tr>
+                  <td class="enrollForm-error" id="error_email"><span></span></td>
+                </tr>	
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 반려동물 정보 입력  -->
+          <div class="joinPetInfoBox">
+            <div class="addInfoTitle">*반려동물 정보 입력</div>
+            <table class="joinInfoBox">
+              <tbody>
+                <!-- 기준 -->
+                <tr>
+                  <th>아이디</th>
+                    <td>
+                      <input type="text" class="joinInfoInput" name="userId" id="userId" required>
+                    </td>
+                    <td>
+                      <input type="button" class="btnInfo" id="userIdDuplicate" value="중복확인"></input>
+                    </td>
+                </tr>
+                <!-- 기준 -->
+                <tr>
+                  <th>이름</th>
+                    <td>
+                      <input type="text" class="joinInfoInput" name="pName" id="pName" >
+                    </td>
+                    <th>Pet 정보</th>
+                    <td>
+                      <div class="petTypeBox" style="width: 300px;
+                      height: 50px;">
+                        <label class="joinRadioType">
+                          <input type="radio" name="pType" id="pDog">
+                          <span>강아지</span>
+                        </label>
+                        <label class="joinRadioType">
+                          <input type="radio" name="pType" id="pCat" >
+                          <span>고양이</span>
+                        </label>
+                      </div>
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                  <th>종</th>
+                    <td>
+                      <input type="text" class="joinInfoInput" name="pbreed" id="breed" >
+                    </td>
+                </tr>
+                <tr>
+                  <th>무게</th>
+                    <td>
+                      <input type="text" class="joinInfoInput" name="pWeight" id="pWeight" >
+                    </td>
+                </tr>
+                <tr>
+                  <th>특이사항</th>
+                    <td>
+                      <input type="text" class="joinInfoInput" name="pCheck" id="pCheck" >
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 판매자 회원 정보 입력-->
+          <div id="joinSellerInfoBox" style="display: none;">
+            <div class="addInfoTitle">*판매자 회원 추가 입력</div>
+            <table class="joinInfoBox">
+              <tbody>
+                <tr>
+                  <th>상호명</th>
+                    <td>
+                      <input type="text" class="joinInfoInput" name="bName" id="bName" >
+                    </td>
+                  <th>사업자 번호</th>
+                    <td>
+                      <input type="text" class="joinInfoInput" name="bNumber" id="bNumber" >
+                    </td>
+                    <td>
+                      <input type="button" class="btnInfo" id="userIdDuplicate" value="중복확인"></input>
+                    </td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <td></td>
+                  <th></th>
+                  <td><span class="checkAlert" id="bNumber_termsCheck"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 가입 정보 입력 끝 -->
+
+          <div class="btnBox">
+            <input type="submit" class="btnJoin" value="가입"></input>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 푸터 시작 -->
+    <section class="ft">
+      <div class="footer_container">
+          <footer class="footer_section1">
+              <div class="footer">
+                  <p class="footerName">Petkage</p>
+
+                  <ul class="nav footer_nav">
+                      <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">이용약관</a></li>
+                      <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">개인정보 취급방침</a></li>
+                      <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">공지사항</a></li>
+                      <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">FAQ</a></li>
+                  </ul>
+
+                  <div class="footer_contents">
+                      <p class="footer_content">회사명 : (주)펫키지 대표 : 문인수 / 전화 : 070-1234-5678 / 주소 : 서울특별시 강남구 테헤란로 14길 6 남도빌딩</p>
+                      <p class="footer_content">사업자 등록번호 안내 : 123-45-6789 / 통신판매업 신고 2022-서울강남-03472 <a href="">[사업자정보 확인]</a>  </p>
+                      <p class="footer_content">&copy;펫키지. All Rights Reserved</p>
+                  </div>
+
+                  <div class="footer_icons">
+                      <a href="/" class="">
+                          <img src="../../EUM/resources/images/Instagram.png" alt="" class="footericon">
+                      </a>
+                      <a href="/" class="">
+                          <img src="../../EUM/resources/images/Facebook.png" alt="" class="footericon">
+                      </a>
+                      <a href="/" class="">
+                          <img src="../../EUM/resources/images/youtube.png" alt="" class="footericon">
+                      </a>
+                      <a href="/" class="">
+                          <img src="../../EUM/resources/images/kakaotalk.png" alt="" class="footericon">
+                      </a>
+                  </div>
+
+                      
+                  <img src="../../EUM/resources/images/Pet2.png" alt="" class="footerLogo">
+              </div>
+          </footer>
+      </div>
+    </section>
+    <!-- 푸터 끝 -->
+
+    <script src="../JS/join.js"></script>
+
+
+    <!-- 모달 사용하기 위한 script -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+
+    <!-- 다음 주소 검색 API -->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+      //본 예제에서는 도로명 주소 표기 방식에 대한 법령에 따라, 내려오는 데이터를 조합하여 올바른 주소를 구성하는 방법을 설명합니다.
+      function postCode() {
+        new daum.Postcode({
+          oncomplete: function (data) {
+            // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+            // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+            // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+            var addr = ""; // 주소 변수
+            var extraAddr = ""; // 참고항목 변수
+
+            //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+            if (data.userSelectedType === "R") {
+              // 사용자가 도로명 주소를 선택했을 경우
+              addr = data.roadAddress;
+            } else {
+              // 사용자가 지번 주소를 선택했을 경우(J)
+              addr = data.jibunAddress;
+            }
+
+            // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+            if (data.userSelectedType === "R") {
+              // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+              // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+              if (data.bname !== "" && /[동|로|가]$/g.test(data.bname)) {
+                extraAddr += data.bname;
+              }
+              // 건물명이 있고, 공동주택일 경우 추가한다.
+              if (data.buildingName !== "" && data.apartment === "Y") {
+                extraAddr += extraAddr !== "" ? ", " + data.buildingName : data.buildingName;
+              }
+            }
+
+            // 우편번호와 주소 정보를 해당 필드에 넣는다.
+            document.getElementById("zonecode").value = data.zonecode;
+            document.getElementById("userAddress").value = addr;
+            // 커서를 상세주소 필드로 이동한다.
+            document.getElementById("addressSub").focus();
+          }
+        }).open();
+    }
+    </script>
+  </body>
+</html>

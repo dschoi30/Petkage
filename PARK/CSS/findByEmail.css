@@ -1,0 +1,162 @@
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "GmarketSansMedium";
+}
+
+.findIdPwd .findRadioType input[type="radio"] {
+  display: none;
+  justify-content: center;
+  padding-right: 30px;
+}
+
+.findIdPwd .findRadioType input[type="radio"] + span {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid #dfdfdf;
+  background-color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 130px;
+  height: 40px;
+  font-weight: 700;
+}
+
+.findIdPwd .findRadioType input[type="radio"]:checked + span {
+  background-color: #6b6b6b;
+  color: #ffffff;
+  border: 2px solid #6b6b6b;
+}
+
+.findIdPwd .find_mainTitle {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.findIdPwd .find_subTitle {
+  display: flex;
+  justify-content: left;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.findIdPwd .findByEmailTable {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.findIdPwd .findByEmailInput {
+  width: 100%;
+  height: 50px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: #d9d9d9 4px solid;
+  box-shadow: none;
+  background-color: none;
+  margin-top: 10px;
+  float: right;
+  padding: 10px;
+  font-size: large;
+  font-weight: 500;
+}
+
+.findIdPwd .find_Box1 {
+  display: flex;
+  justify-content: center;
+}
+
+.findIdPwd .find_Box2 {
+  width: 70%;
+  height: auto;
+  text-align: center;
+}
+
+.findIdPwd hr {
+  width: 100%;
+  border: solid 1px #753422;
+  background-color: #753422;
+  margin-bottom: 25px;
+}
+.findIdPwd .findMyIdTable {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.findIdPwd .findMyIdTable th {
+  padding: 10px;
+  text-align: left;
+  font-size: 20px;
+  padding-right: 15px;
+  vertical-align: bottom;
+  padding-bottom: 23px;
+  color: #6b6b6b;
+  font-weight: bolder;
+}
+
+.findIdPwd .findMyIdTable td {
+  padding: 0;
+  text-align: left;
+  margin: 0;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+}
+
+.findIdPwd .findByEmailAlert {
+  display: block;
+  color: #6b6b6b;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  clear: both;
+  margin-top: 1px;
+  text-align: left;
+}
+
+.findIdPwd .btnBox {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+  display: flex;
+}
+
+.findIdPwd .btnFindByEmail {
+  border: 3px solid #d79771;
+  background-color: transparent;
+  color: #d79771;
+  height: 50px;
+  width: 10em;
+  font-weight: 700;
+  font-size: larger;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.findIdPwd .btnFindMyIdNext,
+.findIdPwd .btnFindMyIdFinish {
+  background-color: #d79771;
+  color: white;
+  height: 50px;
+  width: 200px;
+  font-weight: 700;
+  font-size: 25px;
+  border-radius: 20px;
+  border: none;
+  margin-top: 20px;
+  margin: 10px;
+}
