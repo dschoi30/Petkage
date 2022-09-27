@@ -55,7 +55,7 @@
                     <li class="nav-item header_item"><a href="#" class="nav-link header_link">어디가지</a></li>
                     <li class="nav-item header_item"><a href="#" class="nav-link header_link">커뮤니티</a></li>
                     <li class="nav-item header_item"><a href="#" class="nav-link header_link">마켓</a></li>
-                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">펫키지 툴</a></li>
+                    <li class="nav-item header_item"><a href="../../HTML/tools/tools_main.html" class="nav-link header_link">펫키지 툴</a></li>
                     <input type="button" class="headerBtn" value="마이페이지" >
                     <input type="button" class="headerBtn" id="loginBtn" value="로그아웃">
         
@@ -143,22 +143,42 @@
 								</span>
 								<span class="content_write_input write_divline">
 									<h5>몸무게 선택</h5>
-                                    <label>
-                                        <select id="dog_jisu" name="dog_jisu">
+									<label class="pet_jisu" id="pet_jisu" name="pet_jisu">
+                                        <select >
+                                            <option value="">반려동물 상태 선택</option>
+                                        </select>
+                                    </label>
+
+                                    <label class="pet_jisu" id="dog_jisu" name="dog_jisu" style="display:none">
+                                        <select  >
                                             <option value="">반려견 상태 선택</option>
-                                            <option value="1">젖을 먹고 있는 강아지</option>
-                                            <option value="2">생후 4개월미만 강아지</option>
-                                            <option value="3">생후 4~12개월 강아지</option>
+                                            <option value="1">성장기(4개월 미만) 강아지</option>
+                                            <option value="2">성장기(4 ~ 12개월) 강아지</option>
+                                            <option value="3">중성화하지 않은 성견</option>
                                             <option value="4">중성화한 성견</option>
-                                            <option value="5">중성화하지 않은 성견</option>
-                                            <option value="6">임신 초기 성견 </option>
-                                            <option value="7">임신 중기 이후 성견 </option>
-                                            <option value="8">비만 상태인 성견 </option>
-                                            <option value="9">체중 감량이 필요한 성견</option>
-                                            <option value="10">체중 증가가 필요한 성견</option>
-                                            <option value="11">나이가 많은 성견</option>
-                                            <option value="12">활동적인 성견</option>
-                                            <option value="13">활동량이 많은 성견</option>
+                                            <option value="5">체중 감량이 필요한 성견</option>
+                                            <option value="6">체중 증량이 필요한 성견</option>
+                                            <option value="7">비만 상태인 성견</option>
+                                            <option value="8">가벼운 활동량의 사역견</option>
+                                            <option value="9">중간 활동량의 사역견</option>
+                                            <option value="10">높은 활동량의 사역견</option>
+                                            <option value="11">임신 초기 성견</option>
+                                            <option value="12">임신 중기 이후 성견</option>
+                                            <option value="13">나이가 많은 성견</option>
+                                        </select>
+                                    </label>
+
+									<label class="pet_jisu" id="cat_jisu" name="cat_jisu" style="display:none">
+                                        <select >
+                                            <option value="">반려묘 상태 선택</option>
+                                            <option value="1">유아기(4개월 미만) 고양이</option>
+                                            <option value="2">고속 성장기(4 ~ 6개월) 고양이</option>
+                                            <option value="3">고속 성장기(7 ~ 12개월) 고양이</option>
+                                            <option value="4">중성화한 성묘</option>
+                                            <option value="5">중성화하지 않은 성묘</option>
+                                            <option value="6">체중 감량이 필요한 성묘</option>
+                                            <option value="7">활동량이 많은 성묘</option>
+                                            <option value="8">나이가 많은 성묘</option>
                                         </select>
                                     </label>
 								</span>
@@ -262,26 +282,23 @@
 			weigh_choice(0);
 		});
 
-		var cellBirth = document.getElementById('dog_date');
-			cellBirth.onkeyup = function(event){
-			event = event || window.event;
-			var _val = this.value.trim();
-			this.value = autoBirth(_val) ;
-		}
-
-		$("#pet_choice_dog").on("click", function() {
-			$("#cat_hide").show();
+		$("#dog_on").on("click", function() {
+			// $("#cat_hide").show();
 			$("#dog_on").addClass("pet_on");
-			$("#_on").removeClass("pet_off");
+			$("#dog_on").removeClass("pet_off");
+			$("#dog_jisu").show();
+			$("#pet_jisu").hide();
+
 		})
 
-		$("#pet_choice_cat").on("click", function() {
-			$("#cat_hide").hide();
+		$("#cat_on").on("click", function() {
+			// $("#cat_hide").hide();
 			$("#cat_on").addClass("pet_on");
 			$("#cat_on").removeClass("pet_off");
-		})
 
-		init();
+			$("#cat_jisu").show();
+			$("#pet_jisu").hide();
+		})
 
 		function result_view(tab_id){
 			var dog_date = $('input[name="dog_date"]').val().replace(/\./g,'-');
