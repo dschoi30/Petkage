@@ -80,7 +80,7 @@
 }
 
 .ts .tools_btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .ts .tools_btn span {
@@ -102,15 +102,15 @@
 }
 
 .ts .tools_age {
-    background-color: #fff3e5;
+    background-color: #feeff4;
 }
 
 .ts .tools_age span {
-    color: #f29833;
+    color: #f35767;
 }
 
 .ts .tools_age button {
-    background-color: #f29833;
+    background-color: #f35767;
 }
 
 .ts .tools_bmi {
@@ -138,7 +138,7 @@
 }
 
 .ts .tools_dic {
-    background-color: #fefaee;
+    background-color: #f4feee;
 }
 
 .ts .tools_dic span {
@@ -147,6 +147,18 @@
 
 .ts .tools_dic button {
     background-color: #4e7f1c;
+}
+
+.ts .tools_walk {
+    background-color: #fefeee;
+}
+
+.ts .tools_walk span {
+    color: #fcd11e;
+}
+
+.ts .tools_walk button {
+    background-color: #fcd11e;
 }
 
 .ts .tools_name {

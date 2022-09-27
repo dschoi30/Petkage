@@ -1,16 +1,16 @@
-.ta {
+.tc {
     overflow:hidden;
 }
 
-.ta input:-webkit-autofill,
-.ta input:-webkit-autofill:hover,
-.ta input:-webkit-autofill:focus,
-.ta input:-webkit-autofill:active {
+.tc input:-webkit-autofill,
+.tc input:-webkit-autofill:hover,
+.tc input:-webkit-autofill:focus,
+.tc input:-webkit-autofill:active {
     transition: background-color 5000s; 
 }
 
 
-.ta .tools_A_container {
+.tc .tools_container {
     float: left;
     text-align: center;
     width: 100%;
@@ -18,21 +18,21 @@
     border: 0px solid #000;
 }
 
-.ta .cal_top {
+.tc .cal_top {
     width: 100%;
     min-height: 255px;
     background-size: 100%;
 }
 
-.ta .pr {
+.tc .pr {
     position: relative;
 }
 
-.ta .cal_top_box {
+.tc .cal_top_box {
     margin: 0px auto;
 }
 
-.ta .cal_top_box h3 {
+.tc .cal_top_box h3 {
     width: 100%;
     text-align: center;
     color: #E3B7A0;
@@ -42,13 +42,13 @@
     letter-spacing: -0.03em;
 }
 
-.ta .cal_top_box h3 span {
+.tc .cal_top_box h3 span {
     color: #803D3D;
     font-size: 45px;
     font-weight: 600;
 }
 
-.ta .area {
+.tc .area {
     max-width: 1200px ! important;
     min-width: 1260px ! important;
     margin: 0px auto;
@@ -59,7 +59,7 @@
     min-height: 255px;
 }
 
-.ta .cal_top_h3_line_c {
+.tc .cal_top_h3_line_c {
     width: 1100px;
     height: 3px;
     background: #D6D6D6;
@@ -67,26 +67,27 @@
     margin: 30px auto 15px;
 }
 
-.ta .cal_menu {   
+.tc .cal_menu {   
     top: -40px;
 }
 
-.ta .cal_menu, .ta .cal_content {
+.tc .cal_menu, .tc .cal_content {
     width: 800px;
     overflow: hidden;
     margin: 0 auto;
     background: #fff;
     border-radius: 40px;
-    box-shadow: 5px 5px 48px rgb(207 207 207 / 60%);
+    box-shadow: 5px 5px 48px rgb(207 207 207 / 65%);
 }
 
-.ta .cal_menu_btn li.active {
+.tc .cal_menu_btn li.active {
     background-color: #E3B7A0;
 }
 
-.ta .cal_menu_btn li {
-    width: 33.333%;
-    background-color: #FFEBC9;
+.tc .cal_menu_btn li {
+    width: 20%;
+    /* background-color: #FFEBC9; */
+    background-color: #fff;
     float: left;
     border: none;
     outline: none;
@@ -98,67 +99,73 @@
     box-sizing: border-box;
 }
 
-.ta .cal_menu_btn li .cal_icon {
+.tc .cal_menu_btn li .cal_icon {
     display: block;
     overflow: hidden;
+    text-align: center;
 }
 
-.ta .cal_menu_btn li.active a {
+.tc .cal_menu_btn li.active a {
     color: #fff;
 }
 
-.ta .cal_menu_btn li.active .cal_txt {
+.tc .cal_menu_btn li.active .cal_txt {
     color: #fff;
 }
 
-.ta .cal_menu_btn li .cal_txt {
+.tc .cal_menu_btn li.inactive:hover {
+    background-color: rgba(255, 234, 199, 0.5);
+}
+
+.tc .cal_menu_btn li .cal_txt {
     display: block;
     overflow: hidden;
     padding-top: 5px;
     color: #803D3D;
+    text-align: center;
     
 }
 
-.ta .cal_content {
+.tc .cal_menu_btn img {
+    width: 50px;
+    height: 50px;
+}
+
+.tc .cal_content {
     top: 0px;
 }
 
-.ta .cal_write {
+.tc .cal_write {
     margin: 3%;
 }
 
-.ta .content_write {
+.tc .content_write {
     display: block;
     overflow: hidden;
     border-top: 1px solid #646361;
 }
 
-.ta .content_write .write_divline {
+.tc .content_write .write_divline {
     display: block;
     overflow: hidden;
     border-bottom: 1px solid #ebebeb;
 }
 
-.ta .content_write fieldset {
-    padding-left: 10px;
-    padding-top: 5px;
-}
-
-.ta .content_write label {
+.tc .content_write label {
     margin: 10px;
     padding-top: 1px;
 }
-.ta .content_write span {
+.tc .content_write span {
     margin-left: 10px;
 }
 
-.ta .content_write_input {
+.tc .content_write_input {
     display: block;
     overflow: hidden;
     text-align: left;
 }
 
-.ta .content_write_input h5 {
+.tc .content_write_input h5 {
     width: 16%;
     float: left;
     overflow: hidden;
@@ -169,7 +176,7 @@
     font-weight: 500;
 }
 
-.ta .content_write_input > input[type="radio"] {
+.tc .content_write_input > input[type="radio"] {
     overflow: hidden;
     margin-left: 1%;
     padding: 13px 10px 13px 10px;
@@ -178,7 +185,7 @@
     border: none;
 }
 
-.ta .cal_info_box [type="radio"] {
+.tc .cal_info_box [type="radio"] {
     vertical-align: middle;
     appearance: none;
     border: max(2px, 0.1em) solid gray;
@@ -188,33 +195,33 @@
     transition: border 0.5s ease-in-out;
 }
 
-.ta .cal_info_box [type="radio"]:checked {
+.tc .cal_info_box [type="radio"]:checked {
     border: 0.4em solid #803D3D;
 }
 
-.ta .cal_info_box [type="radio"]:focus-visible {
+.tc .cal_info_box [type="radio"]:focus-visible {
     outline-offset: max(2px, 0.1em);
     outline: max(2px, 0.1em) dotted #803D3D;
 }
 
-.ta .cal_info_box [type="radio"]:hover {
+.tc .cal_info_box [type="radio"]:hover {
     box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
     cursor: pointer;
 }
 
-.ta .cal_info_box [type="radio"]:disabled {
+.tc .cal_info_box [type="radio"]:disabled {
     background-color: lightgray;
     box-shadow: none;
     opacity: 0.7;
     cursor: not-allowed;
 }
 
-.ta .cal_info_box [type="radio"]:disabled + span {
+.tc .cal_info_box [type="radio"]:disabled + span {
     opacity: 0.7;
     cursor: not-allowed;
 }
 
-.ta .content_write_input > input[type="text"] {
+.tc .content_write_input > input[type="text"] {
     width: 60%;
     float: left;
     overflow: hidden;
@@ -224,16 +231,15 @@
     border: none;
 }
 
-.ta .cal_choice {
+.tc .cal_choice {
     overflow: hidden;
     height: 42px;
     text-align: left;
     margin: 8px 5px 5px 5px;
-    padding-left: 10px;
     border: 0px solid #000;
 }
 
-.ta .cal_choice .cal_type_checked {
+/* .tc .cal_choice .cal_type_checked {
     color: #fff !important;
     background: #E3B7A0 !important;
     font-size: 14px;
@@ -243,20 +249,18 @@
     border-style: none;
     vertical-align: middle;
     padding-top:10px;  
-}
+} */
 
-.ta .cal_choice input {
+.tc .cal_choice input {
     width: 78%;
     float: left;
     overflow: hidden;
-    margin-left: 1%;
-    padding: 13px 10px 13px 10px;
     font-size: 16px;
     font-weight: 300;
     border: none;
 }
 
-.ta .cal_choice > input[type="button"] {
+.tc .cal_choice > input[type="button"] {
     color: #cfcece;
     background: #f6f7f8;
     font-size: 14px;
@@ -268,19 +272,19 @@
     padding-top:11px;  
 }
 
-.ta .cal_choice > input[type="button"]:hover {
+.tc .cal_choice > input[type="button"]:hover {
     color: #fff;
     background: #803D3D;
 }
 
-.ta .cal_btn {
+.tc .cal_btn {
     display: block;
     overflow: hidden;
     width: 100%;
     background-color: #fafafa;
 }
 
-.ta .cal_result {
+.tc .cal_result {
     display: block;
     overflow: hidden;
     height: 50px;
@@ -290,61 +294,25 @@
     padding: 10px 40px 16px 40px;
 }
 
-/* 결과 버튼 그라데이션 - 임시  */
-.btn-hover {
-    width: 150px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
-    margin: 20px;
-    height: 40px;
-    text-align:center;
-    border: none;
-    background-size: 300% 100%;
-    border-radius: 10px;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-}
-
-.btn-hover:hover {
-    background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-}
-
-.btn-hover:focus {
-    outline: none;
-}
-
-.btn-hover.color-4 {
-    background-image: linear-gradient(to right, #FFEBC9, #E3B7A0, #803D3D);
-    box-shadow: 0 4px 15px 0 #FFEBC9;
-}
-
-.ta .cal_result a {
+.tc .cal_result a {
     color: #fff !important;
     font-size: 20px;
 }
 
-.ta a {
+.tc a {
     cursor: pointer;
     text-decoration: none !important;
 }
-.ta ol, ul {
+.tc ol, ul {
     list-style: none;
 }
 
-.ta dl, ol, ul {
+.tc dl, ol, ul {
     margin-top: 0;
     margin-bottom: 0 !important; 
 }
 
-.ta html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+.tc html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
 }

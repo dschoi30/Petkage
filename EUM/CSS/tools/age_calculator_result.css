@@ -1,4 +1,4 @@
-.ta .cal_result_age {
+.tc .cal_result_age {
     display: block;
     overflow: hidden;
     text-align: center;
@@ -6,7 +6,7 @@
     padding-top: 7px;
 }
 
-.ta .age_circle {
+.tc .age_circle {
     display: inline-block;
     width: 120px;
     height: 120px;
@@ -17,35 +17,35 @@
     border-radius: 100px;
 }
 
-.ta .age_circle .age_img {
+.tc .age_circle .age_img {
     display: block;
     text-align: center;
     padding-top: 25px;
 }
 
-.ta .age_circle .age_img img {
+.tc .age_circle .age_img img {
     width: 42%;
 }
 
-.ta .age_circle .age_number {
+.tc .age_circle .age_number {
     display: block;
     font-size: 23px;
     color: #803D3D;
     font-weight: 500;
 }
 
-.ta .cal_result_age .age_same {
+.tc .cal_result_age .age_same {
     display: inline-block;
     width: 50px;
 }
 
-.ta .cal_result_age .age_same img {
+.tc .cal_result_age .age_same img {
     width: 100%;
     vertical-align: 2px;
     padding-bottom: 5px;
 }
 
-.ta .age_lifecycle {
+.tc .age_lifecycle {
     display: block;
     padding: 2% 0 0 0;
     font-size: 26px;
@@ -53,7 +53,7 @@
     font-weight: 500;
 }
 
-.ta .cal_again {
+.tc .cal_again {
     display: block;
     overflow: hidden;
     height: 50px;
@@ -63,7 +63,7 @@
     padding: 10px 40px 16px 40px;
 }
 
-.ta .cal_again a {
+.tc .cal_again a {
     color: #fff !important;;
     font-size: 20px;
 }

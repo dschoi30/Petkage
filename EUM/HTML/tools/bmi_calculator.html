@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bmi_calculator</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>bmi_calculator</title>
 
 	<!-- Font -->
 	<style>
-
 		/* 폰트 자체 아래에 여백이 있음 */
 		@font-face {
 			font-family: "GmarketSansMedium";
-			src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
-				format("woff");
+			src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
 			font-weight: normal;
 			font-style: normal;
 		}
@@ -21,172 +20,243 @@
 		* {
 			font-family: "GmarketSansMedium";
 		}
-
 	</style>
 
 	<!-- Header css -->
-	<link rel="stylesheet" href="../../CSS/common/header.css"></link>
-	
+	<link rel="stylesheet" href="../../CSS/common/header.css">
+	</link>
+
 	<!-- Footer css -->
-	<link rel="stylesheet" href="../../CSS/common/footer.css"></link>
-    
+	<link rel="stylesheet" href="../../CSS/common/footer.css">
+	</link>
+
 	<!-- Age_calculator css -->
-	<link rel="stylesheet" href="../../CSS/tools/age_calculator.css"></link>
-    <link rel="stylesheet" href="../../CSS/tools/age_calculator_result.css"></link>
+	<link rel="stylesheet" href="../../CSS/tools/age_calculator.css">
+	</link>
+	<link rel="stylesheet" href="../../CSS/tools/age_calculator_result.css">
+	</link>
+
+	<!-- Bmi_calculator css -->
+	<link rel="stylesheet" href="../../CSS/tools/bmi_calculator.css">
+	</link>
+
+	<!-- Calorie_calculator css -->
+	<link rel="stylesheet" href="../../CSS/tools/calorie_calculator.css">
+	</link>
 
 	<!-- Bootstrap css-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+		integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
 	<!-- <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> -->
 
-	
 </head>
+
 <body>
 	<!-- Header 시작 -->
 	<section class="hd">
-        <div class="header_container">
-            <header class="d-flex flex-wrap mb-4">
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
-                    <img src="../../resources/images/Petkage_Logo3.png" alt="" class="headerLogo">
-                </a>
-            
-                <ul class="nav nav-pills">
-                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">어디가지</a></li>
-                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">커뮤니티</a></li>
-                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">마켓</a></li>
-                    <li class="nav-item header_item"><a href="../../HTML/tools/tools_main.html" class="nav-link header_link">펫키지 툴</a></li>
-                    <input type="button" class="headerBtn" value="마이페이지" >
-                    <input type="button" class="headerBtn" id="loginBtn" value="로그아웃">
-        
-                    <a href="/" class="d-flex align-items-center headercart">
-                        <img src="../../resources/images/Cart.png" alt="" class="cart">
-                    </a>
-                </ul>
-            </header>
-        </div>
-    </section>
+		<div class="header_container">
+			<header class="d-flex flex-wrap mb-4">
+				<a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+					<img src="../../resources/images/Petkage_Logo3.png" alt="" class="headerLogo">
+				</a>
+
+				<ul class="nav nav-pills">
+					<li class="nav-item header_item"><a href="#" class="nav-link header_link">어디가지</a></li>
+					<li class="nav-item header_item"><a href="#" class="nav-link header_link">커뮤니티</a></li>
+					<li class="nav-item header_item"><a href="#" class="nav-link header_link">마켓</a></li>
+					<li class="nav-item header_item"><a href="../../HTML/tools/tools_main.html"
+							class="nav-link header_link">펫키지 툴즈</a></li>
+					<input type="button" class="headerBtn" value="마이페이지">
+					<input type="button" class="headerBtn" id="loginBtn" value="로그아웃">
+
+					<a href="/" class="d-flex align-items-center headercart">
+						<img src="../../resources/images/Cart.png" alt="" class="cart">
+					</a>
+				</ul>
+			</header>
+		</div>
+	</section>
 	<!-- Header 끝 -->
 
-	<!-- Age_calculator 시작 -->
-	<section class="ta">
-		<div class="others-container">
-			<div class="others_B_container">
+	<!-- Bmi_calculator 시작 -->
+	<section class="tc">
+		<div class="tools_container">
 
-				<!-- 계산기 전체 상단 -->
-				<div class="cal_top pr">
-					<div class="cal_top_box pr area">
-						<div class="cal_Tbg">
-							<h3 class="">MY<span> PET</span></h3>
-							<p class="cal_top_h3_line_c"></p>
-						</div>
+			<!-- 계산기 전체 상단 -->
+			<div class="cal_top pr">
+				<div class="cal_top_box pr area">
+					<div class="cal_Tbg">
+						<h3 class="">Tools For MY<span> PET</span></h3>
+						<p class="cal_top_h3_line_c"></p>
 					</div>
 				</div>
+			</div>
 
-				<!-- 계산기 메뉴 버튼 -->
-				<div class="cal_menu pr">
-					<div class="cal_menu_btn">
-						<ul>
-							<li class=''>
-								<a href="?m1Code=tip&m2Code=dogcal&tab_id=1">
-									<span class="cal_icon"><img src="http://appdata.hungryapp.co.kr/images/hatdog/img/pc_img/calculator/btnicon_cal01_on.png" alt="나이계산기" /></span>
-									<span class="cal_txt">나이계산기</span>
-								</a>
-							</li>
-							<li class=''>
-								<a href="?m1Code=tip&m2Code=dogcal&tab_id=2">
-									<span class="cal_icon"><img src="http://appdata.hungryapp.co.kr/images/hatdog/img/pc_img/calculator/btnicon_cal02_on.png" alt="권장칼로리" /></span>
-									<span class="cal_txt">권장칼로리</span>
-								</a>
-							</li>
-							<li class='active'>
-								<a href="?m1Code=tip&m2Code=dogcal&tab_id=3">
-									<span class="cal_icon"><img src="http://appdata.hungryapp.co.kr/images/hatdog/img/pc_img/calculator/btnicon_cal03_on.png" alt="비만도계산기" /></span>
-									<span class="cal_txt">비만도계산기</span>
-								</a>
-							</li>
-						</ul>
-					</div>
+			<!-- 계산기 메뉴 버튼 -->
+			<div class="cal_menu pr">
+				<div class="cal_menu_btn">
+					<ul>
+						<li class='inactive'>
+							<a href="../tools/age_calculator.html">
+								<span class="cal_icon"><img src="../../resources/images/age_off.png"
+										alt="나이 계산기" /></span>
+								<span class="cal_txt">나이 계산기</span>
+							</a>
+						</li>
+						<li class='active'>
+							<a href="../tools/bmi_calculator.html">
+								<span class="cal_icon"><img src="../../resources/images/bmi_on.png"
+										alt="비만도 계산기" /></span>
+								<span class="cal_txt">비만도 계산기</span>
+							</a>
+						<li class='inactive'>
+							<a href="../tools/calorie_calculator.html">
+								<span class="cal_icon"><img src="../../resources/images/cal_off.png"
+										alt="권장 칼로리" /></span>
+								<span class="cal_txt">권장 칼로리</span>
+							</a>
+						</li>
+						</li>
+						<li class='inactive'>
+							<a href="../tools/food_dictionary.html">
+								<span class="cal_icon"><img src="../../resources/images/dic_off.png"
+										alt="식품 사전" /></span>
+								<span class="cal_txt">식품 사전</span>
+							</a>
+						</li>
+						<li class='inactive'>
+							<a href="../tools/walkout_recommend.html">
+								<span class="cal_icon"><img src="../../resources/images/out_off.png"
+										alt="산책코스" /></span>
+								<span class="cal_txt">산책코스</span>
+							</a>
+						</li>
+					</ul>
 				</div>
+			</div>
 
-				<!-- 계산기 컨텐츠 -->
-				<div class="cal_content pr">
+			<!-- 계산기 컨텐츠 -->
+			<div class="cal_content pr">
 
-					<!-- 계산기 정보 박스 -->
-					<!-- style="display:none" -->
-					<div class="cal_info_box" id="contents_tab_1">
+				<!-- 계산기 정보 박스 -->
+				<!-- style="display:none" -->
+				<div class="cal_info_box" id="contents_tab_2">
 
-						<!-- 계산기 정보 작성-->
-						<div class="cal_write">
-							<div class="content_write">
-								<span class="content_write_input write_divline" >
-									<h5>반려동물 선택</h5>
+					<!-- 계산기 정보 작성-->
+					<div class="cal_write">
+						<div class="content_write">
+							<span class="content_write_input write_divline">
+								<h5>반려동물 선택</h5>
+								<div class="pet_choice">
+									<input type="hidden" id="pet_type" name="pet_type">
+									<ul id="pet_sel">
+										<li onclick="pet_sel(0)" class="pet_type_0 pet_off"><a><img
+													src="../../resources/images/Laughing_Dog.png" alt="BCS_s01" />
+												<p>강아지</p>
+											</a></li>
+										<li onclick="pet_sel(3)" class="pet_type_3 pet_off"><a><img
+													src="../../resources/images/Laughing_Cat.png" alt="BCS_s01" />
+												<p>고양이</p>
+											</a></li>
+									</ul>
+								</div>
+							</span>
+							<span class="content_write_input write_divline" id="cat_hide" style="display:none">
+								<h5>몸무게 선택</h5>
+								<div class="cal_choice">
 									<fieldset>
-										<label for="dog_check"><input type="radio" class="animal_choice" id="dog_check" name="animal_check" value="dog_check" checked><span>강아지</span></label>
-										<label for="cat_check"><input type="radio" class="animal_choice" id="cat_check" name="animal_check" value="cat_check"><span>고양이</span></label>
-									</fieldset>
-								</span>
-								<span class="content_write_input write_divline">
-									<h5>생년월일 입력</h5>
-									<input type="text" name="dog_date" id="dog_date"  inputmode="numeric" pattern="[0-9]*" maxlength="10"  xonkeyup="myFunction()" placeholder="반려동물의 생년월일을 입력해주세요. ex) 20221031" title="">
-								</span>
-								<span class="content_write_input write_divline" id="cat_hide">
-									<h5>몸무게 선택</h5>
-									<div class="cal_choice">
 										<input type="hidden" id="dog_type" name="dog_type">
-										<input type="button" class="dog_type_btn dog_type0 cal_type_checked" value="소(~9kg)" onclick="weigh_choice(0)">
-										<input type="button" class="dog_type_btn dog_type1" value="중(9~23kg)" onclick="weigh_choice(1)">
-										<input type="button" class="dog_type_btn dog_type2" value="대(23kg이상)" onclick="weigh_choice(2)">
-										<!-- <a class="dog_type0 h21_cal_checked" onclick="weigh_choice(0)">소(~9kg)</a>
-										<a class="dog_type1" onclick="weigh_choice(1)">중(9~23kg)</a>
-										<a class="dog_type2" onclick="weigh_choice(2)">대(23kg이상)</a> -->
-									</div>
-								</span>
-							</div>
+										<label for="dog_type0"><input type="radio"
+												class="dog_type_btn dog_type0 cal_type_checked" id="dog_type0"
+												name="animal_check" value="dog_check" onclick="weigh_choice(0)"
+												checked><span>소(~ 9kg)</span></label>
+										<label for="dog_type1"><input type="radio" class="dog_type_btn dog_type1"
+												id="dog_type1" name="animal_check" value="dog_check"
+												onclick="weigh_choice(1)"><span>중(9 ~ 23kg)</span></label>
+										<label for="dog_type2"><input type="radio" class="dog_type_btn dog_type2"
+												id="dog_type2" name="animal_check" value="dog_check"
+												onclick="weigh_choice(2)"><span>대(23kg 이상)</span></label>
+									</fieldset>
+								</div>
+							</span>
+							<span class="content_write_input write_divline">
+								<h5>BCS 선택</h5>
+								<div class="bcs_choice">
+									<input type="hidden" id="bcs_type" name="bcs_type">
+									<ul id="bcs_sel_dog_img">
+										<li onclick="bcs_sel(0)" class="bcs_type_0"><a><img
+													src="../../resources/images/Dog_Fat1.png" alt="BCS_s01" /></a></li>
+										<li onclick="bcs_sel(2)" class="bcs_type_2"><a><img
+													src="../../resources/images/Dog_Fat2.png" alt="BCS_s03" /></a></li>
+										<li onclick="bcs_sel(4)" class="bcs_type_4"><a><img
+													src="../../resources/images/Dog_Fat3.png" alt="BCS_s05" /></a></li>
+										<li onclick="bcs_sel(6)" class="bcs_type_6"><a><img
+													src="../../resources/images/Dog_Fat4.png" alt="BCS_s07" /></a></li>
+										<li onclick="bcs_sel(8)" class="bcs_type_8"><a><img
+													src="../../resources/images/Dog_Fat5.png" alt="BCS_s09" /></a></li>
+									</ul>
+									<ul id="bcs_sel_cat_img" style="display:none">
+										<li onclick="bcs_sel(0)" class="bcs_type_0"><a><img
+													src="../../resources/images/Cat_Fat1.png" alt="BCS_l01" /></a></li>
+										<li onclick="bcs_sel(2)" class="bcs_type_2"><a><img
+													src="../../resources/images/Cat_Fat2.png" alt="BCS_l03" /></a></li>
+										<li onclick="bcs_sel(4)" class="bcs_type_4"><a><img
+													src="../../resources/images/Cat_Fat3.png" alt="BCS_l05" /></a></li>
+										<li onclick="bcs_sel(6)" class="bcs_type_6"><a><img
+													src="../../resources/images/Cat_Fat4.png" alt="BCS_l07" /></a></li>
+										<li onclick="bcs_sel(8)" class="bcs_type_8"><a><img
+													src="../../resources/images/Cat_Fat5.png" alt="BCS_l09" /></a></li>
+									</ul>
+								</div>
+							</span>
+						</div>
+					</div>
+
+					<!-- 계산기 결과보기 버튼 -->
+					<div class="cal_btn">
+						<div class="cal_result" id="result_btn" onclick="result_view(2)"><a>결과보기</a></div>
+					</div>
+				</div>
+
+				<!-- 계산기 결과 박스 -->
+				<div class="cal_result_box" style="display:none">
+
+					<!-- 나이 계산기 결과 -->
+					<div class="cal_result_age">
+						<div class="age_circle">
+							<span class="age_img"><img src="../../resources/images/Laughing_Dog.png" alt="강아지" /></span>
+							<span class="age_number" id="dog_age">1살</span>
 						</div>
 
-						<!-- 계산기 결과보기 버튼 -->
-						<div class="cal_btn">
-							<div class="cal_result" id="result_btn" onclick="result_view(1)"><a>결과보기</a></div>
-							<!-- <div class="cal_result" onclick="result_view(1)"><button class="btn-hover color-4">결과보기</button></div> -->
-						</div>
-					</div>	
+						<div class="age_same"><img
+								src="http://appdata.hungryapp.co.kr/images/hatdog/img/calculator/result_img03.png"
+								alt="같다" /></div>
 
-					<!-- 계산기 결과 박스 -->
-					<div class="cal_result_box" style="display:none">
-			
-						<!-- 나이 계산기 결과 -->
-						<div class="cal_result_age">
-							<div class="age_circle">
-								<span class="age_img"><img src="../../resources/images/Laughing_Dog.png" alt="강아지" /></span>
-								<span class="age_number" id="dog_age">1살</span>
-							</div>
-							
-							<div class="age_same"><img src="http://appdata.hungryapp.co.kr/images/hatdog/img/calculator/result_img03.png" alt="같다" /></div>
-			
-							<div class="age_circle">
-								<!-- ! 이미지 수정하기 -->
-								<span class="age_img"><img src="../../resources/images/Agegroup_W1.png" alt="사람" /></span>
-								<span class="age_number" id="dog_age_cal">15살</span>
-							</div>
-			
-							<div class="age_lifecycle"  id="dog_life">아동청소년기</div>
+						<div class="age_circle">
+							<!-- ! 이미지 수정하기 -->
+							<span class="age_img"><img src="../../resources/images/Agegroup_W1.png" alt="사람" /></span>
+							<span class="age_number" id="dog_age_cal">15살</span>
 						</div>
-			
-						<!-- 계산기 다시하기 버튼-->
-						<div class="cal_btn">
-							<div class="cal_again" onclick="location.reload()"><a>다시하기</a></div>
-						</div>
+
+						<div class="age_lifecycle" id="dog_life">아동청소년기</div>
+					</div>
+
+					<!-- 계산기 다시하기 버튼-->
+					<div class="cal_btn">
+						<div class="cal_again" onclick="location.reload()"><a>다시하기</a></div>
 					</div>
 				</div>
 			</div>
 		</div>
+		</div>
 	</section>
-	<!-- Age_calculator 끝 -->
-	
+	<!-- Bmi_calculator 끝 -->
+
 	<!-- Footer 시작 -->
 	<section class="ft">
-        <div class="footer_container">
-            <footer class="footer_part">
+		<div class="footer_container">
+			<footer class="footer_part">
 				<p class="footerName">Petkage</p>
 
 				<ul class="nav footer_nav">
@@ -197,8 +267,10 @@
 				</ul>
 
 				<div class="footer_contents">
-					<p class="footer_content">회사명 : (주)펫키지 대표 : 문인수 / 전화 : 070-1234-5678 / 주소 : 서울특별시 강남구 테헤란로 14길 6 남도빌딩</p>
-					<p class="footer_content">사업자 등록번호 안내 : 123-45-6789 / 통신판매업 신고 2022-서울강남-03472 <a href="">[사업자정보 확인]</a>  </p>
+					<p class="footer_content">회사명 : (주)펫키지 대표 : 문인수 / 전화 : 070-1234-5678 / 주소 : 서울특별시 강남구 테헤란로 14길 6
+						남도빌딩</p>
+					<p class="footer_content">사업자 등록번호 안내 : 123-45-6789 / 통신판매업 신고 2022-서울강남-03472 <a href="">[사업자정보
+							확인]</a> </p>
 					<p class="footer_content">&copy;펫키지. All Rights Reserved</p>
 				</div>
 
@@ -218,145 +290,123 @@
 				</div>
 
 				<img src="../../resources/images/Pet.png" alt="" class="footerLogo">
-            </footer>
-        </div>
-    </section>
+			</footer>
+		</div>
+	</section>
 	<!-- Footer 끝-->
 
 	<!-- jQuery -->
-	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>  
-	
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+		crossorigin="anonymous"></script>
 
 	<script>
-
-
-		function dogcal_tab(tab){
+		function dogcal_tab(tab) {
 			$("div[id^='contents']").hide();
-			$("#contents_tab_"+tab).show();
-
+			$("#contents_tab_" + tab).show();
 		}
 
-		$(document).ready(function() {
-			dogcal_tab(1);
+		$(document).ready(function () {
+			dogcal_tab(2);
 			weigh_choice(0);
 		});
 
-		var cellBirth = document.getElementById('dog_date');
-			cellBirth.onkeyup = function(event){
-			event = event || window.event;
-			var _val = this.value.trim();
-			this.value = autoBirth(_val) ;
+		var dog_type_btn = document.getElementsByClassName("dog_type_btn");
+
+		function handleClick(event) {
+			console.log(event.target);
+
+			console.log(event.target.classList);
+
+			if (event.target.classList[1] === "cal_type_checked") {
+				event.target.classList.remove("cal_type_checked");
+			} else {
+				for (var i = 0; i < dog_type_btn.length; i++) {
+					dog_type_btn[i].classList.remove("cal_type_checked");
+				}
+
+				event.target.classList.add("cal_type_checked");
+			}
 		}
 
-		$("#dog_check").on("click", function() {
-			$("#cat_hide").show();
-		})
-
-		$("#cat_check").on("click", function() {
-			$("#cat_hide").hide();
-		})
+		function init() {
+			for (var i = 0; i < dog_type_btn.length; i++) {
+				dog_type_btn[i].addEventListener("click", handleClick);
+			}
+		}
 
 		init();
 
-		function result_view(tab_id){
-			var dog_date = $('input[name="dog_date"]').val().replace(/\./g,'-');
-			var dog_type= $('input[name="dog_type"]').val();
+		function result_view(tab_id) {
+			var bcs_type = $('#bcs_type').val();
 
-			var dog_weight = $('input[name="dog_weight"]').val();
-			var dog_jisu= $('select[name="dog_jisu"]').val();
-
-			var bcs_type= $('#bcs_type').val();
-
-			if(tab_id==1){
-				if(!dog_date){
-					alert("생년월일을 입력해주세요.");
-					$('input[name="dog_date"]').focus()
-					return;
-				} else if(!dog_type){
-					alert("몸무게를 선택해주세요.");
-					return;
-				}
-
-				if(!isBirthday(dog_date)){ //생년월일 유효성 검사
-					return;
-				} else {
-					$(".cal_info_box").hide();
-					$(".cal_result_box").show();
-				}
-
-				data="m2Code=dogcal&mode=age_cal&dog_date="+dog_date+"&dog_type="+dog_type;
-			} else if(tab_id==2){
-				if(!dog_weight){
-					alert("몸무게를 입력해주세요.");
-					$('input[name="dog_weight"]').focus()
-					return;
-				}else if(!dog_jisu){
-					alert("반려견 상태를 선택해주세요.");
-					return;
-				}
-
-				data="m2Code=dogcal&mode=calorie_cal&dog_weight="+dog_weight+"&dog_jisu="+dog_jisu;
-			} else if(tab_id==3){
-				if(!bcs_type){
+			if (tab_id == 2) {
+				if (!bcs_type) {
 					alert("BCS를 선택해주세요");
 					return;
 				}
-				data="m2Code=dogcal&mode=bimando_cal&bcs_type="+bcs_type;
-			}
-			
+				data = "m2Code=dogcal&mode=bimando_cal&bcs_type=" + bcs_type;
+			} 
 
 			$.ajax({
 				type: "post",
 				dataType: "json",
-				data:data,
+				data: data,
 				url: "../ajaxData_cal.php",
-				success: function(r){
+				success: function (r) {
 					$(".Cc_result").show();
 					$(".h21_calculator_sns").show();
 					$(".Cc_form").hide();
 
-					if(tab_id==1){ // 나이 계산
-						$(".Cc_result_age").css("display","block");
-						$("#dog_age").html(r.msg[0]);
-						$("#dog_age_cal").html(r.msg[1]+"살");
-						$("#dog_life").html(r.msg[2]);
-					}else if(tab_id==2){ //칼로리 계산
-						$(".Cc_result_calorie").css("display","block");
-						$("#basic_meta").html(r.msg[0]+"kcal");
-						$("#basic_kal").html(r.msg[1]+"kcal");
-						
-					}else if(tab_id==3){ // 비만도 계산
-						$(".Cc_result_obesity").css("display","block");
+					if (tab_id == 2) {// 비만도 계산기
+						$(".Cc_result_obesity").css("display", "block");
 						$("#bsc_type_str1").html(r.msg_pc[0]);
 						$("#bsc_type_str2").html(r.msg_pc[1]);
 						$("#bsc_type_str3").html(r.msg_pc[2]);
-					}
-
+					} 
 				}
 			})
 		}
 
-		function bcs_sel(no){//비만도선택
+		
+		function bcs_sel(no) { // 비만도 선택
 			$("#bcs_type").val(no);
-			$(this).addClass("Cc_BCS_on");
-			$("li[class^='bcs_type_']").removeClass("Cc_BCS_on");
-			$(".bcs_type_"+no).addClass("Cc_BCS_on");
+			$(this).addClass("bcs_on");
+			$("li[class^='bcs_type_']").removeClass("bcs_on");
+			$(".bcs_type_" + no).addClass("bcs_on");
 		}
 
-		function weigh_choice(no){//소중대 선택
-			$("a[class^='bcs_type_']").removeClass("Cc_BCS_on");
+		function pet_sel(no) { // 펫 선택
+			$("#pet_type").val(no);
+			$(this).addClass("pet_on");
+			$("li[class^='pet_type_']").removeClass("pet_on");
+			$(".pet_type_" + no).addClass("pet_on");
 
-			$("a[class^='dog_type']").removeClass("h21_cal_checked");
-			$(".dog_type"+no).addClass("h21_cal_checked");
+			if (no == 0) {
+				$("#cat_hide").show();
+				$("#bcs_sel_cat_img").hide();
+				$("#bcs_sel_dog_img").show();
+				
+			} else if (no == 3) {
+				$("#cat_hide").hide();
+				$("#bcs_sel_dog_img").hide();
+				$("#bcs_sel_cat_img").show();
+			}
+		}
+
+		function weigh_choice(no) { // 소중대 선택
+			$("a[class^='bcs_type_']").removeClass("bcs_on");
 
 			$("#dog_type").val(no);
 			$("#bcs_type").val("");
-			$("ul[id^='bcs_sel_']").hide();
-			$("#bcs_sel_"+no+"_img").show();
 		}
 	</script>
 
 </body>
+
 </html>

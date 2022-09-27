@@ -3,6 +3,18 @@
     display: flex;
     flex-wrap: wrap;
 }
+.pet_choice li{
+    float: left;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 170px;
+    height: 150px;
+    box-sizing: border-box;
+    margin: 10px;
+}
 
 .pet_choice img {
     width: 85px;
@@ -21,18 +33,9 @@
 }
 
 .pet_off {
-    border-radius: 10px;
     background-color: #f6f7f8;
     border: 5px solid #f6f7f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 170px;
-    height: 150px;
-    box-sizing: border-box;
     color: #cfcece;
-    margin: 10px;
 }
 
 .pet_off:last-child {
@@ -40,24 +43,17 @@
 }
 
 .pet_off:hover {
+    border: 5px solid #d9d9d9;
+    background: #f5f5f5;
     cursor: pointer;
 }
 
 /* 이미지 클릭 시 실행 */
 .pet_on {
-    border-radius: 10px;
     /* border: 5px solid #fcd11e; */
     border: 5px solid #FFEBC9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 170px;
-    height: 150px;
-    box-sizing: border-box;
     background-color: #ffffff;
     color: #090909;
-    margin: 10px;
 }
 
 .pet_on:last-child {
@@ -65,7 +61,10 @@
 }
 
 .pet_on:hover {
+    border: 5px solid #FFEBC9;
+    background: #fff9ef;
     cursor: pointer;
+    opacity: 0.6;
 }
 
 .pet_on img {
