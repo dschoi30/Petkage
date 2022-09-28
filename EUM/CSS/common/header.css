@@ -20,9 +20,10 @@
 .hd .header_link {
     color: #803D3D !important;
     font-weight: bold;
-    width: 100px;
+    /* width: 100px; */
     text-align: center;
     margin-left: 10px;
+    padding-top: 10px;
 }
 
 .hd .headercart {
@@ -44,6 +45,7 @@
     margin-left: 10px;
     border-radius: 10px;
     border-style: none;
+    padding-top: 4px;
 }
 
 .hd #loginBtn {

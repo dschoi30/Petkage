@@ -1,0 +1,170 @@
+.ts .tools_top {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px auto;
+    max-width: 620px;
+    position: relative;
+    height: 200px;
+}
+
+.ts .tools_top_box {
+    padding-top: 93px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    left: -140px;
+    z-index: 1;
+}
+
+.ts .tools_title {
+    color: #090909;
+    font-size: 38px;
+    line-height: 1.315em;
+    margin: 0px;
+    white-space: nowrap;
+}
+
+.ts .tools_title span {
+    color: #803D3D;
+    font-size: inherit;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.ts .tools_top_box p {
+    font-size: 20px;
+    margin: 0;
+    white-space: nowrap;
+    color: #868688;
+    line-height: 1.75em;
+}
+
+.ts .tools_top_line {
+    width: 980px;
+    height: 3px;
+    background: #D6D6D6;
+    text-align: center;
+    margin: auto;
+}
+
+.ts .tools_menu {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0px 110px;
+}
+
+.ts .tools_menu_box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ts .tools_menu_box button {
+    border: none;
+    outline: 0;
+}
+
+.ts .tools_btn {
+    padding: 32px 30px;
+    margin-left: 10px;
+    margin-right: 15px;
+    width: 220px;
+    height: 300px;
+    border-radius: 14px;
+    position: relative;
+    z-index: 1;
+    box-shadow: #dedee0a6 0px 30px 20px -10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.ts .tools_btn:hover {
+    transform: scale(1.05);
+}
+
+.ts .tools_btn span {
+    font-size: inherit;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.ts .tools_btn button {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    color: #ffffff;
+    font-size: 25px;
+    padding-top: 6px;
+}
+
+.ts .tools_age {
+    background-color: #feeff4;
+}
+
+.ts .tools_age span {
+    color: #f35767;
+}
+
+.ts .tools_age button {
+    background-color: #f35767;
+}
+
+.ts .tools_bmi {
+    background-color: #ecf6ff;
+}
+
+.ts .tools_bmi span {
+    color: #3b74c8;
+}
+
+.ts .tools_bmi button {
+    background-color: #3b74c8;
+}
+
+.ts .tools_calorie {
+    background-color: #f7f4ff;
+}
+
+.ts .tools_calorie span {
+    color: #5843be;
+}
+
+.ts .tools_calorie button {
+    background-color: #5843be;
+}
+
+.ts .tools_dic {
+    background-color: #f4feee;
+}
+
+.ts .tools_dic span {
+    color: #4e7f1c;
+}
+
+.ts .tools_dic button {
+    background-color: #4e7f1c;
+}
+
+.ts .tools_walk {
+    background-color: #fefeee;
+}
+
+.ts .tools_walk span {
+    color: #fcd11e;
+}
+
+.ts .tools_walk button {
+    background-color: #fcd11e;
+}
+
+.ts .tools_name {
+    color: #090909;
+    font-size: 28px;
+    line-height: 1.35em;
+    margin: 0px;
+}
+

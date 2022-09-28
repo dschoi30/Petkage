@@ -1,0 +1,214 @@
+
+.pet_choice {
+    display: flex;
+    flex-wrap: wrap;
+}
+.pet_choice li{
+    float: left;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 170px;
+    height: 150px;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.pet_choice img {
+    width: 85px;
+    height: 85px;
+    background: transparent;
+    opacity: 0.35;
+    mix-blend-mode: multiply;
+    margin: 5px;
+}
+
+.pet_choice p {
+    text-align: center;
+    font-weight: bold;
+    margin: 5px 0px;
+    color: inherit;
+}
+
+.pet_off {
+    background-color: #f6f7f8;
+    border: 5px solid #f6f7f8;
+    color: #cfcece;
+}
+
+.pet_off:last-child {
+    margin-right: 0px;
+}
+
+.pet_off:hover {
+    border: 5px solid #d9d9d9;
+    background: #f5f5f5;
+    cursor: pointer;
+}
+
+/* 이미지 클릭 시 실행 */
+.pet_on {
+    /* border: 5px solid #fcd11e; */
+    border: 5px solid #FFEBC9;
+    background-color: #ffffff;
+    color: #090909;
+}
+
+.pet_on:last-child {
+    margin-right: 0px;
+}
+
+.pet_on:hover {
+    border: 5px solid #FFEBC9;
+    background: #fff9ef;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.pet_on img {
+    opacity: 0.8;
+}
+
+/* select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.selectBox {
+    position: relative;
+    width: 250px;
+    height: 35px;
+    border-radius: 4px;
+    border: 2px solid #E3B7A0;
+}
+
+.selectBox .select {
+    width: inherit;
+    height: inherit;
+    background: transparent;
+    border: 0 none;
+    outline: 0 none;
+    padding: 0 5px;
+    position: relative;
+    z-index: 3; 
+}
+
+.selectBox .select option {
+    padding: 3px 0;
+    font-size: 16px;
+}
+
+.selectBox .select option:hover {
+    background: #E3B7A0;
+    color: #fff;
+    padding: 3px 0;
+    font-size: 16px;
+}
+
+.selectBox .icoArrow {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    z-index: 1; 
+    width: 35px; 
+    height: 33px;
+    border-left: 2px solid #E3B7A0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+.selectBox .icoArrow img {
+        width: 50%;
+        transition: .3s;
+}
+
+.selectBox .select:focus + .icoArrow img {
+        transform: rotate(180deg);
+}
+
+.selectBox .select option:focus + .icoArrow img {
+        transform: rotate(180deg);
+} */
+    
+.selectBox2 * { 
+    box-sizing: border-box; 
+}
+.selectBox2 {
+    display: inline-block;
+    position: relative;
+    width: 270px;
+    height: 35px;
+    margin: 10px;
+    border-radius: 4px;
+    border: 2px solid #E3B7A0;
+    background: url("../../resources/images/arrow_down.png") calc(100% - 7px) center no-repeat;
+    background-size: 20px;
+    cursor: pointer;
+}
+
+.selectBox2:after {
+  content: '';
+  display: block; 
+  width: 2px;
+  height: 100%; 
+  position: absolute; 
+  top: 0; 
+  right: 35px;
+  background: #E3B7A0;
+}
+
+.selectBox2 .label {
+  display: flex;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  border: 0 none;
+  outline: 0 none;
+  padding-left: 15px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.selectBox2 .optionList {
+  /* position: absolute;  */
+  top: 28px;
+  left: 0;
+  width: 100%;
+  background: #E3B7A0;
+  color: #fff;
+  list-style-type: none;
+  padding: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  max-height: 0;
+  transition: .3s ease-in;
+}
+
+.selectBox2.active .optionList {
+  max-height: 500px;
+}
+
+.selectBox2 .optionItem {
+  border-bottom: 1px dashed rgb(170, 72, 72);
+  padding: 6px 15px 3px;
+  transition: .1s;
+}
+
+.selectBox2 .optionItem:hover {
+  background: rgb(175, 93, 93);
+}
+
+.selectBox2 .optionItem:last-child {
+  border-bottom: 0 none;
+}
+
+
+.selectBox2 .optionList::-webkit-scrollbar {width: 6px;}
+.selectBox2 .optionList::-webkit-scrollbar-track {background: transparent; }
+.selectBox2 .optionList::-webkit-scrollbar-thumb {background: #303030; border-radius: 45px;}
+.selectBox2 .optionList::-webkit-scrollbar-thumb:hover {background: #303030;}
+

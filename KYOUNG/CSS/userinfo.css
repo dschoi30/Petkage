@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .mp-info .info {
     position: absolute;
     background: #FFEBC9;
@@ -17,7 +18,7 @@ left: 200px;
 }
 
 .mp-info .infofont {
-    font-family: 'Inter';
+    font-family: 'GmarketSansMedium';
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -28,3 +29,24 @@ left: 200px;
 
     color: #803D3D;
 }
+
+.mp-info2 .container {
+    font-family: 'GmarketSansMedium';
+    border: 3px solid #D6D6D6;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.v91_331 {
+    width: 309px;
+    height: 61px;
+    background: url("../images/v91_331.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }

@@ -9,3 +9,13 @@
 .mp-hrt .pagination {
     margin: 100px;
 }
+
+.mp-hrt .container {
+    font-family: 'GmarketSansMedium';
+}
+
+.mp-hrt .page-link {
+    color: #000; 
+    background-color: #fff;
+    border: 1px solid #ccc; 
+}

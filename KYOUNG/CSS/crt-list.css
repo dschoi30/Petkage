@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.mp-crt .container {
+    font-family: 'GmarketSansMedium';
+}
+
+.mp-crt .page-link {
+    color: #000; 
+    background-color: #fff;
+    border: 1px solid #ccc; 
+}
