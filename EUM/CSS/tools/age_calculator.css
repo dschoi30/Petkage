@@ -1,4 +1,16 @@
-.ot .others_A_container {
+.tc {
+    overflow:hidden;
+}
+
+.tc input:-webkit-autofill,
+.tc input:-webkit-autofill:hover,
+.tc input:-webkit-autofill:focus,
+.tc input:-webkit-autofill:active {
+    transition: background-color 5000s; 
+}
+
+
+.tc .tools_container {
     float: left;
     text-align: center;
     width: 100%;
@@ -6,21 +18,21 @@
     border: 0px solid #000;
 }
 
-.ot .cal_top {
+.tc .cal_top {
     width: 100%;
     min-height: 255px;
     background-size: 100%;
 }
 
-.ot .pr {
+.tc .pr {
     position: relative;
 }
 
-.ot .cal_top_box {
+.tc .cal_top_box {
     margin: 0px auto;
 }
 
-.ot .cal_top_box h3 {
+.tc .cal_top_box h3 {
     width: 100%;
     text-align: center;
     color: #E3B7A0;
@@ -30,13 +42,13 @@
     letter-spacing: -0.03em;
 }
 
-.ot .cal_top_box h3 span {
+.tc .cal_top_box h3 span {
     color: #803D3D;
     font-size: 45px;
     font-weight: 600;
 }
 
-.ot .area {
+.tc .area {
     max-width: 1200px ! important;
     min-width: 1260px ! important;
     margin: 0px auto;
@@ -47,7 +59,7 @@
     min-height: 255px;
 }
 
-.ot .cal_top_h3_line_c {
+.tc .cal_top_h3_line_c {
     width: 1100px;
     height: 3px;
     background: #D6D6D6;
@@ -55,26 +67,27 @@
     margin: 30px auto 15px;
 }
 
-.ot .cal_menu {   
+.tc .cal_menu {   
     top: -40px;
 }
 
-.ot .cal_menu, .ot .cal_menu2 {
+.tc .cal_menu, .tc .cal_content {
     width: 800px;
     overflow: hidden;
     margin: 0 auto;
     background: #fff;
     border-radius: 40px;
-    box-shadow: 5px 5px 48px rgb(207 207 207 / 60%);
+    box-shadow: 5px 5px 48px rgb(207 207 207 / 65%);
 }
 
-.ot .cal_menu_btn li.active {
+.tc .cal_menu_btn li.active {
     background-color: #E3B7A0;
 }
 
-.ot .cal_menu_btn li {
-    width: 33.333%;
-    background-color: #FFEBC9;
+.tc .cal_menu_btn li {
+    width: 20%;
+    /* background-color: #FFEBC9; */
+    background-color: #fff;
     float: left;
     border: none;
     outline: none;
@@ -86,78 +99,83 @@
     box-sizing: border-box;
 }
 
-.ot .cal_menu_btn li .cal_icon {
+.tc .cal_menu_btn li .cal_icon {
     display: block;
     overflow: hidden;
+    text-align: center;
 }
 
-.ot .cal_menu_btn li.active a {
+.tc .cal_menu_btn li.active a {
     color: #fff;
 }
 
-.ot .cal_menu_btn li.active .cal_txt {
+.tc .cal_menu_btn li.active .cal_txt {
     color: #fff;
 }
 
-.ot .cal_menu_btn li .cal_txt {
+.tc .cal_menu_btn li.inactive:hover {
+    background-color: rgba(255, 234, 199, 0.5);
+}
+
+.tc .cal_menu_btn li .cal_txt {
     display: block;
     overflow: hidden;
     padding-top: 5px;
     color: #803D3D;
+    text-align: center;
     
 }
 
-.ot .cal_menu2 {
+.tc .cal_menu_btn img {
+    width: 50px;
+    height: 50px;
+}
+
+.tc .cal_content {
     top: 0px;
 }
 
-.ot .cal_write {
+.tc .cal_write {
     margin: 3%;
 }
 
-.ot .content_write {
+.tc .content_write {
     display: block;
     overflow: hidden;
     border-top: 1px solid #646361;
 }
 
-.ot .content_write .write_divline {
+.tc .content_write .write_divline {
     display: block;
     overflow: hidden;
     border-bottom: 1px solid #ebebeb;
 }
 
-.ot .content_write fieldset {
-    padding-left: 10px;
-}
-
-.ot .content_write label {
+.tc .content_write label {
     margin: 10px;
 }
-.ot .content_write span {
+.tc .content_write span {
     margin-left: 10px;
-    vertical-align: middle;
-    
 }
 
-.ot .content_write_input {
+.tc .content_write_input {
     display: block;
     overflow: hidden;
     text-align: left;
 }
 
-.ot .content_write_input h5 {
+.tc .content_write_input h5 {
     width: 16%;
     float: left;
     overflow: hidden;
-    margin: 15px 2% 15px 0;
+    margin: 18px 2% 15px 0;
     border-right: 1px solid #ebebeb;
     color: #000000;
     font-size: 17px;
     font-weight: 500;
 }
 
-.ot .content_write_input > input[type="radio"] {
+.tc .content_write_input > input[type="radio"] {
     overflow: hidden;
     margin-left: 1%;
     padding: 13px 10px 13px 10px;
@@ -166,7 +184,7 @@
     border: none;
 }
 
-.ot .cal_content [type="radio"] {
+.tc .cal_info_box [type="radio"] {
     vertical-align: middle;
     appearance: none;
     border: max(2px, 0.1em) solid gray;
@@ -176,55 +194,53 @@
     transition: border 0.5s ease-in-out;
 }
 
-.ot .cal_content [type="radio"]:checked {
+.tc .cal_info_box [type="radio"]:checked {
     border: 0.4em solid #803D3D;
 }
 
-.ot .cal_content [type="radio"]:focus-visible {
+.tc .cal_info_box [type="radio"]:focus-visible {
     outline-offset: max(2px, 0.1em);
     outline: max(2px, 0.1em) dotted #803D3D;
 }
 
-.ot .cal_content [type="radio"]:hover {
+.tc .cal_info_box [type="radio"]:hover {
     box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
     cursor: pointer;
 }
 
-.ot .cal_content [type="radio"]:disabled {
+.tc .cal_info_box [type="radio"]:disabled {
     background-color: lightgray;
     box-shadow: none;
     opacity: 0.7;
     cursor: not-allowed;
 }
 
-.ot .cal_content [type="radio"]:disabled + span {
+.tc .cal_info_box [type="radio"]:disabled + span {
     opacity: 0.7;
     cursor: not-allowed;
 }
 
-.ot .content_write_input > input[type="text"] {
-    width: 78%;
+.tc .content_write_input > input[type="text"] {
+    width: 60%;
     float: left;
     overflow: hidden;
-    margin-left: 1%;
-    padding: 13px 10px 13px 10px;
+    margin: 2.2% 1% 1% 2%;
     font-size: 16px;
     font-weight: 300;
     border: none;
 }
 
-.ot .cal_choice {
+.tc .cal_choice {
     overflow: hidden;
     height: 42px;
     text-align: left;
-    margin: 5px;
-    padding-left: 10px;
+    margin: 8px 5px 5px 5px;
     border: 0px solid #000;
 }
 
-.ot .cal_choice .cal_type_checked {
-    color: #fff;
-    background: #803D3D !important;
+/* .tc .cal_choice .cal_type_checked {
+    color: #fff !important;
+    background: #E3B7A0 !important;
     font-size: 14px;
     width: 100px;
     height: 40px;
@@ -232,67 +248,70 @@
     border-style: none;
     vertical-align: middle;
     padding-top:10px;  
-}
+} */
 
-.ot .cal_choice input {
+.tc .cal_choice input {
     width: 78%;
     float: left;
     overflow: hidden;
-    margin-left: 1%;
-    padding: 13px 10px 13px 10px;
     font-size: 16px;
     font-weight: 300;
     border: none;
 }
 
-.ot .cal_choice > input[type="button"] {
-    color: #fff;
-    background: #E3B7A0;
+.tc .cal_choice > input[type="button"] {
+    color: #cfcece;
+    background: #f6f7f8;
     font-size: 14px;
-    width: 100px;
+    width: 115px;
     height: 40px;
     border-radius: 10px;
     border-style: none;
     vertical-align: middle;
-    padding-top:10px;  
+    padding-top:11px;  
 }
 
-.ot .cal_btn {
+.tc .cal_choice > input[type="button"]:hover {
+    color: #fff;
+    background: #803D3D;
+}
+
+.tc .cal_btn {
     display: block;
     overflow: hidden;
     width: 100%;
     background-color: #fafafa;
 }
 
-.ot .cal_result {
+.tc .cal_result {
     display: block;
     overflow: hidden;
-    width: 200px;
-    height: 40px;
+    height: 50px;
     margin: 20px 36% 20px 36%;
     border-radius: 10px;
     background: #E3B7A0;
+    padding: 10px 40px 16px 40px;
 }
 
-.ot .cal_result a {
+.tc .cal_result a {
     color: #fff !important;
     font-size: 20px;
 }
 
-.ot a {
+.tc a {
     cursor: pointer;
     text-decoration: none !important;
 }
-.ot ol, ul {
+.tc ol, ul {
     list-style: none;
 }
 
-.ot dl, ol, ul {
+.tc dl, ol, ul {
     margin-top: 0;
     margin-bottom: 0 !important; 
 }
 
-.ot html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+.tc html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
 }

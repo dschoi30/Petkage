@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tools_main</title>
+
+	<!-- Font -->
+	<style>
+
+		/* 폰트 자체 아래에 여백이 있음 */
+		@font-face {
+			font-family: "GmarketSansMedium";
+			src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+				format("woff");
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		* {
+			font-family: "GmarketSansMedium";
+		}
+
+	</style>
+
+	<!-- Header css -->
+	<link rel="stylesheet" href="../../CSS/common/header.css"></link>
+	
+	<!-- Footer css -->
+	<link rel="stylesheet" href="../../CSS/common/footer.css"></link>
+    
+	<!-- Tools css -->
+    <link rel="stylesheet" href="../../CSS/tools/tools_main.css"></link>
+    
+	<!-- Bootstrap css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> -->
+
+	
+</head>
+<body>
+    <!-- Header 시작 -->
+	<section class="hd">
+        <div class="header_container">
+            <header class="d-flex flex-wrap mb-4">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+                    <img src="../../resources/images/Petkage_Logo3.png" alt="" class="headerLogo">
+                </a>
+            
+                <ul class="nav nav-pills">
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">어디가지</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">커뮤니티</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">마켓</a></li>
+                    <li class="nav-item header_item"><a href="#" class="nav-link header_link">펫키지 툴즈</a></li>
+                    <input type="button" class="headerBtn" value="마이페이지" >
+                    <input type="button" class="headerBtn" id="loginBtn" value="로그아웃">
+        
+                    <a href="/" class="d-flex align-items-center headercart">
+                        <img src="../../resources/images/Cart.png" alt="" class="cart">
+                    </a>
+                </ul>
+            </header>
+        </div>
+    </section>
+	<!-- Header 끝 -->
+    
+    <!-- Tools main 시작 -->
+    <section class="ts">
+
+        <!-- 툴즈 메인 상단 -->
+        <div class="tools_top">
+            <div class="tools_top_box">
+                <h1 class="tools_title">
+                    <span>펫키지 </span>툴즈
+                </h1>
+                <p>우리 아이를 위한 계산기, 가이드라인 모음</p>
+            </div>
+        </div>
+        
+        <p class="tools_top_line"></p>
+
+        <!-- 툴즈 메뉴 -->
+        <div class="tools_menu">
+            <div class="tools_menu_box">
+                <!-- 나이 -->
+                <div class="tools_btn tools_age">
+                    <h2 class="tools_name">
+                        <span>나이</span>
+                        <br>
+                        계산기
+                    </h2>
+                    <a href="../tools/age_calculator.html">
+                        <button class="tools_go_age">></button>
+                    </a>
+                </div>
+
+                <!-- 비만도 -->
+                <div class="tools_btn tools_bmi">
+                    <h2 class="tools_name">
+                        <span>비만도</span>
+                        <br>
+                        계산기
+                    </h2>
+                    <a href="../tools/bmi_calculator.html">
+                        <button class="tools_go_bmi">></button>
+                    </a>
+                </div>
+
+                <!-- 권장 칼로리 -->
+                <div class="tools_btn tools_calorie">
+                    <h2 class="tools_name">
+                        <span>권장칼로리</span>
+                        <br>
+                        계산기
+                    </h2>
+                    <a href="../tools/calorie_calculator.html">
+                        <button class="tools_go_calorie">></button>
+                    </a>
+                </div>
+
+                <!-- 식품 사전 -->
+                <div class="tools_btn tools_dic">
+                    <h2 class="tools_name">
+                        <span>반려동물식품</span>
+                        <br>
+                        사전
+                    </h2>
+                    <a href="../tools/food_dictionary.html">
+                        <button class="tools_go_dic">></button>
+                    </a>
+                </div>
+
+                <!-- 산책 추천 -->
+                <div class="tools_btn tools_walk">
+                    <h2 class="tools_name">
+                        <span>산책코스</span>
+                        <br>
+                        추천
+                    </h2>
+                    <a href="../tools/walkout_recommend.html">
+                        <button class="tools_go_walk">></button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tools main 끝 -->
+
+    <!-- Footer 시작 -->
+    <section class="ft">
+        <div class="footer_container">
+            <footer class="footer_part">
+                <p class="footerName">Petkage</p>
+
+                <ul class="nav footer_nav">
+                    <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">이용약관</a></li>
+                    <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">개인정보 취급방침</a></li>
+                    <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">공지사항</a></li>
+                    <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">FAQ</a></li>
+                </ul>
+
+                <div class="footer_contents">
+                    <p class="footer_content">회사명 : (주)펫키지 대표 : 문인수 / 전화 : 070-1234-5678 / 주소 : 서울특별시 강남구 테헤란로 14길 6 남도빌딩</p>
+                    <p class="footer_content">사업자 등록번호 안내 : 123-45-6789 / 통신판매업 신고 2022-서울강남-03472 <a href="">[사업자정보 확인]</a>  </p>
+                    <p class="footer_content">&copy;펫키지. All Rights Reserved</p>
+                </div>
+
+                <div class="footer_icons">
+                    <a href="/" class="">
+                        <img src="../../resources/images/Instagram.png" alt="" class="footericon">
+                    </a>
+                    <a href="/" class="">
+                        <img src="../../resources/images/Facebook.png" alt="" class="footericon">
+                    </a>
+                    <a href="/" class="">
+                        <img src="../../resources/images/youtube.png" alt="" class="footericon">
+                    </a>
+                    <a href="/" class="">
+                        <img src="../../resources/images/kakaotalk.png" alt="" class="footericon">
+                    </a>
+                </div>
+
+                <img src="../../resources/images/Pet.png" alt="" class="footerLogo">
+            </footer>
+        </div>
+    </section>
+    <!-- Footer 끝-->   
