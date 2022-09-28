@@ -66,7 +66,8 @@
                 <form action="#" method="post">
                   <div class="form-group first">
                     <label for="userId">아이디</label>
-                    <input type="text" class="form-control" placeholder="아이디를 입력해 주세요" id="userId" name="userId" value="${ empty cookie.saveId ? '' : cookie.saveId.value }">
+                    <input type="text" class="form-control" placeholder="아이디를 입력해 주세요" id="userId" name="userId" >
+                    <!-- value="${ empty cookie.saveId ? '' : cookie.saveId.value }" -->
                   </div>
                   <div class="form-group last mb-3">
                     <label for="userPwd">비밀번호</label>
@@ -76,7 +77,8 @@
                   <div class="d-flex mb-5 align-items-center">
                     <!-- 아이디 저장 -->
                     <label class="control control--checkbox mb-0"><span class="caption">Remember ID</span>
-                      <input type="checkbox" id="checkId" name="checkId" checked="checkeId"/>
+                      <input type="checkbox" id="saveId" name="saveId" ${ empty cookie.saveId ? "" : "checked" } >
+                      
                       <div class="control__indicator"></div>
                     </label>
 
@@ -88,13 +90,13 @@
                   </div>
     
                   <div id="btnLoginBox">
-                    <input type="submit" value="로그인" class="btn btn-block" id="btnLoin" style="color: white; background-color: #E3B7A0; border-style: none;font-weight: 700;">
+                    <input type="submit" value="로그인" class="btn btn-block" id="btnLoin" disabled="">
 
-                    <button type="submit" class="btn btn-block" style="color: white; background-color: #F4DF23; font-weight: 700;">
+                    <button type="submit" class="btn btn-block" id="kakaoLogin" >
                       카카오톡으로 로그인
                     </button>
 
-                    <button type="submit" class="btn btn-block" style="color: white; background-color: #92DE63; font-weight: 700;">
+                    <button type="submit" class="btn btn-block" id="naverLogin">
                       네이버로 로그인
                     </button>
 
@@ -102,7 +104,7 @@
                       아직 <strong><span style="color: #753422;">Pet</span>kage</strong>의 회원이 아니신가요?<br>
                       회원가입을 하시면 다양한 혜택이 준비되어 있습니다.
                     </span>
-                    <button type="submit" class="btn btn-block" id="btnJoinMember" style="color: white; background-color: #803D3D; font-weight: 700;">
+                    <button type="submit" class="btn btn-block" id="btnJoinMember" >
                       회원가입
                     </button>
                   </div>

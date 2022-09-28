@@ -9,8 +9,7 @@
 * {
   font-family: "GmarketSansMedium";
 }
-
-.login body {
+btnLoginBox .login body {
   background-color: #fff;
 }
 
@@ -34,11 +33,46 @@
   color: #888;
 }
 
-.login btn:hover {
-  text-decoration: none !important;
-  background: #21825b;
+/* 로그인 버튼 */
+.login #btnLoin {
+  color: white;
+  background-color: #e3b7a0;
+  border-style: none;
 }
 
+.login #btnLoin:hover {
+  background-color: #d79771;
+  font-weight: 700;
+}
+
+.login #kakaoLogin {
+  color: white;
+  background-color: #fce620;
+}
+
+.login #kakaoLogin:hover {
+  background-color: #ffd600;
+  font-weight: 700;
+}
+
+.login #naverLogin {
+  color: white;
+  background-color: #92de63;
+}
+.login #naverLogin:hover {
+  background-color: #57b81b;
+  font-weight: 700;
+}
+
+.login #btnJoinMember {
+  color: white;
+  background-color: #803d3d;
+}
+
+.login #btnJoinMember:hover {
+  background-color: #d79771;
+  font-weight: 700;
+}
 .login .content {
   padding: 7rem 0;
 }

@@ -70,10 +70,10 @@
           
           <!-- 약관 동의 -->
           <div class="termsBox">
-            <div style="font-size: 17px; font-weight: bold;">
-              약관을 읽고 동의해주세요. 
+            <div id="agreeCheck" style="font-size: 17px; font-weight: bold;">
+              약관을 읽고 동의해주세요.
               <button type="button" class="btn btn-Link" id="btnAgree" data-toggle="modal" data-target="#agreemodal">
-                <img src="../images/약관버튼.png" style="height: 20px; width: 20px; padding: 0;">
+                <img src="../images/click.png" style="height: 20px; width: 20px; padding: 0;">
               </button>
             </div>
           </div>
@@ -83,8 +83,8 @@
             <div class="modal-dialog modal-dialog-scrollable modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
-                    <!-- <img class="logo" src="${ path }/resources/images/Hi_Logo.png" alt="" width="120" height="60"> -->
-                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    <img class="logo" src="../../EUM/resources/images/Petkage_Logo2.png" alt="" width="170" height="80">
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Clrrrrrrrose"></button> -->
                 </div>
                 <div class="modal-body">
                 <form name="agreeForm" action="${ path }/member/agree" method="POST" >
@@ -97,7 +97,7 @@
                       <input class="form-check-input checkSep" id="check1" type="checkbox" value="">
                       <label class="form-check-label agreeTitle" for="check1">
                         <strong><span style="color: #753422">Pet</span>kage</strong>의 이용약관에 동의합니다.
-                      </label> <br>
+                      </label><br>
                       <textarea class="terms" cols="80" rows="10" readonly>제 1 장 총칙
                       </textarea>
                   
@@ -106,7 +106,6 @@
                       <strong><span style="color: #753422">Pet</span>kage</strong>의 개인정보 수집 및 이용에 동의합니다.
                     </label> <br>
                     <textarea class="terms" cols="80" rows="10" readonly>1. 개인정보의 수집항목 및 수집방법 
-                        
                     </textarea>
                   </div>
                   </form>
@@ -115,8 +114,8 @@
                     <span></span> 
                   </div>
                 <div class="modal-footer" style="justify-content: center;">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal" style="font-weight: 700;">닫기</button>
-                  <button type="button" class="btn btn-primary" id="btnAgreeFinish" >동의 완료</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                  <button type="button" class="btn btn-primary" id="btnAgreeFinish" data-dismiss="modal">동의 완료</button>
                 </div>
               </div>
             </div>
@@ -128,67 +127,69 @@
               <tbody>
                 <tr>
                   <th>아이디</th>
-                    <td>
-                      <input type="text" class="joinInfoInput" name="userId" id="userId" required>
-                    </td>
-                    <td>
-                      <input type="button" class="btnInfo" id="userIdDuplicate" value="중복확인"></input>
-                    </td>
+                  <td>
+                    <input type="text" class="joinInfoInput" name="userId" id="userId" required>
+                    <input type="hidden" name="idTest" value="0" />
+                  </td>
+                  <td>
+                    <input type="hidden" name="idDuplicateTest" value="0" />
+                    <input type="button" class="btnInfo" id="userIdDuplicate" value="중복확인" disabled=""></input>
+                  </td>
                 </tr>
                 <tr>
                   <th></th>
                   <td>
-                    <span class="checkAlert" id="id_termsCheck"></span>
+                    <span class="checkAlert" id="id_termsCheck">10~12자의 영문 대소문자와 숫자를 입력해 주세요.</span>
                   </td>
                 </tr>
                 <tr>
                   <th>비밀번호</th>
-                    <td>
-                      <input type="password" class="joinInfoInput" name="userPwd" id="userPwd" required>
-                    </td>
+                  <td>
+                    <input type="hidden" name="pwdTest" value="0" />
+                    <input type="password" class="joinInfoInput" name="userPwd" id="userPwd" required >
+                  </td>
                   <th>비밀번호 확인</th>
-                    <td>
-                      <input type="password" class="joinInfoInput" name="userPwdCheck" id="userPwdCheck" required>
-                    </td>
+                  <td>
+                    <input type="hidden" name="pwdCheckTest" value="0" />
+                    <input type="password" class="joinInfoInput" name="userPwdCheck" id="userPwdCheck" required>
+                  </td>
                 </tr>
                 <tr>
                   <th></th>
                   <td>
-                    <span class="checkAlert" id="pwd_termsCheck"></span>
+                    <span class="checkAlert" id="pwd_termsCheck">영문자, 숫자 모두 포함해 8자리 이상 입력해 주세요.</span>
                   </td>
                   <th></th>
                   <td><span class="checkAlert" id="pwd_doubleCheck"></span></td>
                 </tr>
                 <tr>
                   <th>이름</th>
-                    <td>
-                      <input type="text" class="joinInfoInput" name="userName" id="userName" required >
-                    </td>
-                    <th>전화번호</th>
-                    <td>
-                      <input type="text" class="joinInfoInput" name="userPhone" id="userPhone" >
-                    </td>
-                    
+                  <td>
+                    <input type="hidden" name="nameTest" value="0" />
+                    <input type="text" class="joinInfoInput" name="userName" id="userName" required >
+                  </td>
+                  <th>핸드폰 번호</th>
+                  <td>
+                    <input type="hidden" name="phoneTest" value="0" />
+                    <input type="text" class="joinInfoInput" name="userPhone" id="userPhone" >
+                  </td>
                 </tr>
                 <tr>
                   <th></th>
-                  <td></td>
+                  <td>
+                    <span class="checkAlert" id="name_termsCheck"></span>
+                  </td>
                   <th></th>
-                  <td><span class="checkAlert" id="phone_termsCheck"></span></td>
-                </tr>
-                <tr>
-                  <th></th>
-                  <td><span class="checkAlert" id="name_termsCheck"></span></td>
+                  <td><span class="checkAlert" id="phone_termsCheck">문자를 제외한 번호만 입력해 주세요.</span></td>
                 </tr>
                 <tr>
                   <th>주소</th>
                     <td>
                       <div style="display: flex; justify-content: left; text-align:center;">
-                        <input type="text" class="joinInfoInput" name="zonecode" style="width: 100px;" id="zonecode" readonly="readonly" placeholder="우편번호" required>
+                        <input type="text" class="joinInfoInput" name="zonecode" style="width: 100px; display: flex; text-justify: center;" id="zonecode" readonly="readonly" placeholder="우편번호" required>
+
+                        <input type="button" class="btnInfo" id="btnPostcode"  onclick="postCode()" value="주소검색" style="margin-top:16px"></input>
                       </div>
-                    </td>
-                    <td>
-                      <input type="button" class="btnInfo" id="btnPostcode"  onclick="postCode()" value="주소검색"></input>
                     </td>
                 </tr>
                 <tr>
@@ -203,30 +204,40 @@
                 </tr>
                 <tr>
                   <th></th>
-                  <td><span class="checkAlert" id="address_termsCheck"></span></td>
+                  <td></td>
+                  <th></th>
+                  <td>
+                    <span class="checkAlert" id="address_termsCheck">나머지 주소를 입력해 주세요.</span>
+                  </td>
                 </tr>
                 <tr>
                   <th>이메일</th>
                     <td>
                       <input type="text" class="joinInfoInput" name="userEmail" id="userEmail" required>
-                      <span class="userInfoAlert" id="error_newEmail"></span>
+                      <span class="userInfoAlert" id="error_Email"></span>
                     </td>
                     <td>
-                      <input type="button" class="btnInfo" id="newEmailDuplicate" value="인증"></input>
+                      <input type="button" class="btnInfo" id="emailSend" value="인증" disabled></input>
                     </td>
                     <td>
-                      <input type="text" class="joinInfoInput" name="userEmail" id="userEmail" >
-                      <span class="userInfoAlert" id="error_newEmail"></span>
+                      <input type="hidden" name="emailTest" value="0" />
+
+                      <div style="display: flex; justify-items: left;">
+                      <input type="text" class="joinInfoInput" name="userEmailCheck" id="userEmailCheck" style="width: 150px;">
+
+                      <input type="button" class="btnInfo" id="emailCheck" value="확인" style="margin-top:16px" disabled=""></input>
+                    </div>
                     </td>
                 </tr>
                 <tr>
                   <th></th>
                     <td>
-                      
-                      <span class="userInfoAlert" id="error_newEmail"></span>
+                      <span class="checkAlert" id="email_termsCheck"></span>
                     </td>
                     <th></th>
-                  <td><span class="checkAlert">이메일 인증이 완료되었습니다.  </span></td>
+                  <td>
+                    <span class="checkAlert" id="email_numCheck">인증이 완료되었습니다.</span>
+                  </td>
                 </tr>
                 <tr>
                   <td class="enrollForm-error" id="error_email"><span></span></td>
@@ -236,30 +247,22 @@
           </div>
 
           <!-- 반려동물 정보 입력  -->
-          <div class="joinPetInfoBox">
-            <div class="addInfoTitle">*반려동물 정보 입력</div>
-            <table class="joinInfoBox">
+          <div id="joinPetInfoBox">
+            <div class="addInfoTitle">
+              *반려동물 정보 입력
+              <button type="button" id="joinInfoAdd">+</button>
+              <button type="button" id="joinInfoRemove">-</button>
+            </div>
+            <table class="joinInfoBox" id="petInfoAdd" >
               <tbody>
-                <!-- 기준 -->
                 <tr>
-                  <th>아이디</th>
-                    <td>
-                      <input type="text" class="joinInfoInput" name="userId" id="userId" required>
-                    </td>
-                    <td>
-                      <input type="button" class="btnInfo" id="userIdDuplicate" value="중복확인"></input>
-                    </td>
-                </tr>
-                <!-- 기준 -->
-                <tr>
-                  <th>이름</th>
+                  <th style="padding-right: 20px; padding-bottom: 25px;">이름</th>
                     <td>
                       <input type="text" class="joinInfoInput" name="pName" id="pName" >
                     </td>
-                    <th>Pet 정보</th>
+                  <th style="padding: 33px;">My Pet</th>
                     <td>
-                      <div class="petTypeBox" style="width: 300px;
-                      height: 50px;">
+                      <div class="petTypeBox" >
                         <label class="joinRadioType">
                           <input type="radio" name="pType" id="pDog">
                           <span>강아지</span>
@@ -273,22 +276,30 @@
                 </tr>
                 </tr>
                 <tr>
-                  <th>종</th>
-                    <td>
-                      <input type="text" class="joinInfoInput" name="pbreed" id="breed" >
-                    </td>
+                  <th style="padding-right: 25px; padding-bottom: 15px;">몸무게 선택</th>
+                  <td>
+                  <div class="petWeighBox" >
+                    <label class="joinRadioType">
+                      <input type="radio" name="" id="">
+                      <span>소(~9kg)</span>
+                    </label>
+                    <label class="joinRadioType">
+                      <input type="radio" name="" id="" >
+                      <span>중(9~23kg)</span>
+                    </label>
+                    <label class="joinRadioType">
+                      <input type="radio" name="" id="" >
+                      <span>대(23kg~)</span>
+                    </label>
+                  </div>
+                </td>
+                  <th style="padding-right: 25px; padding-bottom: 15px;">특징</th>
+                  <td>
+                    <input type="text" class="joinInfoInput" name="pCheck" id="pCheck" >
+                  </td>
                 </tr>
                 <tr>
-                  <th>무게</th>
-                    <td>
-                      <input type="text" class="joinInfoInput" name="pWeight" id="pWeight" >
-                    </td>
-                </tr>
-                <tr>
-                  <th>특이사항</th>
-                    <td>
-                      <input type="text" class="joinInfoInput" name="pCheck" id="pCheck" >
-                    </td>
+                  
                 </tr>
               </tbody>
             </table>
@@ -308,15 +319,16 @@
                     <td>
                       <input type="text" class="joinInfoInput" name="bNumber" id="bNumber" >
                     </td>
-                    <td>
-                      <input type="button" class="btnInfo" id="userIdDuplicate" value="중복확인"></input>
-                    </td>
                 </tr>
                 <tr>
                   <th></th>
-                  <td></td>
+                  <td>
+                    <span class="checkAlert" id="bName_termsCheck">10자 이내의 한글과 영문만 입력해 주세요.</span>
+                  </td>
                   <th></th>
-                  <td><span class="checkAlert" id="bNumber_termsCheck"></span></td>
+                  <td>
+                    <span class="checkAlert" id="bNumber_termsCheck">-를 제외한 숫자만 입력해 주세요</span>
+                  </td>
                 </tr>
               </tbody>
             </table>
