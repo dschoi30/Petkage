@@ -1,0 +1,349 @@
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "GmarketSansMedium";
+}
+
+/* 약관동의 */
+.join .termsBox {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+}
+
+.join .termsBox > div {
+  width: 382px;
+  height: 40px;
+  background: #ffebc9;
+  opacity: 1;
+  top: 387px;
+  left: 938px;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 7px;
+}
+
+.join #btnAgree {
+  outline: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* 모달 */
+.join .modal-body {
+  padding: 30px;
+}
+
+.join .btnNext {
+  background-color: #495c82;
+  border-color: #495c82;
+}
+
+.join .agreeAllTitle {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.join .submitForm-no {
+  display: block;
+  font-size: 14px;
+  text-align: center;
+}
+
+.join .form-check .form-check-input {
+  float: none;
+}
+
+.join .agreeAll {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.join .agreeTitle {
+  font-size: 15px;
+}
+
+.join #btnAgreeFinish {
+  border: 1px solid #d79771 !important;
+  background-color: #d79771 !important;
+}
+
+.join #btnAgreeFinish:hover {
+  border: 1px solid #753422 !important;
+  background-color: #753422 !important;
+}
+
+.join .terms {
+  width: 100%;
+  margin: 5px 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 13px;
+  resize: none;
+  border-radius: 5px;
+  /* border-width: 1.75px; */
+  border-color: #495c82;
+}
+
+.join .joinMemberRadioType input[type="radio"] {
+  display: none;
+  justify-content: center;
+  padding-right: 30px;
+}
+
+.join .joinMemberRadioType input[type="radio"] + span {
+  display: inline-block;
+  padding: 7px 10px;
+  border: 2px solid #dfdfdf;
+  background-color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 130px;
+  height: 40px;
+}
+
+.join .joinMemberRadioType input[type="radio"]:checked + span {
+  background-color: #6b6b6b;
+  color: #ffffff;
+  border: 2px solid #6b6b6b;
+}
+
+.join .joinInfoBox {
+  border: 5px solid #d9d9d9;
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.join .userInfoBox > div > input {
+  border-top: none;
+  border-bottom: #ffebc9;
+}
+
+.join .joinInfoBox {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.join .joinInfoBox th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 17px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 0;
+  vertical-align: bottom;
+  color: #6b6b6b;
+  font-weight: bolder;
+}
+
+.join .joinInfoBox td {
+  padding: 0;
+  text-align: left;
+  margin: 0;
+}
+
+.join .joinInfoInput {
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
+  border: #d9d9d9 3px solid;
+  box-shadow: none;
+  background-color: none;
+  margin-top: 10px;
+  float: right;
+  padding: 10px;
+  font-size: large;
+  font-weight: 500;
+}
+
+.join .joinRadioType input[type="radio"] {
+  display: none;
+  justify-content: space-between;
+}
+
+/* pet 타입 radio */
+.join .petTypeBox .joinRadioType input[type="radio"] + span {
+  display: inline-block;
+  border: 3px solid #dfdfdf;
+  background-color: transparent;
+  padding-top: 13px;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  font-weight: 700;
+  font-size: medium;
+  color: #6b6b6b;
+}
+
+.join .petTypeBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.join .petTypeBox .joinRadioType input[type="radio"]:checked + span {
+  background-color: #d79771;
+  border: 3px solid #d79771;
+  color: #ffffff;
+}
+
+.join .joinRadioType input[type="radio"]:hover + span {
+  background-color: #d79771;
+  border: 3px solid #d79771;
+  color: #ffffff;
+}
+
+/* 몸무게 선택 radio */
+.join .petWeighBox input[type="radio"] + span {
+  display: inline-block;
+  padding-top: 15px;
+  border: 3px solid #dfdfdf;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 90px;
+  height: 50px;
+  font-weight: 700;
+  color: #6b6b6b;
+  font-size: small;
+}
+
+.join .petWeighBox {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.join .petWeighBox input[type="radio"]:checked + span {
+  background-color: #d79771;
+  border: 3px solid #d79771;
+  color: #ffffff;
+}
+
+.join .joinRadioType input[type="radio"]:hover + span {
+  background-color: #d79771;
+  border: 3px solid #d79771;
+  color: #ffffff;
+}
+
+/* 알림 문구 */
+.join .checkAlert {
+  color: #753422;
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.5;
+  clear: both;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.join .addInfoTitle {
+  font-weight: bolder;
+  text-align: right;
+  color: #753422;
+  padding-top: 20px;
+  font-weight: 700;
+  font-size: 1em;
+}
+
+/* button */
+.join .btnInfo,
+.btn_login_home,
+.btn_login {
+  color: #d79771;
+  border-radius: 20px;
+  border: 2px solid #d79771;
+  background-color: transparent;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 3px;
+  width: 90px;
+  height: 2rem;
+  font-weight: 700;
+  margin: 7px;
+  margin-top: 10;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+.join .btnInfo[disabled],
+.btn_login_home,
+.btn_login {
+  color: #6b6b6b;
+  border-radius: 20px;
+  border: 2px solid #6b6b6b;
+  background-color: #d9d9d9;
+  display: inline-block;
+  cursor: default;
+  text-align: center;
+  padding-top: 3px;
+  width: 90px;
+  height: 2rem;
+  font-weight: 700;
+  margin: 7px;
+  margin-top: 10;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+.join .btnInfo:hover:not([disabled]),
+.btn_login_home:hover:not([disabled]),
+.btn_login:hover:not([disabled]) {
+  background-color: #d79771;
+  border: 3px solid #d79771;
+  color: #ffffff;
+}
+.join .btnBox {
+  margin-top: 30px;
+  justify-content: center;
+  display: flex;
+}
+
+.join .btnJoin {
+  background-color: #d79771;
+  color: white;
+  height: 50px;
+  width: 120px;
+  font-weight: 700;
+  font-size: larger;
+  border-radius: 20px;
+  border: none;
+  margin: 10px;
+  padding-top: 5px;
+}
+
+.join .btnJoin:hover {
+  border: 1px solid #753422 !important;
+  background-color: #753422 !important;
+}
+
+.join .complete {
+  padding: 20px 0 0 0;
+  font-size: 1.5rem;
+  color: #222222;
+}
+
+.join p {
+  font-size: 2em;
+  padding: 20px 0 20px 0;
+  color: #d79771;
+  letter-spacing: -0.5px;
+}

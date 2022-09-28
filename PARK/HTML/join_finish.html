@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+      
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- css 스타일 -->
+    <link rel="stylesheet" href="../CSS/Join.css">
+    <!-- 헤더 스타일 -->
+    <link rel="stylesheet" href="../../EUM/CSS/common/header.css"></link>
+    <!-- 푸터 스타일 -->
+    <link rel="stylesheet" href="../../EUM/CSS/common/footer.css"></link>
+
+    <script src="../JS/jquery-3.6.0.js"></script>
+
+    <script src="../JS/join.js"></script>
+
+  </head>
+  <body>
+    <!-- 헤더 시작 -->
+    <section class="hd">
+      <div class="header_container">
+          <header class="d-flex flex-wrap mb-4">
+              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+                  <img src="../../resources/images/Petkage_Logo2.png" alt="" class="headerLogo">
+              </a>
+
+              <ul class="nav nav-pills">
+                  <li class="nav-item header_item"><a href="#" class="nav-link header_link">어디가지</a></li>
+                  <li class="nav-item header_item"><a href="#" class="nav-link header_link">커뮤니티</a></li>
+                  <li class="nav-item header_item"><a href="#" class="nav-link header_link">마켓</a></li>
+                  <li class="nav-item header_item"><a href="#" class="nav-link header_link">OTHERS</a></li>
+                  <input type="button" class="headerBtn" id="loginBtn" value="로그인">
+                  <a href="/" class="d-flex align-items-center headercart">
+                      <img src="../../resources/images/Cart.png" alt="" class="cart">
+                  </a>
+              </ul>
+          </header>
+      </div>
+
+    </section>
+    <!-- 헤더 끝 -->
+
+    <section class="join">
+      <div class="container">
+        <div class="py-5 text-center">
+          <h1 style="font-weight: 700;">Welcome to <strong><span style="color: #753422;">Pet</span>kage</strong></h1>
+        </div>
+        <div style="text-align: center;">
+          <p class="complete" style="">회원가입이 <strong>완료</strong> 되었습니다.</p>
+          <p><span>${ join.userName }</span>님의 회원가입을 축하합니다. <br>
+          지금부터 당신의 
+          <span style="color: #753422; font-weight: bold;">
+            Pet</span><span style="color: black; font-weight: bold;">kage</span>를 준비하세요 !</p>
+        </div>
+        <div class="btnBox" style="margin: 10em;">
+            <button type="button" id="btnHome" class="btn_login_home">홈으로</button>
+            <button type="button" id="btnNext" class="btn_login">로그인</button>    
+        </div>
+    </section>
+
+    <!-- 폭죽 --> 
+    <script src="../JS/confetti_v2.js"></script>
+
+    <style>
+      canvas {
+        z-index:10;
+        pointer-events: none;
+        position: fixed;top: 0;
+        transform: scale(1.1);}
+    </style>
+    
+    <div class="buttonContainer" style="display: none;">
+      <button class="canvasBtn" id="stopButton" >Stop Confetti</button>
+      <button class="canvasBtn" id="startButton">Drop Confetti</button>	
+    </div>
+
+    <canvas id="canvas"></canvas> 
+    <!-- 푸터 시작 -->
+    <section class="ft">
+      <div class="footer_container">
+          <footer class="footer_section1">
+              <div class="footer">
+                  <p class="footerName">Petkage</p>
+
+                  <ul class="nav footer_nav">
+                      <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">이용약관</a></li>
+                      <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">개인정보 취급방침</a></li>
+                      <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">공지사항</a></li>
+                      <li class="nav-item footer_item"><a href="#" class="nav-link footer_link">FAQ</a></li>
+                  </ul>
+
+                  <div class="footer_contents">
+                      <p class="footer_content">회사명 : (주)펫키지 대표 : 문인수 / 전화 : 070-1234-5678 / 주소 : 서울특별시 강남구 테헤란로 14길 6 남도빌딩</p>
+                      <p class="footer_content">사업자 등록번호 안내 : 123-45-6789 / 통신판매업 신고 2022-서울강남-03472 <a href="">[사업자정보 확인]</a>  </p>
+                      <p class="footer_content">&copy;펫키지. All Rights Reserved</p>
+                  </div>
+
+                  <div class="footer_icons">
+                      <a href="/" class="">
+                          <img src="../../EUM/resources/images/Instagram.png" alt="" class="footericon">
+                      </a>
+                      <a href="/" class="">
+                          <img src="../../EUM/resources/images/Facebook.png" alt="" class="footericon">
+                      </a>
+                      <a href="/" class="">
+                          <img src="../../EUM/resources/images/youtube.png" alt="" class="footericon">
+                      </a>
+                      <a href="/" class="">
+                          <img src="../../EUM/resources/images/kakaotalk.png" alt="" class="footericon">
+                      </a>
+                  </div>
+
+                      
+                  <img src="../../EUM/resources/images/Pet2.png" alt="" class="footerLogo">
+              </div>
+          </footer>
+      </div>
+    </section>
+    <!-- 푸터 끝 -->
+
+
+
+  <script>
+  $(document).ready(function(){  
+    $("#startButton").trigger("click");
+      setTimeout(function(){
+        $("#stopButton").trigger("click");
+      }, 60000);
+  })
+  </script>
+</body>
+</html>
