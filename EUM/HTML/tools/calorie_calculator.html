@@ -161,41 +161,53 @@
 							</span>
 							<span class="content_write_input write_divline">
 								<h5>반려동물 상태</h5>
-								<!-- <div class="pet_jisu selectBox2" id="pet_jisu" name="pet_jisu">
-									<button class="label">반려동물 상태 선택</button>
-									<ul class="optionList">
-										<li class="optionItem">반려동물 상태 선택</li>
-									</ul>
-								</div> -->
-								<!-- <div class="pet_jisu selectBox2" id="dog_jisu" name="dog_jisu" style="display:none">
-									<button class="label">반려견 상태 선택</button>
-									<ul class="optionList">
-										<li class="optionItem" value="1">성장기(4개월 미만) 강아지</li>
-										<li class="optionItem" value="2">성장기(4 ~ 12개월) 강아지</li>
-										<li class="optionItem" value="3">중성화한 성견</li>
-										<li class="optionItem" value="4">중성화하지 않은 성견</li>
-										<li class="optionItem" value="5">체중 감량이 필요한 성견</li>
-										<li class="optionItem" value="6">체중 증량이 필요한 성견</li>
-										<li class="optionItem" value="7">가벼운 활동량의 사역견</li>
-										<li class="optionItem" value="8">중간 활동량의 사역견</li>
-										<li class="optionItem" value="9">높은 활동량의 사역견</li>
-										<li class="optionItem" value="10">임신 초기 성견</li>
-										<li class="optionItem" value="11">임신 중기 이후 성견</li>
-										<li class="optionItem" value="12">나이가 많은 성견</li>
-									</ul>
-								</div> -->
-								<div class="pet_jisu selectBox2" id="cat_jisu" name="cat_jisu" style="display:none">
-									<button class="label">반려묘 상태 선택</button>
-									<ul class="optionList">
-										<li class="optionItem" value="1">유아기(4개월 미만) 고양이</li>
-										<li class="optionItem" value="2">고속 성장기(4 ~ 6개월) 고양이</li>
-										<li class="optionItem" value="3">고속 성장기(7 ~ 12개월) 고양이</li>
-										<li class="optionItem" value="4">중성화한 성묘</li>
-										<li class="optionItem" value="5">중성화하지 않은 성묘</li>
-										<li class="optionItem" value="6">체중 감량이 필요한 성묘</li>
-										<li class="optionItem" value="7">활동량이 많은 성묘</li>
-										<li class="optionItem" value="8">나이가 많은 성묘</li>
-									</ul>
+								<div class="selectBoxList">
+									<!-- selectBox1 -->
+									<div class="box">
+										<div  class="pet_jisu selectBox2" id="pet_jisu" name="pet_jisu">
+											<button class="label">반려동물 상태 선택</button>
+											<ul class="optionList">
+												<li class="optionItem">반려동물 상태 선택</li>
+											</ul>
+										</div>
+									</div>
+									<!-- selectBox2 -->
+									<div class="box">
+										<div class="pet_jisu selectBox2" id="dog_jisu" name="dog_jisu" style="display:none">
+											<button class="label">반려견 상태 선택</button>
+											<ul class="optionList">
+												<li class="optionItem" value="1">성장기(4개월 미만) 강아지</li>
+												<li class="optionItem" value="2">성장기(4 ~ 12개월) 강아지</li>
+												<li class="optionItem" value="3">중성화한 성견</li>
+												<li class="optionItem" value="4">중성화하지 않은 성견</li>
+												<li class="optionItem" value="5">체중 감량이 필요한 성견</li>
+												<li class="optionItem" value="6">체중 증량이 필요한 성견</li>
+												<li class="optionItem" value="7">가벼운 활동량의 사역견</li>
+												<li class="optionItem" value="8">중간 활동량의 사역견</li>
+												<li class="optionItem" value="9">높은 활동량의 사역견</li>
+												<li class="optionItem" value="10">임신 초기 성견</li>
+												<li class="optionItem" value="11">임신 중기 이후 성견</li>
+												<li class="optionItem" value="12">나이가 많은 성견</li>
+											</ul>
+										</div>
+									</div>
+									<!-- selectBox3 -->
+									<div class="box">
+										<div class="pet_jisu selectBox2" id="cat_jisu" name="cat_jisu" style="display:none">
+											<button class="label">반려묘 상태 선택</button>
+											<ul class="optionList">
+												<li class="optionItem" value="1">유아기(4개월 미만) 고양이</li>
+												<li class="optionItem" value="2">고속 성장기(4 ~ 6개월) 고양이</li>
+												<li class="optionItem" value="3">고속 성장기(7 ~ 12개월) 고양이</li>
+												<li class="optionItem" value="4">중성화한 성묘</li>
+												<li class="optionItem" value="5">중성화하지 않은 성묘</li>
+												<li class="optionItem" value="6">체중 감량이 필요한 성묘</li>
+												<li class="optionItem" value="7">활동량이 많은 성묘</li>
+												<li class="optionItem" value="8">나이가 많은 성묘</li>
+											</ul>
+										</div>
+									</div>
+									
 								</div>
 
 								<!-- <label class="pet_jisu selectBox" id="pet_jisu" name="pet_jisu">
@@ -244,8 +256,7 @@
 									<span class="icoArrow">
 										<img src="../../resources/images/arrow_down.png" alt="">
 									</span>
-								</label>
-							</span> -->
+								</label> -->
 							
 							</span>
 						</div>
@@ -395,9 +406,6 @@
 					}
 				}
 			})
-
-
-
 		}
 
 		function isBirthday(dateStr) {
@@ -482,27 +490,38 @@
 			$("#bcs_type").val("");
 		}
 
-		const label = document.querySelector('.label');
-		const options = document.querySelectorAll('.optionItem');
+		// 셀렉트 박스
+		const label = document.querySelectorAll('.label');
+			label.forEach(function(lb){
+				lb.addEventListener('click', e => {
+					let optionList = lb.nextElementSibling;
+					let optionItems = optionList.querySelectorAll('.optionItem');
+					clickLabel(lb, optionItems);
+				})
+			});
 
-		// 클릭한 옵션의 텍스트를 라벨 안에 넣음
-		const handleSelect = (item) => {
-		label.parentNode.classList.remove('active');
-		label.innerHTML = item.textContent;
+		const clickLabel = (lb, optionItems) => {
+			if(lb.parentNode.classList.contains('active')) {
+				lb.parentNode.classList.remove('active');
+				optionItems.forEach((opt) => {
+					opt.removeEventListener('click', () => {
+						handleSelect(lb, opt)
+					})
+				})
+			} else {
+				lb.parentNode.classList.add('active');
+				optionItems.forEach((opt) => {
+					opt.addEventListener('click', () => {
+						handleSelect(lb, opt)
+					})
+				})
+			}
 		}
-		// 옵션 클릭시 클릭한 옵션을 넘김
-		options.forEach(option => {
-			option.addEventListener('click', () => handleSelect(option))
-		})
 
-		// 라벨을 클릭시 옵션 목록이 열림/닫힘
-		label.addEventListener('click', () => {
-		if(label.parentNode.classList.contains('active')) {
+		const handleSelect = (label, item) => {
+			label.innerHTML = item.textContent;
 			label.parentNode.classList.remove('active');
-		} else {
-			label.parentNode.classList.add('active');
 		}
-		})
 
 	</script>
 
