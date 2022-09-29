@@ -133,14 +133,14 @@
 .selectBox .select option:focus + .icoArrow img {
         transform: rotate(180deg);
 } */
-    
+
 .selectBox2 * { 
     box-sizing: border-box; 
 }
 .selectBox2 {
     display: inline-block;
     position: relative;
-    width: 270px;
+    width: 300px;
     height: 35px;
     margin: 10px;
     border-radius: 4px;
@@ -151,59 +151,59 @@
 }
 
 .selectBox2:after {
-  content: '';
-  display: block; 
-  width: 2px;
-  height: 100%; 
-  position: absolute; 
-  top: 0; 
-  right: 35px;
-  background: #E3B7A0;
+    content: '';
+    display: block; 
+    width: 2px;
+    height: 100%; 
+    position: absolute; 
+    top: 0; 
+    right: 35px;
+    background: #E3B7A0;
 }
 
 .selectBox2 .label {
-  display: flex;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0 none;
-  outline: 0 none;
-  padding-left: 15px;
-  background: transparent;
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    border: 0 none;
+    outline: 0 none;
+    padding-left: 15px;
+    background: transparent;
+    cursor: pointer;
 }
 
 .selectBox2 .optionList {
   /* position: absolute;  */
-  top: 28px;
-  left: 0;
-  width: 100%;
-  background: #E3B7A0;
-  color: #fff;
-  list-style-type: none;
-  padding: 0;
-  border-radius: 6px;
-  overflow: hidden;
-  max-height: 0;
-  transition: .3s ease-in;
+    top: 28px;
+    left: 0;
+    width: 100%;
+    background: #E3B7A0;
+    color: #fff;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    max-height: 0;
+    transition: .3s ease-in;
 }
 
 .selectBox2.active .optionList {
-  max-height: 500px;
+    max-height: 500px;
 }
 
 .selectBox2 .optionItem {
-  border-bottom: 1px dashed rgb(170, 72, 72);
-  padding: 6px 15px 3px;
-  transition: .1s;
+    border-bottom: 1px dashed #803D3D;
+    padding: 6px 15px 3px;
+    transition: .1s;
 }
 
 .selectBox2 .optionItem:hover {
-  background: rgb(175, 93, 93);
+    background: #803D3D;
 }
 
 .selectBox2 .optionItem:last-child {
-  border-bottom: 0 none;
+    border-bottom: 0 none;
 }
 
 

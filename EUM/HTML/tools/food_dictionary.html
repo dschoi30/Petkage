@@ -40,6 +40,10 @@
 	<link rel="stylesheet" href="../../CSS/tools/calorie_calculator.css">
 	</link>
 
+	<!-- Food_dictionary css -->
+	<link rel="stylesheet" href="../../CSS/tools/food_dictionary.css">
+	</link>
+
 	<!-- Bootstrap css-->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
 		integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -75,7 +79,7 @@
 	</section>
 	<!-- Header 끝 -->
 
-	<!-- Age_calculator 시작 -->
+	<!-- Dictionary_food 시작 -->
 	<section class="tc">
 		<div class="tools_container">
 
@@ -136,58 +140,25 @@
 			<div class="cal_content pr">
 
 				<!-- 계산기 정보 박스 -->
-				<div class="cal_info_box" id="contents_tab_1">
+				<div class="cal_info_box" id="contents_tab_4">
 
 					<!-- 계산기 정보 작성-->
 					<div class="cal_write">
-						<div class="content_write">
-							<span class="content_write_input write_divline">
-								<h5>반려동물 선택</h5>
-								<div class="pet_choice">
-									<input type="hidden" id="pet_type" name="pet_type">
-									<ul id="pet_sel">
-										<li onclick="pet_sel(0)" class="pet_type_0 pet_off" id="dog_on"><a><img
-													src="../../resources/images/Laughing_Dog.png" alt="BCS_s01" />
-												<p>강아지</p>
-											</a></li>
-										<li onclick="pet_sel(3)" class="pet_type_3 pet_off" id="cat_on"><a><img
-													src="../../resources/images/Laughing_Cat.png" alt="BCS_s01" />
-												<p>고양이</p>
-											</a></li>
-									</ul>
-								</div>
-							</span>
-							<span class="content_write_input write_divline">
-								<h5>생년월일 입력</h5>
-								<input type="text" name="dog_date" id="dog_date" inputmode="numeric" pattern="[0-9]*"
-									maxlength="10" xonkeyup="myFunction()"
-									placeholder="반려동물의 생년월일을 입력해주세요. ex) 20221031" title="">
-							</span>
-							<span class="content_write_input write_divline" id="cat_hide" style="display:none">
-								<h5>몸무게 선택</h5>
-								<div class="cal_choice">
-									<fieldset>
-										<input type="hidden" id="dog_type" name="dog_type">
-										<label for="dog_type0"><input type="radio"
-												class="dog_type_btn dog_type0 cal_type_checked" id="dog_type0"
-												name="animal_check" value="dog_check" onclick="weigh_choice(0)"
-												checked><span>소(~ 9kg)</span></label>
-										<label for="dog_type1"><input type="radio" class="dog_type_btn dog_type1"
-												id="dog_type1" name="animal_check" value="dog_check"
-												onclick="weigh_choice(1)"><span>중(9 ~ 23kg)</span></label>
-										<label for="dog_type2"><input type="radio" class="dog_type_btn dog_type2"
-												id="dog_type2" name="animal_check" value="dog_check"
-												onclick="weigh_choice(2)"><span>대(23kg 이상)</span></label>
-									</fieldset>
-								</div>
-							</span>
+						<div class="content_write box_no_line">
+								<div id="search_box_cover">
+									<form method="get" action="">
+									  <div class="tb">
+										<div class="td"><input type="text" placeholder="이거 먹어도 되나요?" required></div>
+										<div class="td" id="s-cover">
+										  <button type="submit">
+											<div id="s-circle"></div>
+											<span></span>
+										  </button>
+										</div>
+									  </div>
+									</form>
+								  </div>
 						</div>
-					</div>
-
-					<!-- 계산기 결과보기 버튼 -->
-					<div class="cal_btn">
-						<div class="cal_result" id="result_btn" onclick="result_view(1)"><a>결과보기</a></div>
-						<!-- <div class="cal_result" onclick="result_view(1)"><button class="btn-hover color-4">결과보기</button></div> -->
 					</div>
 				</div>
 
@@ -249,7 +220,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- Age_calculator 끝 -->
+	<!-- Dictionary_food 끝 -->
 
 	<!-- Footer 시작 -->
 	<section class="ft">
@@ -311,219 +282,9 @@
 	
 			$(document).ready(function () {
 				dogcal_tab(4);
-				weigh_choice(0);
 			});
 	
-			var dog_type_btn = document.getElementsByClassName("dog_type_btn");
-	
-			function handleClick(event) {
-				console.log(event.target);
-	
-				console.log(event.target.classList);
-	
-				if (event.target.classList[1] === "cal_type_checked") {
-					event.target.classList.remove("cal_type_checked");
-				} else {
-					for (var i = 0; i < dog_type_btn.length; i++) {
-						dog_type_btn[i].classList.remove("cal_type_checked");
-					}
-	
-					event.target.classList.add("cal_type_checked");
-				}
-			}
-	
-			function init() {
-				for (var i = 0; i < dog_type_btn.length; i++) {
-					dog_type_btn[i].addEventListener("click", handleClick);
-				}
-			}
-	
-			init();
-	
-			function result_view(tab_id) {
-				var dog_date = $('input[name="dog_date"]').val().replace(/\./g, '-');
-				var dog_type = $('input[name="dog_type"]').val();
-	
-				var dog_weight = $('input[name="dog_weight"]').val();
-				var dog_jisu = $('select[name="dog_jisu"]').val();
-	
-				var bcs_type = $('#bcs_type').val();
-	
-				if (tab_id == 1) {
-					if (!dog_date) {
-						alert("생년월일을 입력해주세요.");
-						$('input[name="dog_date"]').focus()
-						return;
-					} else if (!dog_type) {
-						alert("몸무게를 선택해주세요.");
-						return;
-					}
-	
-					if (!isBirthday(dog_date)) { //생년월일 유효성 검사
-						return;
-					} else {
-						$(".cal_info_box").hide();
-						if ($("#dog_on").hasClass("pet_on") === true && $("#cat_on").hasClass("pet_off") === true) {
-							$(".cal_result_box").show();
-							$("#dog_life").show();
-							$("#cat_life").hide();
-						} else if ($("#dog_on").hasClass("pet_off") === true && $("#cat_on").hasClass("pet_on") === true) {
-							$(".cal_result_box").show();
-							$("#cat_life").show();
-							$("#dog_life").hide();
-						}
-					}
-					data = "m2Code=dogcal&mode=age_cal&dog_date=" + dog_date + "&dog_type=" + dog_type;
-				} else if (tab_id == 2) {
-	
-					if (!bcs_type) {
-						alert("BCS를 선택해주세요");
-						return;
-					}
-					data = "m2Code=dogcal&mode=bimando_cal&bcs_type=" + bcs_type;
-	
-				} else if (tab_id == 3) {
-					if (!dog_weight) {
-						alert("몸무게를 입력해주세요.");
-						$('input[name="dog_weight"]').focus()
-						return;
-					} else if (!dog_jisu) {
-						alert("반려견 상태를 선택해주세요.");
-						return;
-					}
-	
-					data = "m2Code=dogcal&mode=calorie_cal&dog_weight=" + dog_weight + "&dog_jisu=" + dog_jisu;
-				}
-	
-				$.ajax({
-					type: "post",
-					dataType: "json",
-					data: data,
-					url: "../ajaxData_cal.php",
-					success: function (r) {
-						$(".Cc_result").show();
-						$(".h21_calculator_sns").show();
-						$(".Cc_form").hide();
-	
-						if (tab_id == 1) { // 나이 계산기
-							$(".Cc_result_age").css("display", "block");
-							$("#dog_age").html(r.msg[0]);
-							$("#dog_age_cal").html(r.msg[1] + "살");
-							$("#dog_life").html(r.msg[2]);
-						} else if (tab_id == 2) {// 비만도 계산기
-							$(".Cc_result_obesity").css("display", "block");
-							$("#bsc_type_str1").html(r.msg_pc[0]);
-							$("#bsc_type_str2").html(r.msg_pc[1]);
-							$("#bsc_type_str3").html(r.msg_pc[2]);
-						} else if (tab_id == 3) {// 칼로리 계산기
-							$(".Cc_result_calorie").css("display", "block");
-							$("#basic_meta").html(r.msg[0] + "kcal");
-							$("#basic_kal").html(r.msg[1] + "kcal");
-						}
-					}
-				})
-			}
-	
-			function isBirthday(dateStr) {
-				$("#birth_chk_str").hide();
-				dateStr = dateStr.replace(/[^0-9]/g, '');
-				var year = Number(dateStr.substr(0, 4)); // 입력한 값의 0~4자리까지 (연) 
-				var month = Number(dateStr.substr(4, 2)); // 입력한 값의 4번째 자리부터 2자리 숫자 (월) 
-				var day = Number(dateStr.substr(6, 2)); // 입력한 값 6번째 자리부터 2자리 숫자 (일) 
-				var today = new Date(); // 날짜 변수 선언 
-				var yearNow = today.getFullYear(); // 올해 연도 가져옴 
-	
-				if (dateStr.length <= 10) { // 연도의 경우 1900 보다 작거나 yearNow 보다 크다면 false를 반환합니다. 
-					if (1900 > year || year > yearNow) {
-						alert("날짜형식이 다릅니다.");
-						$('input[name="dog_date"]').focus()
-						return false;
-					} else if (month < 1 || month > 12) {
-						alert("날짜형식이 다릅니다.");
-						$('input[name="dog_date"]').focus()
-						return false;
-					} else if (day < 1 || day > 31) {
-						alert("날짜형식이 다릅니다.");
-						$('input[name="dog_date"]').focus()
-						return false;
-					} else if ((month == 4 || month == 6 || month == 9 || month == 11) && day == 31) {
-						alert("날짜형식이 다릅니다.");
-						$('input[name="dog_date"]').focus()
-						return false;
-					} else if (month == 2) {
-						var isleap = (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
-						if (day > 29 || (day == 29 && !isleap)) {
-							alert("날짜형식이 다릅니다.");
-							$('input[name="dog_date"]').focus()
-							return false;
-						} else {
-							return true;
-						}
-					} else {
-						return true;
-					}//end of if
-				} else { //1.입력된 생년월일이 8자 초과할때 : auth:false 
-					alert("날짜형식이 다릅니다.");
-					$('input[name="dog_date"]').focus()
-					return false;
-				}
-			}
-	
-			// $("#pet_choice_dog").on("click", function() {
-			// 	if($("#dog_on").hasClass("pet_off") === true) {
-			// 		$("#cat_hide").show();
-			// 		$("#dog_on").addClass("pet_on");
-			// 		$("#dog_on").removeClass("pet_off");
-			// 			if($("#cat_on").hasClass("pet_on") === true) {
-			// 			$("#cat_on").addClass("pet_off");
-			// 			$("#cat_on").removeClass("pet_on");
-			// 		}
-			// 	} 
-			// });
-	
-			// $("#pet_choice_cat").on("click", function() {
-			// 	if($("#cat_on").hasClass("pet_off") === true) {
-			// 		$("#cat_hide").hide();
-			// 		$("#cat_on").addClass("pet_on");
-			// 		$("#cat_on").removeClass("pet_off");
-			// 			if($("#dog_on").hasClass("pet_on") === true) {
-			// 				$("#dog_on").addClass("pet_off");
-			// 				$("#dog_on").removeClass("pet_on");
-			// 			}
-			// 	}
-			// });
-			function bcs_sel(no) { // 비만도 선택
-				$("#bcs_type").val(no);
-				$(this).addClass("bcs_on");
-				$("li[class^='bcs_type_']").removeClass("bcs_on");
-				$(".bcs_type_" + no).addClass("bcs_on");
-			}
-	
-			function pet_sel(no) { // 펫 선택
-				$("#pet_type").val(no);
-				$(this).addClass("pet_on");
-				$("li[class^='pet_type_']").removeClass("pet_on");
-				$(".pet_type_" + no).addClass("pet_on");
-	
-				if (no == 0) {
-					$("#cat_hide").show();
-					$("#bcs_sel_cat_img").hide();
-					$("#bcs_sel_dog_img").show();
-					
-				} else if (no == 3) {
-					$("#cat_hide").hide();
-					$("#bcs_sel_dog_img").hide();
-					$("#bcs_sel_cat_img").show();
-				}
-			}
-	
-			function weigh_choice(no) { // 소중대 선택
-				$("a[class^='bcs_type_']").removeClass("bcs_on");
-	
-				$("#dog_type").val(no);
-				$("#bcs_type").val("");
-			}
-		</script>
+	</script>
 
 </body>
 
