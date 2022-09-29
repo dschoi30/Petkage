@@ -45,6 +45,7 @@
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-test</artifactId>
 		    <version>${org.springframework-version}</version>
+		    <scope>test</scope>
 		</dependency>
 		
 		<!-- Spring Security -->
@@ -53,19 +54,19 @@
 		    <artifactId>spring-security-core</artifactId>
 		    <version>${org.springsecurity-version}</version>
 		</dependency>
-
+		
 		<dependency>
 		    <groupId>org.springframework.security</groupId>
 		    <artifactId>spring-security-web</artifactId>
 		    <version>${org.springsecurity-version}</version>
 		</dependency>
-
+		
 		<dependency>
 		    <groupId>org.springframework.security</groupId>
 		    <artifactId>spring-security-config</artifactId>
 		    <version>${org.springsecurity-version}</version>
 		</dependency>
-						
+				
 		<!-- AspectJ -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
@@ -98,21 +99,18 @@
 			<artifactId>slf4j-api</artifactId>
 			<version>${org.slf4j-version}</version>
 		</dependency>
-		
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>jcl-over-slf4j</artifactId>
 			<version>${org.slf4j-version}</version>
 			<scope>runtime</scope>
 		</dependency>
-		
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>${org.slf4j-version}</version>
 			<scope>runtime</scope>
 		</dependency>
-		
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -165,7 +163,7 @@
 		    <artifactId>taglibs-standard-impl</artifactId>
 		    <version>1.2.5</version>
 		</dependency>
-		
+
 		<dependency>
 		    <groupId>org.apache.taglibs</groupId>
 		    <artifactId>taglibs-standard-spec</artifactId>
@@ -182,21 +180,21 @@
 		    <groupId>org.apache.taglibs</groupId>
 		    <artifactId>taglibs-standard-compat</artifactId>
 		    <version>1.2.5</version>
-		</dependency>
+		</dependency>	
 		
-		<!-- DB -->
+		<!-- Database -->
 		<dependency>
 		    <groupId>com.oracle.database.jdbc</groupId>
 		    <artifactId>ojdbc6</artifactId>
 		    <version>11.2.0.4</version>
 		</dependency>
-		
+	  
 		<dependency>
 		    <groupId>org.mybatis</groupId>
 		    <artifactId>mybatis</artifactId>
 		    <version>3.5.10</version>
 		</dependency>
-		
+			
 		<!-- Mybatis Spring -->
 		<dependency>
 		    <groupId>org.mybatis</groupId>
@@ -211,12 +209,12 @@
 		    <version>2.9.0</version>
 		</dependency>
 		
-		<!-- lombok  -->
+		<!-- lombok -->
 		<dependency>
 		    <groupId>org.projectlombok</groupId>
 		    <artifactId>lombok</artifactId>
 		    <version>1.18.24</version>
-		    <scope>provided</scope> 
+		    <scope>provided</scope>
 		</dependency>
 		
 		<dependency>
@@ -224,7 +222,7 @@
 		    <artifactId>jackson-databind</artifactId>
 		    <version>2.13.3</version>
 		</dependency>
-	
+		
 		<!-- Test -->
 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
@@ -232,7 +230,7 @@
 		    <version>5.9.0</version>
 		    <scope>test</scope>
 		</dependency>
-		
+	
 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
 		    <artifactId>junit-jupiter-params</artifactId>
@@ -245,9 +243,8 @@
 		    <artifactId>assertj-core</artifactId>
 		    <version>3.23.1</version>
 		    <scope>test</scope>
-		</dependency>        
+		</dependency>              
 	</dependencies>
-	
     <build>
         <plugins>
             <plugin>
