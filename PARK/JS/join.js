@@ -255,6 +255,7 @@ $("#bName").keyup(function () {
     $("#bName_termsCheck").text("10자 이내의 한글과 영문만 입력해 주세요.");
   } else {
     $("#bName_termsCheck").text("");
+    $("[name=bNameTest]").val("1");
     return true;
   }
 });
@@ -265,6 +266,7 @@ $("#bNumber").keyup(function () {
     $("#bNumber_termsCheck").text("-를 제외한 숫자만 입력해 주세요");
   } else {
     $("#bNumber_termsCheck").text("");
+    $("[name=bNumTest]").val("1");
     return true;
   }
 });
@@ -319,6 +321,20 @@ $(".btnJoin").click(function () {
   }
 
   // 주소 유효성 -> 필요 없음
+
+  // 이메일 유효성 검사
+
+  // 상호명 유효성 검사
+  if ($("[name=bNameTest]").val() != "1") {
+    $("#bName_termsCheck").text("상호명을 입력해 주세요.");
+    $("#bName").focus();
+  }
+
+  // 사업자 번호 유효성 검사
+  if ($("[name=bNumTest]").val() != "1") {
+    $("#bNumber_termsCheck").text("사업자 번호를 입력해 주세요.");
+    $("#bNumber").focus();
+  }
 });
 
 // 강아지 선택시에만 몸무게 선택 클릭 가능
