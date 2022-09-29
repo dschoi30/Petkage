@@ -192,6 +192,21 @@
   color: #6b6b6b;
 }
 
+.join .petTypeBox .joinRadioType input[type="radio"] + span {
+  display: inline-block;
+  border: 3px solid #dfdfdf;
+  background-color: transparent;
+  padding-top: 13px;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  font-weight: 700;
+  font-size: medium;
+  color: #6b6b6b;
+}
+
 .join .petTypeBox {
   display: flex;
   justify-content: space-between;
@@ -284,13 +299,44 @@
   margin-left: 20px;
 }
 
-.join .btnInfo[disabled],
-.btn_login_home,
-.btn_login {
-  color: #6b6b6b;
+.join .btnInfo[disabled] {
+  color: #cfcece;
   border-radius: 20px;
-  border: 2px solid #6b6b6b;
-  background-color: #d9d9d9;
+  border: 2px solid #f6f7f8;
+  background-color: #f6f7f8;
+  display: inline-block;
+  cursor: default;
+  text-align: center;
+  padding-top: 3px;
+  width: 90px;
+  height: 2rem;
+  font-weight: 700;
+  margin: 7px;
+  margin-top: 10;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+.join .petWeighBox input[type="radio"]:disabled + span {
+  color: #cfcece;
+  border: 3px solid #f6f7f8;
+  display: inline-block;
+  padding-top: 15px;
+  background-color: transparent;
+  text-align: center;
+  cursor: default;
+  border-radius: 20px;
+  width: 90px;
+  height: 50px;
+  font-weight: 700;
+  font-size: small;
+}
+
+.join .btn_login_home,
+.btn_login {
+  border-radius: 20px;
+  border: 2px solid #d79771;
+  background-color: transparent;
   display: inline-block;
   cursor: default;
   text-align: center;
