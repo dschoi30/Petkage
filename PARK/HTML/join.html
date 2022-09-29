@@ -76,6 +76,7 @@
                 <img src="../images/click.png" style="height: 20px; width: 20px; padding: 0;">
               </button>
             </div>
+            <input type="hidden" name="agreeTest" value="0" />
           </div>
           
           <!-- 약관 동의 Modal -->
@@ -199,7 +200,8 @@
                     </td>
                     <th>나머지 주소</th>
                     <td>
-                      <input type="text" class="joinInfoInput" name="addressSub" id="addressSub" >
+                      <input type="hidden" name="addressTest" value="0" />
+                      <input type="text" class="joinInfoInput" name="addressSub" id="addressSub" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -208,6 +210,7 @@
                   <th></th>
                   <td>
                     <span class="checkAlert" id="address_termsCheck">나머지 주소를 입력해 주세요.</span>
+                    
                   </td>
                 </tr>
                 <tr>
@@ -250,8 +253,6 @@
           <div id="joinPetInfoBox">
             <div class="addInfoTitle">
               *반려동물 정보 입력
-              <button type="button" id="joinInfoAdd">+</button>
-              <button type="button" id="joinInfoRemove">-</button>
             </div>
             <table class="joinInfoBox" id="petInfoAdd" >
               <tbody>
@@ -278,17 +279,17 @@
                 <tr>
                   <th style="padding-right: 25px; padding-bottom: 15px;">몸무게 선택</th>
                   <td>
-                  <div class="petWeighBox" >
+                  <div class="petWeighBox">
                     <label class="joinRadioType">
-                      <input type="radio" name="" id="">
+                      <input type="radio" name="petWeight" id="" disabled>
                       <span>소(~9kg)</span>
                     </label>
                     <label class="joinRadioType">
-                      <input type="radio" name="" id="" >
+                      <input type="radio" name="petWeight" id="" disabled>
                       <span>중(9~23kg)</span>
                     </label>
                     <label class="joinRadioType">
-                      <input type="radio" name="" id="" >
+                      <input type="radio" name="petWeight" id="" disabled>
                       <span>대(23kg~)</span>
                     </label>
                   </div>
@@ -432,6 +433,7 @@
             // 우편번호와 주소 정보를 해당 필드에 넣는다.
             document.getElementById("zonecode").value = data.zonecode;
             document.getElementById("userAddress").value = addr;
+            
             // 커서를 상세주소 필드로 이동한다.
             document.getElementById("addressSub").focus();
           }

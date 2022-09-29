@@ -21,6 +21,7 @@ $("#btnAgreeFinish").on("click", function () {
   if ($("#checkAll").is(":checked")) {
     $("#please_allCheck").html("");
     $("#agreeCheck").html("약관에 모두 동의하였습니다.");
+    $("[name=agreeTest]").val("1");
   } else {
     $("#please_allCheck").html("모든 항목에 체크 해주세요.");
     $("#please_allCheck").css("color", "#753422");
@@ -70,10 +71,8 @@ var bNameCheck = /^[가-힣|a-z|A-Z]{1,10}$/;
 $("#userId").keyup(function () {
   if (!idCheck.test($("#userId").val())) {
     $("#id_termsCheck").text("10~12자의 영문 대소문자와 숫자를 입력해 주세요.");
-    $("#userIdDuplicate").attr("disabled", "true");
+    $("#userIdDuplicate").attr("disabled", true);
     $("[name=idTest]").val("0");
-
-    console.log($("#userIdDuplicate").attr("disabled"));
   } else {
     $("#id_termsCheck").text("중복 확인을 해주세요 ");
     $("#userIdDuplicate").attr("disabled", false);
@@ -188,9 +187,11 @@ $("#userPhone").keyup(function () {
 });
 
 // 주소 유효성 검사
+// 주소에 공백이 없을 때 나머지 주소 입력창 disabled 풀기! -> 미 해결
 $("#addressSub").keyup(function () {
   if ($("#addressSub").trim().val() !== "") {
     $("#address_termsCheck").text("");
+    $("[name=addressTest]").val("1");
   } else {
     $("#address_termsCheck").text("나머지 주소를 입력해 주세요.");
   }
@@ -271,6 +272,12 @@ $("#bNumber").keyup(function () {
 //제출버튼 클릭시 모든 값 유무 확인
 // click -> submit으로 바꾸기 (지금 테스트용)
 $(".btnJoin").click(function () {
+  // 약관 동의 체크
+  if ($("[name=agreeTest]").val() != "1") {
+    alert("약관에 동의해 주세요.");
+    $("#btnAgree").focus();
+    return false;
+  }
   // 아이디 유효성 검사
   if ($("[name=idTest]").val() != "1") {
     $("#id_termsCheck").text("아이디를 입력해 주세요.");
@@ -305,9 +312,22 @@ $(".btnJoin").click(function () {
     $("#userName").focus();
   }
 
-  //핸드폰 유효성 검사
+  // 핸드폰 유효성 검사
   if ($("[name=phoneTest]").val() != "1") {
     $("#phone_termsCheck").text("문자를 제외한 번호만 입력해 주세요.");
     $("#userName").focus();
   }
+
+  // 주소 유효성 -> 필요 없음
+});
+
+// 강아지 선택시에만 몸무게 선택 클릭 가능
+$("#pDog").click(function () {
+  console.log("강쥐 클릭");
+  $("[name=petWeight").attr("disabled", false);
+});
+
+$("#pCat").click(function () {
+  console.log("고영희 클릭");
+  $("[name=petWeight").attr("disabled", true);
 });
