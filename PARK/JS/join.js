@@ -116,8 +116,7 @@ $("#userIdDuplicate").on("click", () => {
   //   },
   // });
 
-  //아이디 중복검사 이후 id값 변경시 다시 중복검사 하게끔
-
+  //아이디 중복검사 이후 id값 변경시 다시 체크
   $("#userId").change(function () {
     $("[name=idDuplicateTest]").val("0");
   });
