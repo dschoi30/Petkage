@@ -32,11 +32,9 @@
     
 	<!-- Age_calculator css -->
 	<link rel="stylesheet" href="../../CSS/tools/age_calculator.css"></link>
-    <link rel="stylesheet" href="../../CSS/tools/age_calculator_result.css"></link>
 
 	<!-- Bmi_calculator css -->
-	<link rel="stylesheet" href="../../CSS/tools/bmi_calculator.css">
-	</link>
+	<link rel="stylesheet" href="../../CSS/tools/bmi_calculator.css"></link>
 	
 	<!-- Calorie_calculator css -->
 	<link rel="stylesheet" href="../../CSS/tools/calorie_calculator.css"></link>
@@ -91,17 +89,17 @@
 				<div class="cal_menu_btn">
 					<ul>
 						<li class='inactive'>
-							<a href="">
+							<a href="../tools/age_calculator.html">
 								<span class="cal_icon"><img src="../../resources/images/age_off.png"
 										alt="나이 계산기" /></span>
-								<span class="cal_txt">나이 계산기</span>
+								<span class="cal_txt">나이 계산</span>
 							</a>
 						</li>
 						<li class='inactive'>
 							<a href="../tools/bmi_calculator.html">
 								<span class="cal_icon"><img src="../../resources/images/bmi_off.png"
 										alt="비만도 계산기" /></span>
-								<span class="cal_txt">비만도 계산기</span>
+								<span class="cal_txt">비만도 계산</span>
 							</a>
 						<li class='active'>
 							<a href="../tools/calorie_calculator.html">
@@ -164,7 +162,7 @@
 								<div class="selectBoxList">
 									<!-- selectBox1 -->
 									<div class="box">
-										<div  class="pet_jisu selectBox2" id="pet_jisu" name="pet_jisu">
+										<div  class="pet_jisu selectBoxes" id="pet_jisu" name="pet_jisu">
 											<button class="label">반려동물 상태 선택</button>
 											<ul class="optionList">
 												<li class="optionItem">반려동물 상태 선택</li>
@@ -173,7 +171,7 @@
 									</div>
 									<!-- selectBox2 -->
 									<div class="box">
-										<div class="pet_jisu selectBox2" id="dog_jisu" name="dog_jisu" style="display:none">
+										<div class="pet_jisu selectBoxes" id="dog_jisu" name="dog_jisu" style="display:none">
 											<button class="label">반려견 상태 선택</button>
 											<ul class="optionList">
 												<li class="optionItem" value="1">성장기(4개월 미만) 강아지</li>
@@ -193,7 +191,7 @@
 									</div>
 									<!-- selectBox3 -->
 									<div class="box">
-										<div class="pet_jisu selectBox2" id="cat_jisu" name="cat_jisu" style="display:none">
+										<div class="pet_jisu selectBoxes" id="cat_jisu" name="cat_jisu" style="display:none">
 											<button class="label">반려묘 상태 선택</button>
 											<ul class="optionList">
 												<li class="optionItem" value="1">유아기(4개월 미만) 고양이</li>
@@ -207,57 +205,7 @@
 											</ul>
 										</div>
 									</div>
-									
 								</div>
-
-								<!-- <label class="pet_jisu selectBox" id="pet_jisu" name="pet_jisu">
-									<select class="select">
-										<option value="">반려동물 상태 선택</option>
-									</select>
-									<span class="icoArrow">
-										<img src="../../resources/images/arrow_down.png" alt="">
-									</span>
-								</label>
-
-								<label class="pet_jisu selectBox" id="dog_jisu" name="dog_jisu" style="display:none">
-									<select class="select">
-										<option value="">반려견 상태 선택</option>
-										<option value="1">성장기(4개월 미만) 강아지</option>
-										<option value="2">성장기(4 ~ 12개월) 강아지</option>
-										<option value="3">중성화하지 않은 성견</option>
-										<option value="4">중성화한 성견</option>
-										<option value="5">체중 감량이 필요한 성견</option>
-										<option value="6">체중 증량이 필요한 성견</option>
-										<option value="7">비만 상태인 성견</option>
-										<option value="8">가벼운 활동량의 사역견</option>
-										<option value="9">중간 활동량의 사역견</option>
-										<option value="10">높은 활동량의 사역견</option>
-										<option value="11">임신 초기 성견</option>
-										<option value="12">임신 중기 이후 성견</option>
-										<option value="13">나이가 많은 성견</option>
-									</select>
-									<span class="icoArrow">
-										<img src="../../resources/images/arrow_down.png" alt="">
-									</span>
-								</label>
-
-								<label class="pet_jisu selectBox" id="cat_jisu" name="cat_jisu" style="display:none">
-									<select class="select">
-										<option value="">반려묘 상태 선택</option>
-										<option value="1">유아기(4개월 미만) 고양이</option>
-										<option value="2">고속 성장기(4 ~ 6개월) 고양이</option>
-										<option value="3">고속 성장기(7 ~ 12개월) 고양이</option>
-										<option value="4">중성화한 성묘</option>
-										<option value="5">중성화하지 않은 성묘</option>
-										<option value="6">체중 감량이 필요한 성묘</option>
-										<option value="7">활동량이 많은 성묘</option>
-										<option value="8">나이가 많은 성묘</option>
-									</select>
-									<span class="icoArrow">
-										<img src="../../resources/images/arrow_down.png" alt="">
-									</span>
-								</label> -->
-							
 							</span>
 						</div>
 					</div>
@@ -271,22 +219,29 @@
 				<!-- 계산기 결과 박스 -->
 				<div class="cal_result_box" style="display:none">
 		
-					<!-- 나이 계산기 결과 -->
-					<div class="cal_result_age">
-						<div class="age_circle">
-							<span class="age_img"><img src="../../resources/images/Laughing_Dog.png" alt="강아지" /></span>
-							<span class="age_number" id="dog_age">1살</span>
+					<!-- 칼로리 계산기 결과 -->
+					<div class="cal_result_calorie">
+
+						<div class="cal_result_calo">
+							<span class="calo_img"><img src="http://appdata.hungryapp.co.kr/images/hatdog/img/calculator/result_img04.png" alt="저울" /></span>
+							<dl>
+								<dt>1일 기초 대사량</dt>
+								<dd id="basic_meta">205kcal</dd>
+							</dl>
 						</div>
-						
-						<div class="age_same"><img src="http://appdata.hungryapp.co.kr/images/hatdog/img/calculator/result_img03.png" alt="같다" /></div>
-		
-						<div class="age_circle">
-							<!-- ! 이미지 수정하기 -->
-							<span class="age_img"><img src="../../resources/images/Agegroup_W1.png" alt="사람" /></span>
-							<span class="age_number" id="dog_age_cal">15살</span>
+
+						<div class="cal_result_calo" >
+							<span class="calo_img"><img src="http://appdata.hungryapp.co.kr/images/hatdog/img/calculator/result_img04.png" alt="저울" /></span>
+							<dl>
+								<dt>1일 권장 칼로리</dt>
+								<dd id="basic_kal">1100kcal</dd>
+							</dl>
 						</div>
-		
-						<div class="age_lifecycle"  id="dog_life">아동청소년기</div>
+
+						<div class="calo_txt">
+							<span class="calo_txt_b">※ 기초대사량</span> : 생물체가 생명을 유지하는데 필요한 최소한의 에너지량<br>
+							<span class="calo_txt_b">※ 권장칼로리</span> : 몸을 움직이는 데 필요한 에너지인 작업 대사량을 위한 칼로리
+						</div>
 					</div>
 		
 					<!-- 계산기 다시하기 버튼-->
@@ -385,22 +340,22 @@
 				data: data,
 				url: "../ajaxData_cal.php",
 				success: function (r) {
-					$(".Cc_result").show();
-					$(".h21_calculator_sns").show();
-					$(".Cc_form").hide();
+					$(".cal_result_box").show();
+					// $(".h21_calculator_sns").show(); // sns 공유하기
+					$(".cal_info_box").hide();
 
 					if (tab_id == 1) { // 나이 계산기
-						$(".Cc_result_age").css("display", "block");
+						$(".cal_result_age").css("display", "block");
 						$("#dog_age").html(r.msg[0]);
 						$("#dog_age_cal").html(r.msg[1] + "살");
 						$("#dog_life").html(r.msg[2]);
 					} else if (tab_id == 2) {// 비만도 계산기
-						$(".Cc_result_obesity").css("display", "block");
+						$(".cal_result_bmi").css("display", "block");
 						$("#bsc_type_str1").html(r.msg_pc[0]);
 						$("#bsc_type_str2").html(r.msg_pc[1]);
 						$("#bsc_type_str3").html(r.msg_pc[2]);
 					} else if (tab_id == 3) {// 칼로리 계산기
-						$(".Cc_result_calorie").css("display", "block");
+						$(".cal_result_calorie").css("display", "block");
 						$("#basic_meta").html(r.msg[0] + "kcal");
 						$("#basic_kal").html(r.msg[1] + "kcal");
 					}
