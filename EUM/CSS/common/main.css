@@ -1,0 +1,167 @@
+html,body {
+    width:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    overflow:hidden;
+    font-family:sans-serif;
+}
+
+#fullpage {
+    position:relative;
+    top:0px;
+    z-index:9;
+    width:100%;
+    height:100%;
+}
+
+.fullsection {
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.full1 {
+    background:red;
+}
+
+.full2 {
+    background:yellow;
+}
+
+.full3 {
+    background:green;
+}
+
+.full4 {
+    background:blue;
+}
+
+.full5 {
+    background:purple;
+}
+
+#fullpage span {
+    display:block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#fff;font-size:4em;
+    font-weight:bold;
+}
+
+.full2 span {
+    color:#000;
+}
+
+ul, li {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.quick {
+    position:fixed;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:100000;
+}
+
+.quick li {
+    width:10px;
+    height:10px;
+    margin-bottom:10px; 
+    border-radius:15px;
+    border:2px solid #fff;
+    cursor:pointer;
+}
+
+.quick .on {
+    background:#fff;
+}
+
+#fullpage #wrapper video {
+    width: 100%;
+    /*height: 350px;*/
+  }
+#fullpage #wrapper svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+#fullpage #wrapper svg text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+#fullpage #wrapper svg > rect {
+    -webkit-mask: url(#mask);
+    mask: url(#mask);
+  }
+#fullpage #wrapper svg rect {
+    fill: #fff;
+  }
+  
+#fullpage #wrapper:before, #wrapper:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background-color: #fff;
+  }
+#fullpage #wrapper:before {
+    left: -9px;
+  }
+#fullpage #wrapper:after {
+    right: -5px;
+  }
+
+.iconmouse{
+    position: absolute; 
+    bottom: 50px; 
+    left: 50%; 
+    transform: translate(-50%, 0); 
+    z-index: 1; 
+    width: 30px; 
+    height: 50px; 
+    border:2px solid #000; 
+    border-radius: 20px;
+}
+
+@keyframes Mouse_act {
+    0% { transform:translateY(5px);}
+
+    50% { transform:translateY(-5px);}
+
+    100% { transform:translateY(5px);}
+}
+.iconmouse::before {
+    content: 'SCROLL'; 
+    display: block; 
+    position: absolute; 
+    top: -35px; 
+    left: 50%; 
+    margin-left: -29px; 
+    width: 60px; 
+    font-size: 16px; 
+    color: #000; 
+    letter-spacing: 0px; 
+    font-weight:600;
+}
+
+.iconmouse .ball {
+    position: absolute; 
+    top: 8px; 
+    left: 13px; 
+    width:4px; 
+    height: 4px; 
+    background: #000; 
+    border-radius: 50%; 
+    animation: Mouse_act 1s ease-out infinite;
+}
