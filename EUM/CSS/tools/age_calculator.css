@@ -1,3 +1,6 @@
+
+/* TOOLS CSS */
+
 .tc {
     overflow:hidden;
 }
@@ -184,6 +187,83 @@
     border: none;
 }
 
+/* PET 선택 CSS */
+
+.tc .pet_choice {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tc .pet_choice li{
+    float: left;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 170px;
+    height: 150px;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.tc .pet_choice img {
+    width: 85px;
+    height: 85px;
+    background: transparent;
+    opacity: 0.35;
+    mix-blend-mode: multiply;
+    margin: 5px;
+}
+
+.tc .pet_choice p {
+    text-align: center;
+    font-weight: bold;
+    margin: 5px 0px;
+    color: inherit;
+}
+
+.tc .pet_off {
+    background-color: #f6f7f8;
+    border: 5px solid #f6f7f8;
+    color: #cfcece;
+}
+
+.tc .pet_off:last-child {
+    margin-right: 0px;
+}
+
+.tc .pet_off:hover {
+    border: 5px solid #d9d9d9;
+    background: #f5f5f5;
+    cursor: pointer;
+}
+
+/* 이미지 클릭 시 실행 */
+.tc .pet_on {
+    /* border: 5px solid #fcd11e; */
+    border: 5px solid #FFEBC9;
+    background-color: #ffffff;
+    color: #090909;
+}
+
+.tc .pet_on:last-child {
+    margin-right: 0px;
+}
+
+.tc .pet_on:hover {
+    border: 5px solid #FFEBC9;
+    background: #fff9ef;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.tc .pet_on img {
+    opacity: 0.8;
+}
+
+/* AGE 계산 CSS */
+
 .tc .cal_info_box [type="radio"] {
     vertical-align: middle;
     appearance: none;
@@ -204,7 +284,7 @@
 }
 
 .tc .cal_info_box [type="radio"]:hover {
-    box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+    box-shadow: 0 0 0 max(4px, 0.2em) #d3d3d3;
     cursor: pointer;
 }
 
@@ -316,3 +396,73 @@
     padding: 0;
 }
 
+/* AGE 결과 CSS */
+.tc .cal_result_age {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    margin: 5% auto;
+    padding-top: 7px;
+}
+
+.tc .age_circle {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background: #D9D9D9;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -o-border-radius: 100px;
+    border-radius: 100px;
+}
+
+.tc .age_circle .age_img {
+    display: block;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.tc .age_circle .age_img img {
+    width: 42%;
+}
+
+.tc .age_circle .age_number {
+    display: block;
+    font-size: 23px;
+    color: #803D3D;
+    font-weight: 500;
+}
+
+.tc .cal_result_age .age_same {
+    display: inline-block;
+    width: 50px;
+}
+
+.tc .cal_result_age .age_same img {
+    width: 100%;
+    vertical-align: 2px;
+    padding-bottom: 5px;
+}
+
+.tc .age_lifecycle {
+    display: block;
+    padding: 2% 0 0 0;
+    font-size: 26px;
+    color: #803D3D;
+    font-weight: 500;
+}
+
+.tc .cal_again {
+    display: block;
+    overflow: hidden;
+    height: 50px;
+    margin: 20px 36% 20px 36%;
+    border-radius: 10px;
+    background: #E3B7A0;
+    padding: 10px 40px 16px 40px;
+}
+
+.tc .cal_again a {
+    color: #fff !important;;
+    font-size: 20px;
+}

@@ -33,8 +33,6 @@
 	<!-- Age_calculator css -->
 	<link rel="stylesheet" href="../../CSS/tools/age_calculator.css">
 	</link>
-	<link rel="stylesheet" href="../../CSS/tools/age_calculator_result.css">
-	</link>
 
 	<!-- Bmi_calculator css -->
 	<link rel="stylesheet" href="../../CSS/tools/bmi_calculator.css">
@@ -101,14 +99,14 @@
 							<a href="../tools/age_calculator.html">
 								<span class="cal_icon"><img src="../../resources/images/age_off.png"
 										alt="나이 계산기" /></span>
-								<span class="cal_txt">나이 계산기</span>
+								<span class="cal_txt">나이 계산</span>
 							</a>
 						</li>
 						<li class='active'>
 							<a href="../tools/bmi_calculator.html">
 								<span class="cal_icon"><img src="../../resources/images/bmi_on.png"
 										alt="비만도 계산기" /></span>
-								<span class="cal_txt">비만도 계산기</span>
+								<span class="cal_txt">비만도 계산</span>
 							</a>
 						<li class='inactive'>
 							<a href="../tools/calorie_calculator.html">
@@ -151,11 +149,11 @@
 								<div class="pet_choice">
 									<input type="hidden" id="pet_type" name="pet_type">
 									<ul id="pet_sel">
-										<li onclick="pet_sel(0)" class="pet_type_0 pet_off"><a><img
+										<li onclick="pet_sel(0)" class="pet_type_0 pet_off" id="dog_on"><a><img
 													src="../../resources/images/Laughing_Dog.png" alt="BCS_s01" />
 												<p>강아지</p>
 											</a></li>
-										<li onclick="pet_sel(3)" class="pet_type_3 pet_off"><a><img
+										<li onclick="pet_sel(3)" class="pet_type_3 pet_off" id="cat_on"><a><img
 													src="../../resources/images/Laughing_Cat.png" alt="BCS_s01" />
 												<p>고양이</p>
 											</a></li>
@@ -222,24 +220,123 @@
 				<!-- 계산기 결과 박스 -->
 				<div class="cal_result_box" style="display:none">
 
-					<!-- 나이 계산기 결과 -->
-					<div class="cal_result_age">
-						<div class="age_circle">
-							<span class="age_img"><img src="../../resources/images/Laughing_Dog.png" alt="강아지" /></span>
-							<span class="age_number" id="dog_age">1살</span>
+					<!-- 비만도 계산기 결과 -->
+					<div class="cal_result_obesity">
+						<div class="cal_result_ob">
+							<span class="cal_ob_img"><img src="http://appdata.hungryapp.co.kr/images/hatdog/img/calculator/result_img05.png" alt="체중계" /></span>
+							<div id="dog_ob_1">
+								<dl>
+									<dt id="bsc_type_str1">1단계</dt>
+									<dd id="bsc_type_str2">(너무 마름, 심한 저체중)</dd>
+								</dl>
+								<p id="bsc_type_str3">멀리서 봐도 갈비뼈, 척추뼈, 골반뼈를 비롯한 몸의 뼈들이 <br>
+									두드러지게 보입니다.<br>
+									한 눈에 보아도 체지방이 없어 보입니다.<br>
+									몸 전체적으로 명백하게 근육이 없어 보입니다.
+								</p>
+							</div>
+							<div id="dog_ob_2" style="display:none">
+								<dl>
+									<dt id="bsc_type_str1">1단계</dt>
+									<dd id="bsc_type_str2">(너무 마름, 심한 저체중)</dd>
+								</dl>
+								<p id="bsc_type_str3">멀리서 봐도 갈비뼈, 척추뼈, 골반뼈를 비롯한 몸의 뼈들이 <br>
+									두드러지게 보입니다.<br>
+									한 눈에 보아도 체지방이 없어 보입니다.<br>
+									몸 전체적으로 명백하게 근육이 없어 보입니다.
+								</p>
+							</div>
+							<div id="dog_ob_3" style="display:none">
+								<dl>
+									<dt id="bsc_type_str1">1단계</dt>
+									<dd id="bsc_type_str2">(너무 마름, 심한 저체중)</dd>
+								</dl>
+								<p id="bsc_type_str3">멀리서 봐도 갈비뼈, 척추뼈, 골반뼈를 비롯한 몸의 뼈들이 <br>
+									두드러지게 보입니다.<br>
+									한 눈에 보아도 체지방이 없어 보입니다.<br>
+									몸 전체적으로 명백하게 근육이 없어 보입니다.
+								</p>
+							</div>
+							<div id="dog_ob_4" style="display:none">
+								<dl>
+									<dt id="bsc_type_str1">1단계</dt>
+									<dd id="bsc_type_str2">(너무 마름, 심한 저체중)</dd>
+								</dl>
+								<p id="bsc_type_str3">멀리서 봐도 갈비뼈, 척추뼈, 골반뼈를 비롯한 몸의 뼈들이 <br>
+									두드러지게 보입니다.<br>
+									한 눈에 보아도 체지방이 없어 보입니다.<br>
+									몸 전체적으로 명백하게 근육이 없어 보입니다.
+								</p>
+							</div>
+							<div id="dog_ob_5" style="display:none">
+								<dl>
+									<dt id="bsc_type_str1">1단계</dt>
+									<dd id="bsc_type_str2">(너무 마름, 심한 저체중)</dd>
+								</dl>
+								<p id="bsc_type_str3">멀리서 봐도 갈비뼈, 척추뼈, 골반뼈를 비롯한 몸의 뼈들이 <br>
+									두드러지게 보입니다.<br>
+									한 눈에 보아도 체지방이 없어 보입니다.<br>
+									몸 전체적으로 명백하게 근육이 없어 보입니다.
+								</p>
+							</div>
+
+							<div id="cat_ob_1" style="display:none">
+								<dl>
+									<dt id="bsc_type_str1">1단계</dt>
+									<dd id="bsc_type_str2">(너무 마름, 심한 저체중)</dd>
+								</dl>
+								<p id="bsc_type_str3">갈비뼈, 척추뼈, 골반뼈가 두드러지게 보입니다.<br>
+									만져지는 지방이 거의 없고, <br>
+									갈비뼈가 불거진 것이 느집니다.<br>
+									몸 전체적으로 근육 손실이 느껴집니다.
+								</p>
+							</div>
+							<div id="cat_ob_2" style="display:none">
+								<dl>
+									<dt id="bsc_type_str1">1단계</dt>
+									<dd id="bsc_type_str2">(너무 마름, 심한 저체중)</dd>
+								</dl>
+								<p id="bsc_type_str3">갈비뼈, 척추뼈, 골반뼈가 두드러지게 보입니다.<br>
+									만져지는 지방이 거의 없고, <br>
+									갈비뼈가 불거진 것이 느집니다.<br>
+									몸 전체적으로 근육 손실이 느껴집니다.
+								</p>
+							</div>
+							<div id="cat_ob_3" style="display:none">
+								<dl>
+									<dt id="bsc_type_str1">1단계</dt>
+									<dd id="bsc_type_str2">(너무 마름, 심한 저체중)</dd>
+								</dl>
+								<p id="bsc_type_str3">갈비뼈, 척추뼈, 골반뼈가 두드러지게 보입니다.<br>
+									만져지는 지방이 거의 없고, <br>
+									갈비뼈가 불거진 것이 느집니다.<br>
+									몸 전체적으로 근육 손실이 느껴집니다.
+								</p>
+							</div>
+							<div id="cat_ob_4" style="display:none">
+								<dl>
+									<dt id="bsc_type_str1">1단계</dt>
+									<dd id="bsc_type_str2">(너무 마름, 심한 저체중)</dd>
+								</dl>
+								<p id="bsc_type_str3">갈비뼈, 척추뼈, 골반뼈가 두드러지게 보입니다.<br>
+									만져지는 지방이 거의 없고, <br>
+									갈비뼈가 불거진 것이 느집니다.<br>
+									몸 전체적으로 근육 손실이 느껴집니다.
+								</p>
+							</div>
+							<div id="cat_ob_5" style="display:none">
+								<dl>
+									<dt id="bsc_type_str1">1단계</dt>
+									<dd id="bsc_type_str2">(너무 마름, 심한 저체중)</dd>
+								</dl>
+								<p id="bsc_type_str3">갈비뼈, 척추뼈, 골반뼈가 두드러지게 보입니다.<br>
+									만져지는 지방이 거의 없고, <br>
+									갈비뼈가 불거진 것이 느집니다.<br>
+									몸 전체적으로 근육 손실이 느껴집니다.
+								</p>
+							</div>
+							<span class="cal_ob_txt">※ BCS(Body Contdition Score)의 각 단계별 체중의 차이는 대략 10%입니다.</span>
 						</div>
-
-						<div class="age_same"><img
-								src="http://appdata.hungryapp.co.kr/images/hatdog/img/calculator/result_img03.png"
-								alt="같다" /></div>
-
-						<div class="age_circle">
-							<!-- ! 이미지 수정하기 -->
-							<span class="age_img"><img src="../../resources/images/Agegroup_W1.png" alt="사람" /></span>
-							<span class="age_number" id="dog_age_cal">15살</span>
-						</div>
-
-						<div class="age_lifecycle" id="dog_life">아동청소년기</div>
 					</div>
 
 					<!-- 계산기 다시하기 버튼-->
@@ -305,107 +402,6 @@
 		integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
 		crossorigin="anonymous"></script>
 
-	<script>
-		function dogcal_tab(tab) {
-			$("div[id^='contents']").hide();
-			$("#contents_tab_" + tab).show();
-		}
-
-		$(document).ready(function () {
-			dogcal_tab(2);
-			weigh_choice(0);
-		});
-
-		var dog_type_btn = document.getElementsByClassName("dog_type_btn");
-
-		function handleClick(event) {
-			console.log(event.target);
-
-			console.log(event.target.classList);
-
-			if (event.target.classList[1] === "cal_type_checked") {
-				event.target.classList.remove("cal_type_checked");
-			} else {
-				for (var i = 0; i < dog_type_btn.length; i++) {
-					dog_type_btn[i].classList.remove("cal_type_checked");
-				}
-
-				event.target.classList.add("cal_type_checked");
-			}
-		}
-
-		function init() {
-			for (var i = 0; i < dog_type_btn.length; i++) {
-				dog_type_btn[i].addEventListener("click", handleClick);
-			}
-		}
-
-		init();
-
-		function result_view(tab_id) {
-			var bcs_type = $('#bcs_type').val();
-
-			if (tab_id == 2) {
-				if (!bcs_type) {
-					alert("BCS를 선택해주세요");
-					return;
-				}
-				data = "m2Code=dogcal&mode=bimando_cal&bcs_type=" + bcs_type;
-			} 
-
-			$.ajax({
-				type: "post",
-				dataType: "json",
-				data: data,
-				url: "../ajaxData_cal.php",
-				success: function (r) {
-					$(".Cc_result").show();
-					$(".h21_calculator_sns").show();
-					$(".Cc_form").hide();
-
-					if (tab_id == 2) {// 비만도 계산기
-						$(".Cc_result_obesity").css("display", "block");
-						$("#bsc_type_str1").html(r.msg_pc[0]);
-						$("#bsc_type_str2").html(r.msg_pc[1]);
-						$("#bsc_type_str3").html(r.msg_pc[2]);
-					} 
-				}
-			})
-		}
-
-		
-		function bcs_sel(no) { // 비만도 선택
-			$("#bcs_type").val(no);
-			$(this).addClass("bcs_on");
-			$("li[class^='bcs_type_']").removeClass("bcs_on");
-			$(".bcs_type_" + no).addClass("bcs_on");
-		}
-
-		function pet_sel(no) { // 펫 선택
-			$("#pet_type").val(no);
-			$(this).addClass("pet_on");
-			$("li[class^='pet_type_']").removeClass("pet_on");
-			$(".pet_type_" + no).addClass("pet_on");
-
-			if (no == 0) {
-				$("#cat_hide").show();
-				$("#bcs_sel_cat_img").hide();
-				$("#bcs_sel_dog_img").show();
-				
-			} else if (no == 3) {
-				$("#cat_hide").hide();
-				$("#bcs_sel_dog_img").hide();
-				$("#bcs_sel_cat_img").show();
-			}
-		}
-
-		function weigh_choice(no) { // 소중대 선택
-			$("a[class^='bcs_type_']").removeClass("bcs_on");
-
-			$("#dog_type").val(no);
-			$("#bcs_type").val("");
-		}
-	</script>
 
 </body>
 

@@ -1,11 +1,12 @@
-.bcs_choice {
+/* BMI 계산 CSS */
+.tc .bcs_choice {
     display: block;
     overflow: hidden;
     width: 100%;
     margin: 0 0 2% 0;
 }
 
-.bcs_choice li {
+.tc .bcs_choice li {
     float: left;
     width: 18%;
     margin: 1%;
@@ -15,19 +16,19 @@
     box-sizing: border-box;
 }
 
-.bcs_choice a img {
+.tc .bcs_choice a img {
     width: 100%;
     /* filter: grayscale(100%); */
     opacity: 0.6;
 }
 
-.bcs_choice li.bcs_on:hover {
+.tc .bcs_choice li.bcs_on:hover {
     border: 5px solid #FFEBC9;
     background: #fff9ef;
     opacity: 0.6;
 }
 
-.bcs_choice .bcs_on {
+.tc .bcs_choice .bcs_on {
     /* border: 1px solid #ffb901; */
     border: 5px solid #FFEBC9;
     background-color: #ffffff;
@@ -35,11 +36,59 @@
     opacity: 1;
 }
 
-.bcs_choice li:hover {
+.tc .bcs_choice li:hover {
     border: 5px solid #d9d9d9;
     background: #f5f5f5;
 }
 
-.bcs_choice .bcs_on img {
+.tc .bcs_choice .bcs_on img {
     opacity: 1;
+}
+
+/* BMI 결과 CSS */
+
+.tc .cal_result_obesity {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    margin: 2% auto;
+    padding-top: 7px;
+}
+
+.tc .cal_ob_img img {
+    width: 30px;
+}
+
+.tc .cal_result_ob dt {
+    padding: 5px 0 5px 0;
+    font-size: 32px;
+    color: #ffb901;
+    font-weight: 500;
+}
+
+.tc .cal_result_ob dd {
+    display: block;
+    font-size: 20px;
+    color: #8c5600;
+    font-weight: 300;
+}
+
+.tc .cal_result_ob p {
+    padding: 5px 30px;
+    font-size: 18px;
+    color: #656565;
+    font-weight: 300;
+    line-height: 1.6em;
+}
+
+.tc .cal_result_ob .cal_ob_txt {
+    display: block;
+    margin: 20px 5% 0 5%;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #6565657a;
+    /* font-weight: 100; */
+    line-height: 28px;
+    text-align: center;
+    border-top: 1px solid #f2f2f2;
 }

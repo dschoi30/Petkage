@@ -1,3 +1,12 @@
+/* header {
+    position:fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    background-color: #FFEBC9;
+} */
+
 .hd .header_container {
     background-color: #FFEBC9;
     height: 80px;
@@ -20,7 +29,6 @@
 .hd .header_link {
     color: #803D3D !important;
     font-weight: bold;
-    /* width: 100px; */
     text-align: center;
     margin-left: 10px;
     padding-top: 10px;
@@ -51,3 +59,67 @@
 .hd #loginBtn {
     background-color: #D79771 !important;
 }
+
+
+/* header {
+    /* position:fixed; */
+    /* z-index: 100; */
+    /*left: 0;
+    right: 0;
+    top: 0;
+    background-color: #FFEBC9;
+} */
+
+/* .header_container {
+    background-color: #FFEBC9;
+    height: 80px;
+}
+
+.d-flex {
+    justify-content: space-between;
+}
+
+.headerLogo {
+    width: 170px;
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+.header_item {
+    padding-top: 20px;
+}
+
+.header_link {
+    color: #803D3D !important;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 10px;
+    padding-top: 10px;
+}
+
+.headercart {
+    padding: 0px 20px 0px 20px;
+}
+
+.cart {
+    width: 30px;
+    margin-top: 5px;
+}
+
+.headerBtn {
+    background-color: #803D3D;
+    color: white !important;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border-style: none;
+    padding-top: 4px;
+}
+
+#loginBtn {
+    background-color: #D79771 !important;
+} */
