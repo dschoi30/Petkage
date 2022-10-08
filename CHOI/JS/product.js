@@ -60,4 +60,12 @@ $(document).ready(() => {
     function modalDisplay(text){
         modal.style.display = text;
     }
+
+    // 등록 상품 삭제
+
+    $("#btnDelProd").on("click", () => {
+        if(confirm("정말로 게시글을 삭제하시겠습니까?")) {
+            location.replace("${ path }/market/product-delete?no=${ product.proNo }");
+        };
+    });
 });
